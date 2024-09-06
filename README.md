@@ -30,8 +30,10 @@ For full functionality the system should only be applied combining all three sub
 Within the design it was aimed to use standard naming of variables according to https://cfconventions.org/. 
 
 # Licenses
-Hyfive is an open-source project consisting of software, hardware, and documentation components. Each part of this project is licensed under a different copyleft license to ensure it remains free and open.
+Hyfive is an open-source project consisting of software, hardware, and documentation components. Each part of this project is licensed under a different copyleft license to ensure it remains free and open:
 
 - Software/Code is licensed under [MPL-2.0](LICENSE_MPL-2.0)
 - Hardware is licensed under [CERN-OHL-W-2.0 or later](LICENSE_CERN-OHL-W-2.0)
 - Documentation is licensed under [CC-BY-SA-4.0](LICENSE_CC-BY-SA-4.0)
+
+The Hyfive logo is not published under above licenses and not free to use. 

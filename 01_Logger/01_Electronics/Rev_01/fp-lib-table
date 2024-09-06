@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Hyfive")(type "KiCad")(uri "${KIPRJMOD}/../HyfiveLib/Footprints")(options "")(descr ""))
-)
