@@ -8,6 +8,7 @@ Keller Series 20, Pyroscience PICO-O2.
 Calibrate all sensors according to the manual.
 
 ### Conductivity
+
 		<figure> 
 			<img src="media/glue_preparation.png"  height="200" title="finished_logger">
 			<img src="media/glue_fixation.png"  height="200" title="finished_logger">
