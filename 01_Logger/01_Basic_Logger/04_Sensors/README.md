@@ -8,15 +8,7 @@ Keller Series 20, Pyroscience PICO-O2.
 Calibrate all sensors according to the manual.
 
 ### Conductivity
-	
-		<figure> 
-			<img src="media/glue_preparation.png"  height="200" title="finished_logger">
-			<img src="media/glue_fixation.png"  height="200" title="finished_logger">
-			<img src="media/glue_finished.png"  height="200" title="finished_logger">
 
-		<figurecaption><a name="figure10">*Figure 10:*</a> *Fitting the sensors into the bushing*</figurecaption>
-		</figure>
-  		
 - Atlas Scientific K 0.1, K 1.0 (https://files.atlas-scientific.com/EC_K_0.1_probe.pdf)
 	- *Hardware:* 
 		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed desciption under [../02_Mechanics/](../02_Mechanics/README.md). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
