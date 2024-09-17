@@ -11,7 +11,7 @@ Calibrate all sensors according to the manual.
 
 <figure> 
 	<img src="media/glue_preparation.png"  height="300" title="charging_contacts">
-	<img src="media/glue_fixation.png  height="300" title="finished_logger">
+	<img src="media/glue_fixation.png"  height="300" title="finished_logger">
 
 <figurecaption><a name="figure2">*Figure 2:*</a> *Left: Self designed charging contact. Right: Charging contacts, LED and magnetic switch inserted into endcap - notice attachment of wires to charging contacts by soldering to an extension of a washer*</figurecaption>
 </figure>
