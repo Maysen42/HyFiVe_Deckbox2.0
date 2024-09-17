@@ -22,6 +22,7 @@ For charging batteries without opening the pressure housing, charging contacts n
 
 <figure> 
    <img src="media/Charging_contacts.jpg"  width="44%" title="charging_contacts"> 
+   &nbsp;
    <img src="media/end_cap_assembled.jpg"  width="55%" title="end_cap_assembled">
 
    <figurecaption><a name="figure2">*Figure 2:*</a> *Left: Self designed charging contact. Right: Charging contacts, LED and magnetic switch inserted into endcap - notice attachment of wires to charging contacts by soldering to an extension of a washer*</figurecaption>
