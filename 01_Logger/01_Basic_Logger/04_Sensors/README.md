@@ -16,6 +16,7 @@ Calibrate all sensors according to the manual.
 		
 		<figurecaption><a name="figure1">*Figure 1:*</a> *Fitting the sensors into the bushing*</figurecaption>
 		</figure>
+  		
 
 - Atlas Scientific K 0.1, K 1.0 (https://files.atlas-scientific.com/EC_K_0.1_probe.pdf)
 	- *Hardware:* 
