@@ -2,7 +2,7 @@ Integrated sensors
 =======
 
 The following sensors have been integrated and tested in hardware and software. Every sensor in this list has a brief description of how to place it into the lid, connect to the PCB, and 
-a link to the software to implement it. The positions in the lid can be taken from the drawings in the folder *03_Mechanic*. As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: Atlas Scientific K1.0, Blue Robotics Celsius fast response, 
+a link to the software to implement it. The positions in the lid can be taken from the drawings in the folder [*02_Mechanic*](../02_Mechanics/README.md). As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: Atlas Scientific K1.0, Blue Robotics Celsius fast response, 
 Keller Series 20, Pyroscience PICO-O2.
 
 Calibrate all sensors according to the manual.
@@ -11,8 +11,7 @@ Calibrate all sensors according to the manual.
 
 - Atlas Scientific K 0.1, K 1.0 (https://files.atlas-scientific.com/EC_K_0.1_probe.pdf)
 	- *Hardware:* 
-		1. To be able to insert the sensor into the cap of the sensor carrier mechanically and watertight we designed the sensor bushing in ..\02_Mechanics\02_pressure_housing\04_penetrators. The figures below 
-		show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
+		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed desciption under [../02_Mechanics/](../02_Mechanics/README.md). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
 	
 		<figure> 
 			<img src="media/glue_preparation.png"  height="200" title="finished_logger">
@@ -42,8 +41,7 @@ Calibrate all sensors according to the manual.
 		Before applying the sensor make sure that the Conductivity Circuit is configured to the right sensors type and is calibrated according to the datasheet. 
 
 - AML XChange CT
-	- *Hardware:* For mechanical integration of the sensor get in contact with AML. The sensor comes with a thread and orings attached. Attach the wires to the Uart2_RS485_V8 with the correct 
-	pin settings.
+	- *Hardware:* The sensor can be directly integrated in the pressure housing, as it offers O-rings and a thread for securing. The specification of the needed hole in the end cap can be provided by AML. Attach the wires to the Uart2_RS485_V8 with the correct pin settings.
 	- *Software:* The sensor can be integrated in software with the library ***AML***. This sensor must be setup individualy though to output the right information (string format) and at the right frequency. Set 
 	this up to your needs.
 
@@ -106,7 +104,7 @@ Calibrate all sensors according to the manual.
 		<figurecaption><a name="figure5">*Figure 5:*</a> *PICO-O2 and connector with wiring.*</figurecaption>
 		</figure>
 	
-	- *Software:* For integrating the check the library ***pyroO2***.
+	- *Software:* For integrating check the library ***pyroO2***.
 
 - Presens Oxybase485:
 	- *Hardware:* This sensor is installed to the end cap similar to the sensors of Atlas Scientific. They need to be glued into a bushing to be integrated. Attach the wires to the Uart2_RS485_V8 with the correct 

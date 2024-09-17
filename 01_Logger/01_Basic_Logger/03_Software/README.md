@@ -3,7 +3,7 @@ Software
 
 # Configuration File
 
-The configuration file contains important inforamtion on the loggers behaviour and is placed on its SD card.
+The configuration file contains important information on the loggers behaviour and is placed on its SD card.
 
 ## File preparation
 Prepare a configuration JSON file with the configuration interface installed on the server (e.g. hyfive.info:4000). The configuration file contains information from the database such as
@@ -17,7 +17,7 @@ Prepare a configuration JSON file with the configuration interface installed on 
 - *contact information*
 - *sensor inforamtion* - sensor_ids, calbration information, sensor_type
 
-and other additional inforamtion for the functionality:
+and other additional information for the functionality:
 - *WiFi credentials*
 - *config_update_periode*		- interval in seconds when to check for update
 - *status_upload_periode*		- interval in seconds when to upload new status
@@ -54,21 +54,21 @@ The logger is programmed in C++ with the PlatformIO plugin of VS Code and uses t
 
 The software runs on the microcontoller of the logger. The code integrates multiple sensors that are attached to the electronics, collects their measured values
 and stores them on an SD card. It is able to detect the state (inside or outside of the water) by readings of the sensors. After surfacing it transfers the data wireless.
-A state machine of the software is given in the figure below. Libraries with functions to take readings of the sensors musst be implemented into the code according to
-the hardware setup. Taking timing of sensors and their cahracteristics into account is important to look into before deploying a system.
+A state machine of the software is given in the figure below. Libraries with functions to take readings of the sensors must be implemented into the code according to
+the hardware setup. Before deploying a system it is important, to look into the timing of sensors and their characteristics.
 
 <figure> 
-   <img src="media/Flowchart.jpg"  width="400">
+   <img src="media/Flowchart.jpg"  width="600">
 
    <figurecaption><a name="figure1">*Figure 1:*</a> *Flowchart of the software*</figurecaption>
 </figure>
 
 To adapt the software it is important to look into the functions:
 
-- Logger::init(): reads in the config file and sets up some important behaviour
-- measure(&sample): takes reading of the sensors. In this timing of the individual sensors must be met to read them out properly and not have a long delay. Some sensors, such as oxygen, are compensated by temperature 
-and need the value in before.
-- loop(): the main loop with the state machine
+- Logger::init(): Reads in the config file and sets up some important behaviour
+- measure(&sample): Takes reading of the sensors. Here the timing of the individual sensors must be met to read them out properly and not have a long delay. Some sensors, such as oxygen, are compensated by temperature 
+and need that value in before.
+- loop(): The main loop with the state machine
 
 # Flash the ESP32
 The UART programmer listed in the BOM of the folder *01_Hardware* can be used to flash the ESP32. The pins should be connected to the Molex 15134-0602 as follows where pin DTR on the PCB (lowest one of the Molex connector 
