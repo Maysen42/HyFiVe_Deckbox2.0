@@ -55,6 +55,7 @@ A pressure relief valve is integrated for several reasons. The valve is opened w
 3D printed mountings were developed to hold the electronic components inside the logger. The mounting is attached to the same end cap the sensors are fed through. In this way all electronic components and most cables can be extracted on one side of the logger. The mounting is attached with a single screw in the centre of the cap, please see Figure 1.
 
 Manually designing mounting, that connects more than two components in a three-dimensional room, can be a tiring and error prone job, especially if the position of the components is changing during development. To facilitate the design process, the generative design function of Fusion 360 was used. After defining surfaces, which shall be connected, and volumes, which are blocked, the software proposes different solutions. The results are organic looking, tree-like bodies, which can be easily adapted by changing the input and recalculation. 
+
 <figure>
    <img src="media/electronic_mounting_modeled.png"  height="300" title="mounting_modeled">
    <img src="media/electronic_mounting_printed.jpg"  height="300" title="mounting_printed">
@@ -73,6 +74,7 @@ These features are only available for the modular logger and descriped under [01
 
 ## Otter board mounting
 The logger can be deployed on a trawl. For this use case we developed an own mounting, which is described in the folder in [./04_otter_board_mounting](./04_otter_board_mounting/readme.md). 
+
 <figure> 
    <img src="media/otter_board_mounting.jpg"  width="700" title="otter_board_mounting">
 
