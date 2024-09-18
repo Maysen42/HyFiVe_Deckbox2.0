@@ -169,30 +169,33 @@ const ChartLayout = ({
           const filteredMeasurements = measurements.filter((measurement: any) => measurement !== false);
 
           getSalinity(filteredMeasurements).then((res) => {
-            const salinityData = res.data.map((salinity: number, index: number) => {
-              maxSalinity = Number(salinity) > maxSalinity ? Number(salinity) : maxSalinity;
+            let salinityArray = [];
+            let salinityData = [];
+            if (res.data) {
+              salinityData = res.data.map((salinity: number, index: number) => {
+                maxSalinity = Number(salinity) > maxSalinity ? Number(salinity) : maxSalinity;
 
-              return {
+                return {
+                  parameter: "salinity",
+                  value: salinity,
+                  measuring_time: newData["temperature-" + temperature.sensor_id][index]?.measuring_time,
+                  pressure: newData["temperature-" + temperature.sensor_id][index]?.pressure,
+                  depth: newData["temperature-" + temperature.sensor_id][index]?.depth,
+                  sensor_id: 0,
+                };
+              });
+
+              const salinityObj = {
+                ...pressureObj,
                 parameter: "salinity",
-                value: salinity,
-                measuring_time: newData["temperature-" + temperature.sensor_id][index]?.measuring_time,
-                pressure: newData["temperature-" + temperature.sensor_id][index]?.pressure,
-                depth: newData["temperature-" + temperature.sensor_id][index]?.depth,
+                value: maxSalinity,
+                unit: "PSU",
                 sensor_id: 0,
               };
-            });
-
-            const salinityObj = {
-              ...pressureObj,
-              parameter: "salinity",
-              value: maxSalinity,
-              unit: "PSU",
-              sensor_id: 0,
-            };
-
-            const salinityArray = [{ ...salinityObj }] as any[];
-            const tmp = upAndDownCastCalculationService.execute(salinityData as unknown as DataPoint[]);
-            castDataObj["salinity-0"] = tmp;
+              salinityArray = [{ ...salinityObj }] as any[];
+              const tmp = upAndDownCastCalculationService.execute(salinityData as unknown as DataPoint[]);
+              castDataObj["salinity-0"] = tmp;
+            }
 
             if (oxygen) {
               const oxygenData = res.data.map((salinity: number, index: number) => {
@@ -314,7 +317,7 @@ const ChartLayout = ({
       {(!completeParameterData || completeParameterData.length === 0 || logger === -1 || deployment === -1) && (
         <NoDiagramData />
       )}
-      {completeParameterData.map((obj: ParameterDataForDeployment) => (
+      {completeParameterData?.map((obj: ParameterDataForDeployment) => (
         <div key={obj.parameter + "-" + obj.sensor_id} className=" flex-grow flex justify-center ">
           <ChartWrapper dataLoading={dataLoading} width={width}>
             {diagramData[obj.parameter + "-" + obj.sensor_id] !== undefined && logger > -1 && deployment > -1 && (

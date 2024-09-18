@@ -19,9 +19,10 @@ import { observer } from "mobx-react-lite";
 interface TableWrapperProps {
   setPopUpVisible: (visible: boolean) => void;
   tableData: SwitchTableData[];
+  isDataLoading?: boolean;
 }
 
-const TableWrapper = ({ setPopUpVisible, tableData }: TableWrapperProps): JSX.Element => {
+const TableWrapper = ({ setPopUpVisible, tableData, isDataLoading }: TableWrapperProps): JSX.Element => {
   return (
     <div className="relative basis-full overflow-x-auto sm:basis-2/3 ">
       <CardWrapper
@@ -29,7 +30,7 @@ const TableWrapper = ({ setPopUpVisible, tableData }: TableWrapperProps): JSX.El
         hasMap={false}
         id={OverviewAnchors.OverviewDeployments}
       >
-        <Table data={tableData} maxHeight={"max-h-64"} hasTableWrapper={true} />
+        <Table data={tableData} maxHeight={"max-h-64"} hasTableWrapper={true} isLoading={isDataLoading} />
         <div className="mt-4 flex justify-center">
           <Button
             text={"Show all"}

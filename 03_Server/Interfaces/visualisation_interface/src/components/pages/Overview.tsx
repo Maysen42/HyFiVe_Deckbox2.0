@@ -35,6 +35,7 @@ const Overview = (): JSX.Element => {
   const [region, setRegion] = useState<Region>();
   const [platform, setPlatform] = useState<number>(-1);
   const [applyClicked, setApplyClicked] = useState<boolean>(false);
+  const [isDataLoading, setIsLoading] = useState<boolean>(false);
   const [trackData, setTrackData] = useState<OverviewDeploymentTrackData[]>([]);
 
   /**
@@ -42,6 +43,7 @@ const Overview = (): JSX.Element => {
    * Sets the deployment track data and updates the data store.
    */
   const getOverviewDeploymentDataByTimePlatformAndRegion = useCallback(async () => {
+    setIsLoading(true);
     const res = await deploymentService.getOverviewDeploymentDataByTimePlatformAndRegion(
       region || undefined,
       platform || undefined,
@@ -58,6 +60,7 @@ const Overview = (): JSX.Element => {
         ? completeArray.filter((obj: SwitchTableData) => obj.showInMap)
         : completeArray;
     setTrackData(filteredData);
+    setIsLoading(false);
   }, [applyClicked]);
 
   useEffect(() => {
@@ -91,7 +94,13 @@ const Overview = (): JSX.Element => {
             applyClicked={applyClicked}
             setApplyClicked={setApplyClicked}
           />
-          {!popUpVisible && <TableWrapper setPopUpVisible={setPopUpVisible} tableData={overviewDeploymentTrackData} />}
+          {!popUpVisible && (
+            <TableWrapper
+              setPopUpVisible={setPopUpVisible}
+              tableData={overviewDeploymentTrackData}
+              isDataLoading={isDataLoading}
+            />
+          )}
         </div>
         <CardWrapper
           text={"Measurement locations (start positions of deployments)"}
