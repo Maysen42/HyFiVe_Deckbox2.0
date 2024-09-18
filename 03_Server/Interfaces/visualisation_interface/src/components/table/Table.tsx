@@ -22,12 +22,13 @@ import { observer } from "mobx-react-lite";
  */
 interface TableProps {
   data: SwitchTableData[];
+  isLoading?: boolean;
   maxHeight?: string;
   textSize?: string;
   hasTableWrapper?: boolean;
 }
 
-const Table = ({ data, maxHeight, textSize, hasTableWrapper }: TableProps): JSX.Element => {
+const Table = ({ data, maxHeight, textSize, hasTableWrapper, isLoading }: TableProps): JSX.Element => {
   const [tableData, setTableData] = useState<SwitchTableData[]>(data);
   const [sorted, setSorted] = useState<boolean>(false);
   const { data: dataStore } = useStore();
@@ -238,12 +239,17 @@ const Table = ({ data, maxHeight, textSize, hasTableWrapper }: TableProps): JSX.
 
   return (
     <div className="overflow-x-auto rounded-t-lg shadow-md">
-      {(!tableData || tableData?.length === 0) && (
+      {isLoading && (
+        <div className="w-full flex justify-center items-center">
+          <img className="z-0" src="pulse_load.svg" width={200} height={300} />
+        </div>
+      )}
+      {(!tableData || tableData?.length === 0) && !isLoading && (
         <div className="px-6 py-24 text-danube-900 text-sm text-center bg-danube-50">
           No data is available for the entered filter criteria.
         </div>
       )}
-      {tableData && tableData?.length > 0 && (
+      {tableData && tableData?.length > 0 && !isLoading && (
         <div
           className={`grid grid-rows-1 bg-white gap-1 min-w-[800px] ${textSize === "small" ? "text-xs" : "text-sm"}`}
         >

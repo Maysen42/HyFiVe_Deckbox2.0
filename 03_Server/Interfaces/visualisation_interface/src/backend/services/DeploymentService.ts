@@ -85,10 +85,19 @@ export class DeploymentService extends BackendDbService {
       )
       .where("processedData.valid", "=", 1)
       .where(sql`ST_AsText(sensorData.measuring_location)`, "!=", "POINT(-999 -999)")
-      .leftJoin("PlatformContainsLogger", "sensorData.logger_id", "PlatformContainsLogger.logger_id")
+      .innerJoin("PlatformContainsLogger", (join) =>
+        join
+          .on((eb) =>
+            eb.and([
+              eb("sensorData.measuring_time", ">=", eb.ref("PlatformContainsLogger.time_start")),
+              eb("sensorData.measuring_time", "<=", eb.ref("PlatformContainsLogger.time_end")),
+            ])
+          )
+          .onRef("sensorData.logger_id", "=", "PlatformContainsLogger.logger_id")
+      )
       .leftJoin("Platform", "Platform.platform_id", "PlatformContainsLogger.platform_id")
       .leftJoin("Vessel", "Platform.platform_id", "Vessel.platform_id")
-      .leftJoin("Deployment", (join) =>
+      .innerJoin("Deployment", (join) =>
         join
           .onRef("Deployment.deployment_id", "=", "sensorData.deployment_id")
           .onRef("Deployment.logger_id", "=", "sensorData.logger_id")
