@@ -24,14 +24,14 @@ After comparing several variants, we decided to manufacture the mounting from a 
 
 The back inlay can be removed to insert or extract the logger. The back inlay is locked with a single bolt, which is secured with a splint. In this way we avoid a screw and are close to the usual tools of fishermen.  
 
-<figure>
+- <figure>
    <img src="media/otter_board_mounting_2.jpg"  height="330" title="otter_board_mounting_front">
    <img src="media/otter_board_mounting.jpg"  height="330" title="otter_board_mounting_back">
    
    <figurecaption><a name="figure2">*Figure 2:*</a> *Otter board mounting with inserted 3D printed inlays; front inlay secured with screws (left) and back inlay secured with bolt and split pin (right)*</figurecaption>
  </figure>
 
- <figure>
+- <figure>
    <img src="media/welding_stencil.jpg"  height="330" title="welding_stencil">
    <img src="media/Insert_logger.jpg"  height="330" title="insert_logger">
    

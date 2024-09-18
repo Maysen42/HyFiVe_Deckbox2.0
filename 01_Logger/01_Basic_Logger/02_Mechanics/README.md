@@ -56,7 +56,7 @@ A pressure relief valve is integrated for several reasons. The valve is opened w
 
 Manually designing mounting, that connects more than two components in a three-dimensional room, can be a tiring and error prone job, especially if the position of the components is changing during development. To facilitate the design process, the generative design function of Fusion 360 was used. After defining surfaces, which shall be connected, and volumes, which are blocked, the software proposes different solutions. The results are organic looking, tree-like bodies, which can be easily adapted by changing the input and recalculation. 
 
-<figure>
+- <figure>
    <img src="media/electronic_mounting_modeled.png"  height="300" title="mounting_modeled">
    <img src="media/electronic_mounting_printed.jpg"  height="300" title="mounting_printed">
    
