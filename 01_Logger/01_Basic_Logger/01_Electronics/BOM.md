@@ -1,18 +1,17 @@
 
-Bil of Materials
-================
+# Basic Logger - Electronics - Bill of Material
 
-# Electronics main PCB
+# Main PCB
   
-To manufacture the electronic hardware of a logger order the PCB in **/Rev_01**. To assemble the PCB to your needs follow the instructions and the bill of materials in the tables below. The schematics and board design in **/Rev_01** provide additional information for the assembly.  
+To manufacture the electronic hardware of a logger order the PCB in **/Rev_01** at the manufacturer of your choice. To assemble the PCB to your needs follow the instructions and the bill of materials in the tables below. The schematics and board design in **/Rev_01** provide additional information for the assembly.  
 
- **Note:** The connection between the hardware and software is very close in this embedded design. Understanding and testing the the hardware in detail is highly recommended before usage. GPIOs of the µC are in the code to switch components such as sensors and the SD card and can lead to errors in case of changes.
-## Main components for PCB Rev_01
+ **Note:** The connection between the hardware and software is very close in this embedded design. Understanding and testing the the hardware in detail is highly recommended before usage. GPIOs of the micro controller are used in the code to switch components such as sensors and the SD card and can lead to errors in case of changes.
 
+## Main Components for PCB Rev_01
 
-These are components needed in any case to run the microcontroller and his basic functions.
+These are components needed in any case to run the micro controller and his basic functions.
 
-U3 is used to protect the power supply from deep discharge. Wit the combination of R22 and R21 it will turn everything off, when the battery is lower than 3.55 V. If this is not needed, bridge pin 7 & 8 of U3.
+U3 is used to protect the power supply from deep discharge. With the combination of R22 and R21 it will turn everything off, when the battery falls below 3.55 V. If this is not needed, bridge pin 7 & 8 of U3.
 
 **Note:** when using Blue Robotics sensors, I2C1 and I2C2 should be replaced with BM04B-GHS-TBT to connect them easily.
 |Reference|Amount|Value|Footprint|Manufacturer Part Number|
@@ -44,7 +43,7 @@ U3 is used to protect the power supply from deep discharge. Wit the combination 
 ### UART1 with boost converter (13V) and optional RS485
 
 
-These components enable a higher supply voltage for one sensor. The voltage can be adjusted bythe setup of R3, R23, R2 and R24.
+These components enable a higher supply voltage for one sensor. The voltage can be adjusted by the setup of R3, R23, R2 and R24.
 |Reference|Amount|Value|Footprint|Manufacturer Part Number|
 | :---: | :---: | :---: | :---: | :---: |
 |C18|1|10µ|Capacitor_SMD:C_0805_2012Metric|TMK212BBJ106KG8T|
@@ -64,12 +63,10 @@ These components enable a higher supply voltage for one sensor. The voltage can 
 
 ### UART1 or RS485
 
-
 For using UART1 use
 |Reference|Amount|Value|Footprint|Manufacturer Part Number|
 | :---: | :---: | :---: | :---: | :---: |
 |R40, R42|2|0|Resistor_SMD:R_0603_1608Metric||
-
 
 For using RS485 use
 |Reference|Amount|Value|Footprint|Manufacturer Part Number|
@@ -79,7 +76,6 @@ For using RS485 use
 |U1|1|THVD14x9|Package_SO:SOIC-8_3.9x4.9mm_P1.27mm|THVD1429DT|
 
 ### UART2, 3.3V
-
 
 UART2 runs with 3.3V and can be switched off by a high side switch.
 |Reference|Amount|Value|Footprint|Manufacturer Part Number|

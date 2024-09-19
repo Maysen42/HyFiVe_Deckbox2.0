@@ -1,12 +1,14 @@
-Software
-=====
+# Basic Logger - Software
 
-# Configuration File
+## Configuration File
 
-The configuration file contains important information on the loggers behaviour and is placed on its SD card.
+The configuration file contains parameters, which can be changed to control the behavior of the logger. An example file is located in this folder, containing all config parameters, see [./logger_10_config_202405071357.json](./logger_10_config_202405071357.json). 
 
-## File preparation
-Prepare a configuration JSON file with the configuration interface installed on the server (e.g. hyfive.info:4000). The configuration file contains information from the database such as
+The basic logger is not using the full set of config parameters included in the config file. 
+
+### Config Parameters
+
+The configuration file contains information from the database such as
 - *logger_id*
 - *operation_mode*
 - *fw_version*
@@ -34,9 +36,10 @@ and other additional information for the functionality:
 - *dry_det_verify_delay*	- time in seconds after which the logger will transmitt the measured data
 - *data_upload_retry_periode*	- interval in seconds  after which the logger will try to transmitt data again, if it did not work the las time
 
-A demonstation file is given with logger_10_config_202405071357.json
 
-## Micro SD card
+### Preparing the SD Card and Inserting Config File
+Prepare a configuration JSON file with the configuration interface installed on the server (e.g. hyfive.info:4000). 
+
 Prepare a micro SD card (4GB) formatted in FAT32 with the following folders and a configuration file to then insert it into the micro SD card holder J9 on the PCB:
 ```
 \measurements\
@@ -48,39 +51,37 @@ Prepare a micro SD card (4GB) formatted in FAT32 with the following folders and 
 	measurements\
 ```
 
-# Software to run the logger with all features
+## Software to Run the Logger with All Features
 
-The logger is programmed in C++ with the PlatformIO plugin of VS Code and uses the arduino framework.
+The logger is programmed in C++ with the PlatformIO plugin of VS Code and uses the Arduino framework.
 
-The software runs on the microcontoller of the logger. The code integrates multiple sensors that are attached to the electronics, collects their measured values
-and stores them on an SD card. It is able to detect the state (inside or outside of the water) by readings of the sensors. After surfacing it transfers the data wireless.
-A state machine of the software is given in the figure below. Libraries with functions to take readings of the sensors must be implemented into the code according to
+The software runs on the micro controller of the logger. The code integrates multiple sensors that are attached to the electronics, collects their measured values
+and stores them on a SD card. It is able to detect the state (inside or outside of the water) by readings of the sensors. After surfacing it transfers the data wireless.
+The state machine of the software is depicted in the figure below. Libraries with functions to take readings of the sensors must be implemented into the code according to
 the hardware setup. Before deploying a system it is important, to look into the timing of sensors and their characteristics.
 
 <figure> 
    <img src="media/Flowchart.jpg"  width="600">
 
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Flowchart of the software*</figurecaption>
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Flowchart of the software's state machine*</figurecaption>
 </figure>
 
 To adapt the software it is important to look into the functions:
 
-- Logger::init(): Reads in the config file and sets up some important behaviour
-- measure(&sample): Takes reading of the sensors. Here the timing of the individual sensors must be met to read them out properly and not have a long delay. Some sensors, such as oxygen, are compensated by temperature 
-and need that value in before.
+- Logger::init(): Reads in the config file and sets up some important behavior
+- measure(&sample): Takes reading of the sensors. Here the timing of the individual sensors must be met to read them out properly and not have a long delay. Some sensors, such as oxygen, are compensated by temperature and need that value before.
 - loop(): The main loop with the state machine
 
-# Flash the ESP32
-The UART programmer listed in the BOM of the folder *01_Hardware* can be used to flash the ESP32. The pins should be connected to the Molex 15134-0602 as follows where pin DTR on the PCB (lowest one of the Molex connector 
-in the picture) must be unpluggable easily from CTS of the programmer. We recommend using a female pin header.
+## Flash the Micro Controller ESP32
+The UART programmer listed in the BOM of the folder *01_Hardware* can be used to flash the ESP32. The pins should be connected to the Molex 15134-0602 as follows where pin DTR on the PCB (lowest one of the Molex connector in the picture) must be easy to unplug from CTS of the programmer. We recommend using a female pin header.
 
 <figure> 
-   <img src="media/connector.png"  width="400" title="finished_logger">
+   <img src="media/connector.png"  width="600" title="finished_logger">
 
    <figurecaption><a name="figure2">*Figure 2:*</a> *Connection of the programmer to Molex 15134-0602 with a female pin header on the lowest pin.*</figurecaption>
 </figure>
 
-The PCB is powerd by the battery and not the USB. The flow of programming is as follows:
+The PCB is powered by the battery and not the USB. The flow of flashing the micro controller is as follows:
 1. Connect DTR to CTS.
 2. Supply the PCB with power.
 3. Click PlatformIO: Upload
