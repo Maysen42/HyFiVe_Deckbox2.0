@@ -4,7 +4,7 @@
 
 The configuration file contains parameters, which can be changed to control the behavior of the logger. An example file is located in this folder, containing all config parameters, see [./logger_10_config_202405071357.json](./logger_10_config_202405071357.json). 
 
-The basic logger is not using the full set of config parameters included in the config file. 
+Although it needs a correct config file, the basic logger is not using the full set of config parameters included in the config file. For a detailed description of all parameters incl. which are used by the basic logger, please s. [02_modular_logger/03_software](../../02_Modular_Logger/03_Software/README.md) 
 
 ### Config Parameters
 
@@ -35,7 +35,6 @@ and other additional information for the functionality:
 - *dry_det_threshold*		- threshold to detect if the logger has left the water
 - *dry_det_verify_delay*	- time in seconds after which the logger will transmitt the measured data
 - *data_upload_retry_periode*	- interval in seconds  after which the logger will try to transmitt data again, if it did not work the las time
-
 
 ### Preparing the SD Card and Inserting Config File
 Prepare a configuration JSON file with the configuration interface installed on the server (e.g. hyfive.info:4000). 

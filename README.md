@@ -21,9 +21,9 @@ For this use case we developed a very flexible autonomous measuring system, whic
 ## The HyFiVe System
 
 This measuring system essentially consists of three components: 
-1. Logger: Measures data with implemented OEM sensors while in the water and transmits them wireless afterwards.
-2. Deck box: Receives measuring data via wifi, geo-references and stores it, visualizes it locally via webservice and transmits it to shore. The deck box also forwards config updates from server to loggers.
-3. Land-Based Server: Central infrastructure with a relational database, a configuration interface for remote maintenance and a tool for visualization of measuring data.
+1. [Logger](./01_Logger/README.md): Measures data with implemented OEM sensors while in the water and transmits them wireless afterwards.
+2. [Deck box](./02_Deckbox/README.md): Receives measuring data via wifi, geo-references and stores it, visualizes it locally via webservice and transmits it to shore. The deck box also forwards config updates from server to loggers.
+3. [Land-Based Server](./03_Server/Readme.md): Central infrastructure with a relational database, a configuration interface for remote maintenance and a tool for visualization of measuring data.
 
 The HyFiVe system offers many advantages:
 - Autonomous operation up to several month
@@ -43,7 +43,7 @@ The system was developed in an agile method, so prototypes were built from an ea
 <figure> 
    <img src="media/System_overview.svg"  title="system_overview">
 
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Logger (left), deck box (middle) and server (right) - the three components of the HyFiVe measuring system*</figurecaption>
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Logger, deck box and server - the three components of the HyFiVe measuring system*</figurecaption>
 </figure>
 
 ## Github Repository
