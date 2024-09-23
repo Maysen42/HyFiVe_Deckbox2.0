@@ -1,43 +1,12 @@
-# Update of Logger Configuration
-
-## Purpose
-
-An aim of the HyFiVe project is, that a fleet of measuring systems can be managed with small effort. Therefore we developed a possibility to change the configuration of loggers, which are already deployed on a remote vessel. 
-
-Therefore we defined a set of config parameters, which are stored in a config.json file and described below. The config files can be created with an webinterface and are handed down from  server to loggers. 
+# Updating a Logger's Configuration Remotely
 
 ## Configuration parameters and JSON file
 
-All config parameters are stored in a config.json file, an example is given in this folder. The table down below contains all config parameters with a brief description.The modular logger uses all config parameters. The basic logger needs a correct config file, but processes only few parameters from it, as indicated in the table.
+All config parameters are stored in a config.json file, an example is given in [./logger_10_config_202405071357.json](./logger_10_config_202405071357.json). The table down below contains all config parameters with a brief description.
+
+The modular logger uses all config parameters. The basic logger needs a correct config file, but processes only few parameters from it, as indicated in the table.
 
 This table is also given as [excel table](./logger_config_parameters.xlsx) containing additional information (data type of parameter on modular logger and information if and how the parameter can be found in the data base). 
-
-## Data Flow: Handing Config Files from Server to Logger
-
-1. Creation:  
-After creation by the webinterface, the config files are stored on the server:
-    - location: mailbox/out/config/logger_ID/
-    - file name: logger_ID_config_DATE, with DATE like YYYYMMDDHHMM, e.g. logger_10_config_202405071357
-The format of the file name is important and shall not be altered, as the ID in the file name is used to them assign to the right logger and the date is used to identify the latest file. 
-2. Transmission from server to deck box:   
-Each deck box copies all config files from the server to a local repository. This is done in regular intervals by a flow in NodeRED on the deck box. 
-3. Transmission from deck box to logger:  
-As a deck box does not know which loggers are close and also has no way (implemented) to start a MQTT connection, the loggers need to ask for updates. They do this in regular intervals given by the config parameter config_update_periode. The process is described in detail below. 
-
-## Creating a Config File: The Configuration Interface
-
-We engaged a external software company to develop an interface. The interface has the following functionalities: 
-- Gives an overview of all loggers:
-    - Currently assigned deck box and vessel
-    - Status information
-        - Battery remaining
-        - Memory remaining
-    - Last position shown on map
-- Change config parameters of loggers:
-    - including sensor information
-    - Creating new config files
-    - Also writing changes in relational data base
-- Create config files and database entries for new loggers and sensors
 
 
 ## Transmitting a Config File from Deck Box to Logger via MQTT

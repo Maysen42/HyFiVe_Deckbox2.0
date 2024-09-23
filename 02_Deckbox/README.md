@@ -1,5 +1,11 @@
 # Deck box
 
+<figure> 
+   <img src="./01_Hardware/media/deckbox_on_deck2.jpg"  width=700 title="deckbox_on_deck">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Deck box installed on mast of fishing vessel using steel mounting*</figurecaption>
+</figure>
+
 ## Main Components
 
 The main hardware components of the deck box are:
@@ -37,11 +43,6 @@ To build and configure a deck box follow the instructions in the following chapt
 <figure> 
    <img src="./01_Hardware/media/whole_deckbox_named.svg"  width=700 title="whole_deckbox_named">
 
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Look inside a deck box*</figurecaption>
+   <figurecaption><a name="figure2">*Figure 2:*</a> *Look inside a deck box*</figurecaption>
 </figure>
 
-<figure> 
-   <img src="./01_Hardware/media/deckbox_on_deck2.jpg"  width=700 title="deckbox_on_deck">
-
-   <figurecaption><a name="figure2">*Figure 2:*</a> *Deck box installed on mast of fishing vessel using steel mounting*</figurecaption>
-</figure>
