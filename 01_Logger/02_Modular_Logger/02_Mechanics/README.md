@@ -1,6 +1,6 @@
 # Mechanics: Differences of Modular Logger to Basic Logger
 
-The mechanic hardware is almost the same for the basic and the modular version of the logger. For a detailed description of this topic please go to [01_Logger/01_Basic_Logger/02_Mechanics](../../01_Basic_Logger/02_Mechanics/README.md).
+The mechanic hardware is almost the same for the basic and the modular version of the logger. For a detailed description of this topic please go to [01_Logger/01_Basic_Logger/02_Mechanics](../../01_Basic_Logger/02_Mechanics/).
 
 There are only two differences to the basic logger:
 

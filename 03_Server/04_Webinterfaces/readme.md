@@ -6,9 +6,9 @@ The source code for the interfaces is published in the subfolders, incl. instruc
 
 ## Configuration Interface
 
-Detailed information about config parameters and data transmission can be found in [bi_directional_communication](../../bi_directional_communication/README.md).
+Detailed information about config parameters and data transmission can be found in [bi_directional_communication](../../bi_directional_communication/).
 
-The [configuration interface](./config_interface/README.md) has the following functionalities: 
+The [configuration interface](./config_interface/) has the following functionalities: 
 - Gives an overview of all loggers:
     - Currently assigned deck box and vessel
     - Status information
@@ -25,7 +25,7 @@ The configuration interface has to interact with "two points of truth": The data
 
 ## Visualisation interface
 
-The [visualisation interface](./visualisation_interface/README.md) is reachable under [http://hyfive.info:4001](http://hyfive.info:4001) has the following functionalities:
+The [visualisation interface](./visualisation_interface/) is reachable under [http://hyfive.info:4001](http://hyfive.info:4001) has the following functionalities:
 - Visualising all measurement data in the HyFiVe database
 - Giving an overview of measurements
     - Filter date, region and vessel
@@ -44,19 +44,19 @@ The visualisation interface interacts with the database by SQL requests to recei
 ## Pictures of Interfaces
 
 <figure> 
-   <img src="./media/config_1_overview.png" title="config_1_overview">
+   <img src="./media/config_1_overview.png" width=800 title="config_1_overview">
 
    <figurecaption><a name="figure1">*Figure 1:*</a> *Config interface - Overview*</figurecaption>
 </figure>
 
 <figure> 
-   <img src="./media/config_2_logger.PNG" title="config_2_logger">
+   <img src="./media/config_2_logger.png" width=800 title="config_2_logger">
 
    <figurecaption><a name="figure2">*Figure 2:*</a> *Config interface - Logger*</figurecaption>
 </figure>
 
 <figure> 
-   <img src="./media/config_3_sensor.PNG" title="config_3_sensor">
+   <img src="./media/config_3_sensor.png" width=800 title="config_3_sensor">
 
    <figurecaption><a name="figure3">*Figure 3:*</a> *Config interface - Sensor*</figurecaption>
 </figure>
@@ -64,20 +64,20 @@ The visualisation interface interacts with the database by SQL requests to recei
 ---
 
 <figure> 
-   <img src="./media/vis_1_overview.PNG" title="vis_1_overview">
+   <img src="./media/vis_1_overview.png" width=800 title="vis_1_overview">
 
    <figurecaption><a name="figure4">*Figure 4:*</a> *Visualisation interface - Overview*</figurecaption>
 </figure>
 
 
 <figure> 
-   <img src="./media/vis_2_plots1.PNG" title="vis_2_plots1">
+   <img src="./media/vis_2_plots1.png" width=800 title="vis_2_plots1">
 
    <figurecaption><a name="figure5">*Figure 5:*</a> *Visualisation interface - Plots Part 1*</figurecaption>
 </figure>
 
 <figure> 
-   <img src="./media/vis_2_plots2.PNG" title="vis_2_plots2">
+   <img src="./media/vis_2_plots2.png" width=800 title="vis_2_plots2">
 
    <figurecaption><a name="figure6">*Figure 6:*</a> *Visualisation interface - Plots Part 2*</figurecaption>
 </figure>

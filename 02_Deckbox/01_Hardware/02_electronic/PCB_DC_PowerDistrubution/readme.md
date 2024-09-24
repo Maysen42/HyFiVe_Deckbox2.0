@@ -2,7 +2,7 @@
 
 Both power inputs of the deck box (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse.
 
-More comprehensive documentation in [../../README.md](../../README.md)
+More comprehensive documentation in [Hardware](../../)
 
 <figure> 
    <img src="../../media/deckbox_connection_diagramm.svg"  width="1000" title="deckbox_drilling">

@@ -4,7 +4,7 @@
 
 The configuration file contains parameters, which can be changed to control the behavior of the logger. An example file is located in this folder, containing all config parameters, see [./logger_10_config_202405071357.json](./logger_10_config_202405071357.json). 
 
-Although it needs a correct config file, the basic logger is not using the full set of config parameters included in the config file. For a detailed description of all parameters incl. which are used by the basic logger, please s. [02_modular_logger/03_software](../../02_Modular_Logger/03_Software/README.md) 
+Although it needs a correct config file, the basic logger is not using the full set of config parameters included in the config file. For a detailed description of all parameters incl. which are used by the basic logger, please s. [02_modular_logger/03_software](../../02_Modular_Logger/03_Software/) 
 
 ### Config Parameters
 

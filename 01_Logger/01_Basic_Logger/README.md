@@ -9,13 +9,13 @@ The documentation in this folder will explain how to build a basic logger for CT
 </figure>
 
 
-1. [**Electronics**](./01_Electronics/README.md): The electronics are used to integrate the sensors and transmit data wireless. The corresponding readme of *01_Electronics* explains which components are necessary to assemble for the desired usage.
+1. [**Electronics**](./01_Electronics/): The electronics are used to integrate the sensors and transmit data wireless. The corresponding readme of *01_Electronics* explains which components are necessary to assemble for the desired usage.
 
-2. [**Mechanics**](./02_Mechanics/README.md): The readme of the corresponding subfolder *02_Mechanics* gives a detailed description, how the mechanical hardware (especially the pressure housing and mountings) is designed and how it can be manufactured and assembled.
+2. [**Mechanics**](./02_Mechanics/): The readme of the corresponding subfolder *02_Mechanics* gives a detailed description, how the mechanical hardware (especially the pressure housing and mountings) is designed and how it can be manufactured and assembled.
 
-3. [**Software**](./03_Software/README.md): The software is mostly commented in the code. A brief description however is given in the readme of the subfolder *03_Software* including instructions on how to flash the micro controller.
+3. [**Software**](./03_Software/): The software is mostly commented in the code. A brief description however is given in the readme of the subfolder *03_Software* including instructions on how to flash the micro controller.
  
-4. [**Sensors**](./04_Sensors/README.md): The sensors that have been tested so far are listed and described briefly in *04_Sensors*. For every sensor there is an explanation of how to connect it to the PCB and which libraries are relevant in the software.
+4. [**Sensors**](./04_Sensors/): The sensors that have been tested so far are listed and described briefly in *04_Sensors*. For every sensor there is an explanation of how to connect it to the PCB and which libraries are relevant in the software.
 
 	A cap with four sensors for CTD and Oxygen mounted is displayed in the images below.
 <figure>

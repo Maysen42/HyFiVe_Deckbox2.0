@@ -10,9 +10,9 @@ The main PCB is designed to run the operations of the logger. It features an ESP
 	- 2x UART
 	- 1x RS485
 
-To select possible sensors to implement take a look into the subfolder [*../04_Sensors*](../04_Sensors/README.md). The list can of course be extended. So far all sensors except the ones by BlueRobotics are connected with Molex PicoBlade connectors. How to connect each sensor in hardware is described in the sensor readme.
+To select possible sensors to implement take a look into the subfolder [*../04_Sensors*](../04_Sensors/). The list can of course be extended. So far all sensors except the ones by BlueRobotics are connected with Molex PicoBlade connectors. How to connect each sensor in hardware is described in the sensor readme.
 
-How to program the electronics after manufacturing is explained in the subfolder [*../03_Software*](../03_Software/README.md).
+How to program the electronics after manufacturing is explained in the subfolder [*../03_Software*](../03_Software/).
 
 A basic version of the PCB is shown in the image below.
 

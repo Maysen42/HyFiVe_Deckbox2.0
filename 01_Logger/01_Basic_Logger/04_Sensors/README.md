@@ -5,7 +5,7 @@
 We spend significant time researching available sensors and made a comparison in respect to all aspects, relevant for integrating in our logger (e.g. openness and documentation of interfaces, price, accuracy, ...). We chose and tested the sensors described below. Nevertheless the system can easily integrate other sensors.
 
 ## Integrated Sensors
-The following sensors have been integrated and tested in hardware and software. Every sensor in this list has a brief description of how to place it into the end cap, connect to the PCB, and a link to the software to implement it. The positions in the end cap can be taken from the drawings in the folder [*02_Mechanic*](../02_Mechanics/README.md). As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: 
+The following sensors have been integrated and tested in hardware and software. Every sensor in this list has a brief description of how to place it into the end cap, connect to the PCB, and a link to the software to implement it. The positions in the end cap can be taken from the drawings in the folder [*02_Mechanic*](../02_Mechanics/). As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: 
 - Atlas Scientific K1.0, 
 - Blue Robotics Celsius fast response, 
 - Keller Series 20, 
@@ -17,7 +17,7 @@ Calibrate all sensors according to the manual.
 
 - Atlas Scientific K 0.1, K 1.0 (https://files.atlas-scientific.com/EC_K_0.1_probe.pdf)
 	- *Hardware:* 
-		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed description under [../02_Mechanics/](../02_Mechanics/README.md). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
+		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed description under [../02_Mechanics/](../02_Mechanics/). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
 	
 		<figure> 
 			<img src="media/glue_preparation.png"  height="200" title="finished_logger">

@@ -64,7 +64,7 @@ Manually designing mounting, that connects more than two components in a three-d
  </figure>
 
 ## Self-Designed Penetrators for Charging and Integration of LED and Magnetic Sensor
-These features are only available for the modular logger and descriped under [01_Logger/02_Modular_Logger/02_Mechanics/](../../02_Modular_Logger/02_Mechanics/README.md).
+These features are only available for the modular logger and descriped under [01_Logger/02_Modular_Logger/02_Mechanics/](../../02_Modular_Logger/02_Mechanics/).
 
 <figure> 
    <img src="media/logger_charging.jpg"  width="700" title="logger_charging">
@@ -73,7 +73,7 @@ These features are only available for the modular logger and descriped under [01
 </figure>
 
 ## Otter board mounting
-The logger can be deployed on a trawl. For this use case we developed an own mounting, which is described in the folder in [./04_otter_board_mounting](./04_otter_board_mounting/readme.md). 
+The logger can be deployed on a trawl. For this use case we developed an own mounting, which is described in the folder in [./04_otter_board_mounting](./04_otter_board_mounting/). 
 
 <figure> 
    <img src="media/otter_board_mounting.jpg"  width="700" title="otter_board_mounting">

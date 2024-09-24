@@ -19,7 +19,7 @@ There is no significant difference between the two versions regarding:
 The main differences between both versions are explained below. Both versions are explained in detail in the corresponding subfolders. 
 
 ### Basic Logger
-The [basic logger](./01_Basic_Logger/README.md) was developed by building prototypes from an early stage on (agile development). The prototypes were deployed in field tests and the results used to improve the design. Until the end of the first HyFiVe project in Sept 2024, all measuring campaigns on more than 10 vessels were conducted with this logger version. 
+The [basic logger](./01_Basic_Logger/) was developed by building prototypes from an early stage on (agile development). The prototypes were deployed in field tests and the results used to improve the design. Until the end of the first HyFiVe project in Sept 2024, all measuring campaigns on more than 10 vessels were conducted with this logger version. 
 
 The electronic design is straight forward and easier to reproduce than the modular logger. It is based on only one PCB. All sensors are directly interfaced to micro controller on the PCB. 
 
@@ -30,7 +30,7 @@ The electronic design is straight forward and easier to reproduce than the modul
 </figure>
 
 ### Modular Logger
-The [modular logger](./02_Modular_Logger/README.md) offers more functionalities and it's design is more complex. The development took more time, so the prototypes could only be tested in harbour tests until the end of the first HyFiVe project in Sept 2024. 
+The [modular logger](./02_Modular_Logger/) offers more functionalities and it's design is more complex. The development took more time, so the prototypes could only be tested in harbour tests until the end of the first HyFiVe project in Sept 2024. 
 
 The modularity is the main difference between both versions: In the modular logger each sensor is connected to one interface PCB. All interface PCBs are connected to a main PCB. The communication between main PCB and interface PCB is standardized. In this way, all sensor specific things can be encapsulated on the interface PCB.
 

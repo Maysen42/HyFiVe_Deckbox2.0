@@ -37,8 +37,8 @@ The Raspberry Pi runs the main functionalities of the deck box:
 ## Instructions
 
 To build and configure a deck box follow the instructions in the following chapters:
-1. [**Hardware:**](./01_Hardware/README.md) Description of the mechanic and electric hardware incl. Bills of Material.
-2. [**Software:**](./02_Software/README.md) Description of the software setup.
+1. [**Hardware:**](./01_Hardware/) Description of the mechanic and electric hardware incl. Bills of Material.
+2. [**Software:**](./02_Software/) Description of the software setup.
 
 <figure> 
    <img src="./01_Hardware/media/whole_deckbox_named.svg"  width=700 title="whole_deckbox_named">

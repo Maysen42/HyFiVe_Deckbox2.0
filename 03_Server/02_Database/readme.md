@@ -16,6 +16,12 @@ During development of the ER model, we aimed to store:
 
 The above aspirations led to the complexity of the ER model. 
 
+<figure> 
+   <img src="./database_ER-model.png" title="database_ER">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Entity-Relational model of the HyFiVe data base*</figurecaption>
+</figure>
+
 ## Installation
 
 Installation of the mariadb-server
@@ -35,13 +41,6 @@ Load the dump file dump-hyfivedb-202408051002.sql. The file contains the structu
 	sudo mariadb
 	mariadb --user admin_restore --password < dump.sql
 ```
-
-<figure> 
-   <img src="./database_ER-model.png" title="database_ER">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Entity-Relational model of the HyFiVe data base*</figurecaption>
-</figure>
-
 
 ## Backups
 
