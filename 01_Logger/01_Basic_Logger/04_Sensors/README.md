@@ -75,15 +75,18 @@ Calibrate all sensors according to the manual.
 	- *Hardware:* 
 		1. The sensor can be placed into the designated hole in the end cap according to the instructions of BlueRobotics without and further preparation.
 		
-		2. The BlueRobotics pressure sensor can directly be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct.
+		2. The BlueRobotics pressure sensor can directly be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct. Regarding the pin assignment: 
+  
 	
 	- *Software:* To integrate the sensor with software, download the Blue Robotics MS5837 Library in PlatformIO an implement it accordingly.
 
-- Keller Series 20 (https://keller-druck.com/en/products/pressure-transducers/oem-pressure-transducers-with-thread/series-20)
+- Keller Series 20D (https://keller-druck.com/en/products/pressure-transducers/oem-pressure-transducers-with-thread/series-20)
 	- *Hardware:*
 		1. The sensors is directly screwed into the inside of the end cap at the according position. Make sure to add some lube on the O-ring and tighten it properly (as the pressure works against the sealing in this case).
 		
 		2. The sensor is connected by a Keller connector board described in the folder *01_Electronics*. It can then be connected to the Molex 53261-0471 on I2C1 or I2C2 with a Molex 15134-0402.
+  		3. Comment on Keller data sheets: Be aware that we used 20D sensor, which is the I2C version. The pin assignment of this sensor can be found in the communication protocol of the 4LD to 9LD sensors (which are incorporated in the 20 series)
+  
 		<figure> 
 			<img src="media/keller_side.png"  height="200" title="finished_logger">
 			<img src="media/keller_top.png"  height="200" title="finished_logger">
