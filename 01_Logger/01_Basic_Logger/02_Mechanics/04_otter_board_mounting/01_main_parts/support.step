@@ -9,12 +9,12 @@ FILE_DESCRIPTION(
 /* implementation_level */ '2;1');
 
 FILE_NAME(
-/* name */ 'foot v5.step',
-/* time_stamp */ '2023-11-20T12:34:02+01:00',
+/* name */ 'support.step',
+/* time_stamp */ '2024-09-25T16:50:25+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20',
-/* originating_system */ 'Autodesk Translation Framework v12.14.0.127',
+/* originating_system */ 'Autodesk Translation Framework v13.20.0.188',
 
 /* authorisation */ '');
 
@@ -26,7 +26,7 @@ DATA;
 #11=SHAPE_REPRESENTATION_RELATIONSHIP('SRR','None',#402,#12);
 #12=ADVANCED_BREP_SHAPE_REPRESENTATION('',(#14),#394);
 #13=STYLED_ITEM('',(#411),#14);
-#14=MANIFOLD_SOLID_BREP('Body2',#235);
+#14=MANIFOLD_SOLID_BREP('K\X\F6rper2',#235);
 #15=FACE_BOUND('',#43,.T.);
 #16=FACE_BOUND('',#44,.T.);
 #17=FACE_BOUND('',#47,.T.);
@@ -263,7 +263,7 @@ POSITIVE_RATIO_MEASURE(7850.),#239);
 #242=PROPERTY_DEFINITION_REPRESENTATION(#247,#244);
 #243=REPRESENTATION('material name',(#245),#394);
 #244=REPRESENTATION('density',(#240),#394);
-#245=DESCRIPTIVE_REPRESENTATION_ITEM('Steel','Steel');
+#245=DESCRIPTIVE_REPRESENTATION_ITEM('Stahl','Stahl');
 #246=PROPERTY_DEFINITION('material property','material name',#404);
 #247=PROPERTY_DEFINITION('material property','density of part',#404);
 #248=AXIS2_PLACEMENT_3D('',#329,#267,#268);
@@ -467,8 +467,9 @@ SOLID_ANGLE_UNIT()
 #412=SURFACE_STYLE_USAGE(.BOTH.,#413);
 #413=SURFACE_SIDE_STYLE('',(#414));
 #414=SURFACE_STYLE_FILL_AREA(#415);
-#415=FILL_AREA_STYLE('Steel - Satin',(#416));
-#416=FILL_AREA_STYLE_COLOUR('Steel - Satin',#417);
-#417=COLOUR_RGB('Steel - Satin',0.627450980392157,0.627450980392157,0.627450980392157);
+#415=FILL_AREA_STYLE('Stahl - satiniert',(#416));
+#416=FILL_AREA_STYLE_COLOUR('Stahl - satiniert',#417);
+#417=COLOUR_RGB('Stahl - satiniert',0.627450980392157,0.627450980392157,
+0.627450980392157);
 ENDSEC;
 END-ISO-10303-21;
