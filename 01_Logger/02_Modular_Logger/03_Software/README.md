@@ -1,8 +1,6 @@
-# Programming Guide: Logger-Mainboard and Interfaceboard
-
-## Content
+# Content
+- [Complete Measurement Cycle](#complete-measurement-cycle)
 - [Programming Guide: Logger-Mainboard and Interfaceboard](#programming-guide-logger-mainboard-and-interfaceboard)
-  - [Content](#content)
   - [Logger-Mainboard Programming](#logger-mainboard-programming)
     - [1. Installing VSCode and PlatformIO IDE](#1-installing-vscode-and-platformio-ide)
     - [2. Opening a Project with PlatformIO](#2-opening-a-project-with-platformio)
@@ -18,6 +16,63 @@
     - [4. Compiling the Project](#4-compiling-the-project)
     - [5. Flashing Firmware and Debugging](#5-flashing-firmware-and-debugging)
     - [6. After Programming](#6-after-programming)
+  - [BMS Programming](#bms-programming)
+    - [1. Prerequisites](#1-prerequisites)
+    - [2. Software Setup](#2-software-setup)
+    - [3. Hardware Connection](#3-hardware-connection)
+    - [4. Firmware Update Procedure](#4-firmware-update-procedure)
+    - [5. Troubleshooting](#5-troubleshooting)
+- [Resetting the Logger](#resetting-the-logger)
+- [Logger Configuration Update](#logger-configuration-update)
+- [LED Behavior](#led-behavior)
+
+# Complete Measurement Cycle
+
+1. Waking up and Initialization:
+   - The logger wakes up from deep sleep.
+   - The system initializes itself.
+
+2. Environment Check:
+   - The logger checks if it's underwater using `checkWetSensorThreshold()`.
+   - If underwater, `performUnderWaterOperations()` is executed.
+
+3. Sensor Activation:
+   - `setRequiredVoltage(true)` activates the necessary voltages for the sensors.
+   - `Logger.sensorWakeupAll()` wakes up all sensors.
+
+4. Measurement Preparations:
+   - `createConfigHeader()` creates the configuration header for the measurement.
+
+5. Measurement Loop:
+   - `startConversionformUnderWaterOperations()` initiates the conversion for all active sensors.
+   - `updateSensorMeasurements()` performs the actual measurements.
+   - For each sensor that needs to take a measurement, `performSensorMeasurement()` is called.
+
+6. Data Processing:
+   - Measurement values are stored in `sensorValue` and `sensorValueRaw`.
+   - `writeMeasurementDataToFile()` writes the data in JSON format to a file.
+
+7. Special Checks:
+   - `checkDryCondition()` checks if the logger is still underwater.
+   - `performSampleCast()` checks if a faster measurement cycle ("Cast") is necessary.
+
+8. Data Transmission (if possible):
+   - If Wi-Fi is available, data is transmitted via MQTT (`transmitDataViaMqtt()`).
+
+9. Periodic Tasks:
+   - Additional functions are executed at regular intervals:
+     - `configUpdatePeriodeFunktion()` for configuration updates
+     - `statusUploadPeriodeFunktion()` for status uploads
+     - `wetDetPeriodeFunktion()` for wet detection
+     - `dataUploadRetryPeriodeFunktion()` for data upload retry attempts
+
+10. Ending Underwater Mode:
+    - If dryness is detected, the system calls `terminateUnderwaterMode()`.
+    - This deactivates sensors, moves data, and prepares the system for surface mode.
+
+[Return to content](#content)
+
+# Programming Guide: Logger-Mainboard and Interfaceboard
 
 ## Logger-Mainboard Programming
 
@@ -64,6 +119,8 @@
 1. Locate the compiled firmware under `.pio\build\HyFiVe_Logger-Mainboard\firmware.bin`.
 2. Copy this file to the "updateFW" folder on the logger's SD card.
 3. The new firmware will be automatically installed on the next start.
+
+[Return to content](#content)
 
 ## Interfaceboard Programming
 
@@ -118,3 +175,52 @@
 1. Turn off the power supply.
 2. Remove the programming connector.
 3. Remove the jumper from X203.
+
+[Return to content](#content)
+
+## BMS Programming
+
+### 1. Prerequisites
+- Ensure the battery voltage and charging voltage of 19V are applied to prevent firmware update failures.
+- The ESP32 must be in `programBms()` state. Adjust this in the `main.cpp` file.
+
+### 2. Software Setup
+1. Download Battery Management Studio (bqStudio) Software from [TI's BQ40Z80 product page](https://www.ti.com/product/BQ40Z80).
+   - Select "BQSTUDIO-STABLE — Battery Management Studio (bqStudio) Software"
+   - Choose the stable version for bq series TI battery fuel gauges.
+  
+### 3. Hardware Connection
+Connect the [BQ40Z80EVM-020](https://www.ti.com/tool/BQ40Z80EVM-020) to the BMS on the Logger-Mainboard (BQ40Z80):
+- Connect pin SMBD1 on BQ40Z80EVM-020 to SDA on Logger-mainboard 'BMS Serial Interface'
+- Connect pin SMBC1 on BQ40Z80EVM-020 to SDC on Logger-mainboard 'BMS Serial Interface'
+
+### 4. Firmware Update Procedure
+1. Open bqStudio and connect to the BMS(BQ40Z80).
+2. Navigate to the Firmware section.
+3. In the Program area, select the appropriate firmware file (with .srec extension).
+4. Click the "Program" button to initiate the firmware upload.
+
+### 5. Troubleshooting
+If the firmware update process is interrupted or fails:
+1. Manually select the chip:
+   - Navigate to: Gauge -> 4800_0_04-bq40z80.bqz
+2. Retry the firmware update process.
+
+[Return to content](#content)
+
+# Resetting the Logger
+The logger can be reset in case of an error using the `reed switch`. Hold a magnet to the switch for over 5 seconds to initiate a reset. However, if the BMS error detection has triggered and shut down the logger, you must press the `Boot BMS` button on the `Logger-Mainboard`.
+
+[Return to content](#content)
+
+# Logger Configuration Update
+The configuration update can be initiated in two ways:
+1. Through the fixed cycle via `configUpdatePeriodeFunktion()`.
+2. Manually using the reed switch with a magnet. When the LED lights up, it indicates that the config update cycle has been initiated.
+
+[Return to content](#content)
+
+# LED Behavior
+See [Excel](media/LED_signals_rev1_1.xlsx). file for details.
+
+[Return to content](#content)
