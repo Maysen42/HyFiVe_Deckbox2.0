@@ -12,23 +12,33 @@
 #ifndef SENSOR_CONFIG_H
 #define SENSOR_CONFIG_H
 
-// ID | Manufacturer        | Parameter         | Model                 | Long name                                 | Unit
-//----:---------------------:-------------------:-----------------------:-------------------------------------------:--------------
-// 1  : blue_robotics       : pressure          : bar30                 : sea_water_pressure                        : mbar
-// 2  : blue_robotics       : temperature       : celsius_fast_response : sea_water_temperature                     : degree_C
-// 4  : presens             : oxygen            : NAU-OIW               : mass_concentration_of_oxygen_in_sea_water : mbar
-// 5  : presens             : oxygen            : NAU-YOP               : mass_concentration_of_oxygen_in_sea_water : mbar
-// 6  : keller              : pressure          : series_20             : sea_water_pressure                        : mbar
-// 7  : aml                 : temperature       : ct_xchange            : sea_water_temperature                     : degree_C
-// 8  : aml                 : conductivity      : ct_xchange            : sea_water_electrical_conductivity         : mS_cm-1
-// 3  : atlas_scientific    : conductivity      : k0.1                  : sea_water_electrical_conductivity         : mS_cm-1
-// 10 : atlas_scientific    : conductivity      : k1.0                  : sea_water_electrical_conductivity         : mS_cm-1
-// 9  : pyroscience         : oxygen            : oxycap_sub            : partial_pressure_of_oxygen_in_sea_water   : mbar
-// 11 : pyroscience         : oxygen            : oxycap_hs_sub         : partial_pressure_of_oxygen_in_sea_water   : mbar
-// 12 : Turner              : turbidity         : C-Flour_TRB           : sea_water_turbidity_in_NTU                : NTU
-// 13 : Turner              : phycoerythrin     : C-Flour_PE            : phycoerythrin_in_ppb                      : ppb
+// SELECTED_SENSOR | Manufacturer        | Parameter                     | Model                          | sensor_type_ID  | Voltage  | FW
+//-----------------:---------------------:-------------------------------:--------------------------------:-----------------:----------:-----
+// 1               : blue_robotics       : pressure                      : bar30                          : 1               : +3.3V    : 1
+// 2               : blue_robotics       : temperature                   : celsius_fast_response          : 2               : +3.3V    : 1
+// 3               : keller              : pressure                      : series_20                      : 6               : +3.3V    : 2
+// 4               : atlas_scientific    : conductivity                  : k0.1 | k1.0                    : 3 | 10          : +3.3V    : 1
+// 5               : pyroscience         : oxygen                        : oxycap_sub | oxycap_hs_sub     : 9 | 11          : +3.3V    : 1
+// 6               : Turner              : turbidity | phycoerythrin     : C-Flour_TRB | C-Flour_PE       : 12 | 13         : +5.0V    : 1
 
-// SELECTED_SENSOR ID
-#define SELECTED_SENSOR 9
+// SELECTED_SENSOR
+#define SELECTED_SENSOR 6
+
+//in code:
+enum SENSOR_LIST{
+  blue_robotics_pressure_bar30                      = 1,
+  blue_robotics_temperature_celsius_fast_response   = 2,
+  atlas_scientific_conductivity_k01                 = 3,
+  presens_oxygen_NAUOIW                             = 4,
+  presens_oxygen_NAUYOP                             = 5,
+  keller_pressure_series_20                         = 6,
+  aml_temperature_ct_xchange                        = 7,
+  aml_conductivity_ct_xchange                       = 8,
+  pyroscience_oxygen_oxycap_sub                     = 9,
+  atlas_scientific_conductivity_k10                 = 10,
+  pyroscience_oxygen_oxycap_hs_sub                  = 11,
+  turner_turbidity_CFlour_TRB                       = 12,
+  turner_phycoerythrin_CFlour_PE                    = 13,
+};
 
 #endif

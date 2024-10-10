@@ -25,13 +25,15 @@ public:
     virtual bool getRAWValue(int64_t *aval);
     virtual bool getCalculatedValue(int64_t *aval);
     virtual uint8_t getParameter();
-    virtual uint8_t getVersion();
+    virtual uint32_t getVersion();
     virtual bool setCalib(float cal, uint8_t coeffToSet);
+    virtual bool getCalibrated();
     virtual ~Analog();
 
 private:
     uint8_t crc4(uint16_t n_prom[]);
     uint16_t ADC_Value;
+    bool calibrated = false;
     //float Co1 = 0.0912;  //Absolut Offset
     //float Co2 = 44.6508;  //Calibration Factor
     //float Co3 = 36016;  //

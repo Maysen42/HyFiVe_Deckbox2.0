@@ -29,6 +29,10 @@ enum CMD_LIST{
   CMD_GET_PARAMETER     = 0x15,
   CMD_GET_RDY           = 0x16,
   CMD_SET_CALIB         = 0x17, // 6 bytes: cmd, #num, 4byte floating point
+  CMD_GET_CALIBRATED    = 0x18,
+  CMD_GET_SENSOR_WAKEUP_TIME = 0x19,
+  CMD_GET_FW_VERSION = 0x20,
+  CMD_SOFTWARE_RESET = 0x21,
   CMD_PING              = 0xAA, //master wants a answer byte (seems to be unnecessary, because of getver)
 
   CMD_1ByteDummyTest    = 0xFE,
