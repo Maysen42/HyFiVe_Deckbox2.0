@@ -1,7 +1,7 @@
 {
   "board": {
-    "active_layer": 0,
-    "active_layer_preset": "",
+    "active_layer": 31,
+    "active_layer_preset": "Alle Lagen",
     "auto_track_width": true,
     "hidden_nets": [],
     "high_contrast_mode": 0,
@@ -37,10 +37,12 @@
       9,
       10,
       11,
+      12,
       13,
       14,
       15,
       16,
+      17,
       18,
       19,
       20,
@@ -60,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "101ffff_80000001",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "Analog-Adapter.kicad_prl",
+    "filename": "I2C-Adapter.kicad_prl",
     "version": 3
   },
   "project": {
