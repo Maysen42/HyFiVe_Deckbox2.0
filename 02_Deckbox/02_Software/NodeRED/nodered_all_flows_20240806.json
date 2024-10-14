@@ -1,0 +1,3009 @@
+[
+    {
+        "id": "30d72cf4f9917220",
+        "type": "tab",
+        "label": "ChangeLog",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "72118d9a33eeb04b",
+        "type": "tab",
+        "label": "MainFlows",
+        "disabled": false,
+        "info": "was"
+    },
+    {
+        "id": "7a84f8dc4deb136f",
+        "type": "tab",
+        "label": "netcdf",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "62e03883e3d9883a",
+        "type": "tab",
+        "label": "updateConfig",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "af6e47fcae886541",
+        "type": "tab",
+        "label": "TestFunctionality",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7ad1b0b473847135",
+        "type": "group",
+        "z": "62e03883e3d9883a",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.26",
+            "label": true
+        },
+        "nodes": [
+            "9fd888f34f1e4f87",
+            "fb235b5e4876452f",
+            "e95f8e5b26aaa9f3",
+            "0e260912a24efc3f",
+            "afbfa98ee9c644a7",
+            "f9d212a04be44d46",
+            "c0680d4de6fedf2b",
+            "53944c2daa6a286c",
+            "e5bec25851038b7d",
+            "0c57bc33386189bd"
+        ],
+        "x": 14,
+        "y": 695,
+        "w": 892,
+        "h": 346
+    },
+    {
+        "id": "0edc8b423f12853c",
+        "type": "group",
+        "z": "62e03883e3d9883a",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "32639dca115094d5",
+            "454db1f43a1c0929",
+            "484c7785bdef8085",
+            "eac989c33baa795e"
+        ],
+        "x": 14,
+        "y": 1079,
+        "w": 772,
+        "h": 149.5
+    },
+    {
+        "id": "0167c48cdd0f0320",
+        "type": "group",
+        "z": "62e03883e3d9883a",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.26",
+            "label": true
+        },
+        "nodes": [
+            "21125eeea8acb647",
+            "9f0a63aa18952e8b",
+            "f96b19daba1992e8",
+            "87b875ccaf64f3f9",
+            "3d568f36220c7eab"
+        ],
+        "x": 954,
+        "y": 699,
+        "w": 472,
+        "h": 222
+    },
+    {
+        "id": "3d9701ed261147c4",
+        "type": "group",
+        "z": "62e03883e3d9883a",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "label": true,
+            "fill-opacity": "0.25"
+        },
+        "nodes": [
+            "9ca2b54d0a53d2d6",
+            "f97c978fe19de46c",
+            "f26f78af8e2b2c70",
+            "354f1f7072f97ebf",
+            "da9f31890053ad8e",
+            "8b2c8074b4652ba9",
+            "e62ccbcbc86ac048",
+            "254f4fca65c9cdb8",
+            "c0b54d915499663a",
+            "df6b67139e473768",
+            "f8c817f727ca9b57",
+            "066e70c6afd3b019",
+            "8ff27869dc20e45f",
+            "025377ba3e3119fa",
+            "083f1436bdb30664",
+            "cc5821d34b73945d"
+        ],
+        "x": 14,
+        "y": 243,
+        "w": 1412,
+        "h": 405.5
+    },
+    {
+        "id": "63ab58f928859832",
+        "type": "group",
+        "z": "62e03883e3d9883a",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "a3f58d993b35749a",
+            "2b32d4db13b1991f",
+            "c8d38f859964e32e",
+            "50bb02d184542fc0"
+        ],
+        "x": 14,
+        "y": 15,
+        "w": 792,
+        "h": 193.5
+    },
+    {
+        "id": "5afe377637f9bc74",
+        "type": "group",
+        "z": "7a84f8dc4deb136f",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.27",
+            "label": true
+        },
+        "nodes": [
+            "0d7b930aa36390bf",
+            "5ff4dd191488ac57",
+            "79e048ea4d1b5e28",
+            "e84535c9519586cb",
+            "36a28a55d4386408",
+            "b2d46da506f1dc81",
+            "88d1269955e51a8f",
+            "61212d3dc70a81f9",
+            "12badd777954b29e",
+            "6f9c9ad7524e8bd2",
+            "86485098568d586b"
+        ],
+        "x": 14,
+        "y": 15,
+        "w": 1342,
+        "h": 406
+    },
+    {
+        "id": "431ae9b43686a66e",
+        "type": "group",
+        "z": "af6e47fcae886541",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "7fe51656adfef64a",
+            "a9fa19267e841df1",
+            "41f2c481ed99c34a",
+            "3a76b41d183438f5",
+            "d4b1e25929ebaa2f",
+            "f63bd2d0538e1050",
+            "36ccb48ddb4dfe70",
+            "8a065e0c0fc7d18f",
+            "a16917a8f760894b",
+            "4cc97390b9bff031",
+            "02731d5d1581dc9b",
+            "eeb5f3d014fcfa05"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1132,
+        "h": 442
+    },
+    {
+        "id": "f76703e16bcff935",
+        "type": "group",
+        "z": "72118d9a33eeb04b",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "29cdc0c65964646a",
+            "da303619102768cb",
+            "ed13be1bf21a6f0c",
+            "897c37048ec0ba0b",
+            "92e3d89e7d4aca99",
+            "10f361048658bc35",
+            "41b4d9ebad98c8f4"
+        ],
+        "x": 14,
+        "y": 27,
+        "w": 942,
+        "h": 194
+    },
+    {
+        "id": "21d124a36b0900ee",
+        "type": "group",
+        "z": "72118d9a33eeb04b",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.24",
+            "label": true
+        },
+        "nodes": [
+            "e1c5e4c113a640c9",
+            "310d826d26dfef7a",
+            "ad31105acd0d30a8",
+            "4ef592a8d44db4d5",
+            "b8718c8e6a1ded53",
+            "9d9565291b6f4095",
+            "0d0b4055ae4c3101",
+            "84917fbb0fae34d4",
+            "4764918d6abea7c3",
+            "1b2cc7442e6c6128",
+            "46933c4a1bb5b82d"
+        ],
+        "x": 14,
+        "y": 247,
+        "w": 1242,
+        "h": 294
+    },
+    {
+        "id": "1ab8d56511e7cdca",
+        "type": "group",
+        "z": "72118d9a33eeb04b",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "fc59a618461691d3",
+            "7e10c7bdead866dc",
+            "38f3c3aed764e5aa"
+        ],
+        "x": 14,
+        "y": 939,
+        "w": 522,
+        "h": 122
+    },
+    {
+        "id": "ff2c88ac7461d8ec",
+        "type": "group",
+        "z": "72118d9a33eeb04b",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.26",
+            "label": true
+        },
+        "nodes": [
+            "f4c19fc05cda383f",
+            "59fa7230a626a9ae",
+            "6b97dd5ba4ef2b03",
+            "a3d81c0e9380f386",
+            "1b34a36df074515e",
+            "0871f0118c49c1a3",
+            "26f5677f334eb9c5",
+            "4e51b225ca86f4eb",
+            "3504f8117221a3ff"
+        ],
+        "x": 14,
+        "y": 579,
+        "w": 1292,
+        "h": 162
+    },
+    {
+        "id": "79ba412d91851539",
+        "type": "group",
+        "z": "30d72cf4f9917220",
+        "name": "",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "20f977c67b5bdb40",
+            "6d7bdc1d4f0531a5",
+            "6b3164c889e5f7bf"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 412,
+        "h": 238
+    },
+    {
+        "id": "8f90319f099207ad",
+        "type": "group",
+        "z": "30d72cf4f9917220",
+        "name": "",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "stroke": "#0070c0"
+        },
+        "nodes": [
+            "b9d8b118e5e11d0f",
+            "ec8350f8a0559dd0",
+            "a50d174aa6d77adc",
+            "1ee9ac3bb881781e",
+            "c2b0b76b5e686811",
+            "862aed8b3e7a9503",
+            "41cd7a73abc35f90"
+        ],
+        "x": 34,
+        "y": 319,
+        "w": 812,
+        "h": 902
+    },
+    {
+        "id": "20f3c98e15e2490e",
+        "type": "group",
+        "z": "af6e47fcae886541",
+        "name": "",
+        "style": {
+            "fill": "#d1d1d1",
+            "fill-opacity": "0.25",
+            "label": true
+        },
+        "nodes": [
+            "0763e1fbe8cc7b1f",
+            "e8fbdc0e3cab8d49",
+            "c32c63ee572062b6",
+            "80901d13215adee5",
+            "e31f083510691f5d"
+        ],
+        "x": 14,
+        "y": 499,
+        "w": 1212,
+        "h": 142
+    },
+    {
+        "id": "c650078577625659",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "LocalInflux",
+        "usetls": false,
+        "tls": "c8f010c74bee9135",
+        "influxdbVersion": "2.0",
+        "url": "http://influxDB:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "ed4cd49e795775da",
+        "type": "mqtt-broker",
+        "name": "RUT955",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c8f010c74bee9135",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "1062df4f6e8d4e3c",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "",
+        "password": ""
+    },
+    {
+        "id": "1510af957dea04fd",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "4e41f0dbfaeb30e2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a28c5920a6216eb7",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "0adf19cfbb60aa4b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.ostseeforschung.info",
+        "port": "8883",
+        "tls": "c8f010c74bee9135",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7f445ca17cf754e2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e1feb3ca28693896",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "8e0afad26e8060cc",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "d3a9cb7b124eeb94",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.ostseeforschung.info",
+        "port": "8883",
+        "tls": "c8f010c74bee9135",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d5bc607ae6364bf5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1ad8ce79b221484a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0b4c116fa302a5fe",
+        "type": "influxdb",
+        "hostname": "mqtt-influx.ostseeforschung.info",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "IOW",
+        "usetls": false,
+        "tls": "c8f010c74bee9135",
+        "influxdbVersion": "2.0",
+        "url": "https://mqtt-influx.ostseeforschung.info",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "ae6698d6de6d7f63",
+        "type": "mqtt-broker",
+        "name": "MathisPhone",
+        "broker": "100.99.211.65",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c2f8329459b812c1",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "43e227d5a7e3d711",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "Laptop",
+        "usetls": false,
+        "tls": "c8f010c74bee9135",
+        "influxdbVersion": "2.0",
+        "url": "http://172.17.0.1:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "fe905591c579d7c8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5d91884e0a1ba278",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "9818285b979a8514",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.ostseeforschung.info",
+        "port": "8883",
+        "tls": "c8f010c74bee9135",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "289b39d02de9d5c3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "42960f7d49201865",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "45a3b4a419220e21",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "093b1b3c1f55bebc",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "2a7d7f357cd358c9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt.ostseeforschung.info",
+        "port": "8883",
+        "tls": "c8f010c74bee9135",
+        "clientid": "",
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "883aeebc459475e2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e43b951b5fb49639",
+        "type": "SFTP-credentials",
+        "host": "hyfive.info",
+        "port": "22",
+        "username": "loggermailbox",
+        "password": ""
+    },
+    {
+        "id": "b9d8b118e5e11d0f",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "CURRENT VERSION: 06.08.2024",
+        "info": "",
+        "x": 200,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "20f977c67b5bdb40",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "79ba412d91851539",
+        "name": "FLOW FOR HYFIVE DECKBOX",
+        "info": "",
+        "x": 190,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6b3164c889e5f7bf",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "79ba412d91851539",
+        "name": "After every change: \\n EDIT CHANGE LOG \\n Change date of 'Current Version' \\n Export and commit flow to Github",
+        "info": "",
+        "x": 200,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6d7bdc1d4f0531a5",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "79ba412d91851539",
+        "name": "For detailed info check Github documentation",
+        "info": "",
+        "x": 240,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ec8350f8a0559dd0",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "x",
+        "info": "",
+        "x": 770,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "a50d174aa6d77adc",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "Format: Date -      Contributor -       Short description of changes",
+        "info": "",
+        "x": 280,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "1ee9ac3bb881781e",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "05.08.2024 - Mathis Björner - changed the way data is passed after creating the query for GPS",
+        "info": "",
+        "x": 400,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c2b0b76b5e686811",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "04.08.2024 - Stanislas Klein - Clean up and documentation of current version",
+        "info": "",
+        "x": 340,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "862aed8b3e7a9503",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "06.08.2024 - Frederik Furkert - New Layout, extended docu, testing with Hensel logger, small bug fixes",
+        "info": "",
+        "x": 420,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "41cd7a73abc35f90",
+        "type": "comment",
+        "z": "30d72cf4f9917220",
+        "g": "8f90319f099207ad",
+        "name": "CHANGE LOG",
+        "info": "",
+        "x": 140,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "29cdc0c65964646a",
+        "type": "debug",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "GPS",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "da303619102768cb",
+        "type": "udp in",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "",
+        "iface": "",
+        "port": "8500",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "ed13be1bf21a6f0c"
+            ]
+        ]
+    },
+    {
+        "id": "ed13be1bf21a6f0c",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "Extract GPS",
+        "func": "//Example of data received:\n//GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,\nvar symblat = \"\";\nvar symblong = \"\";\n\nmsg.string = msg.payload.split(\",\");\n\nif(msg.string[1] == \"\"){\n    msg.payload = {};\n    return;\n}\n\n//Find if latitude is south and add minus\nif (msg.string[4] == \"S\") {\n    symblat = \"-\";\n    \n} else {\n}\n//Find if longitude is west and add minus\nif (msg.string[6] == \"W\") {\n    symblong = \"-\";\n    \n} else {\n}\nvar nvals = msg.payload.match(/,(\\d+)(\\d\\d\\.\\d+),(N|S)/);\nvar evals = msg.payload.match(/,(\\d+)(\\d\\d\\.\\d+),(E|W)/);\nvar time = parseInt(msg.string[1]);\nvar time2 = Date.parse(time);\nmsg.payload = {\n    //time:       new Date(time),\n    time:       new Date(),\n    latitude:   parseFloat(symblat + (+nvals[1] + nvals[2]/60).toFixed(6)),\n    longitude:  parseFloat(symblong + (+evals[1] + evals[2]/60).toFixed(6)),\n    speed:      parseFloat(msg.string[7]) || 0,\n    course:     parseFloat(msg.string[8]) || 0\n}\nflow.set(\"latitude\", parseFloat(symblat + (+nvals[1] + nvals[2] / 60).toFixed(6)));\nflow.set(\"longitude\", parseFloat(symblong + (+evals[1] + evals[2] / 60).toFixed(6)));\ndelete msg.string;\nreturn [msg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "92e3d89e7d4aca99"
+            ]
+        ]
+    },
+    {
+        "id": "897c37048ec0ba0b",
+        "type": "comment",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "GPS Buffer \\n Receives GPS from router and store it into database",
+        "info": "",
+        "x": 240,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "92e3d89e7d4aca99",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "Prepare data",
+        "func": "var newMsg = [];\nvar myarray = [];\nvar obj = {\n    measurement: 'Buffer',\n\n    tags: {\n        GpsReceiver: 1,\n    },\n\n    fields: {\n        \n        latitude: parseFloat(msg.payload.latitude),\n        longitude: parseFloat(msg.payload.longitude),\n        speed: parseFloat(msg.payload.speed),\n        course: parseFloat(msg.payload.course),\n    },\n    timestamp: new Date(),\n        \n}\nmyarray.push(obj);\n\n\nnewMsg = { payload: myarray };\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "29cdc0c65964646a",
+                "10f361048658bc35"
+            ]
+        ]
+    },
+    {
+        "id": "10f361048658bc35",
+        "type": "influxdb batch",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "influxdb": "c650078577625659",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "Store GPS data",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "hyfive",
+        "bucket": "GpsBuffer",
+        "x": 850,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "41b4d9ebad98c8f4",
+        "type": "inject",
+        "z": "72118d9a33eeb04b",
+        "g": "f76703e16bcff935",
+        "name": "GPRMC (1sec)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "GPRMC,123519,A,5529.60,N,1235.03,E,022.4,084.4,230394,003.1,",
+        "payloadType": "str",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e1c5e4c113a640c9",
+        "type": "debug",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "debug data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "310d826d26dfef7a",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "Prepare data",
+        "func": "var v;\nvar newmsg = [];\n\n//var data = flow.get(\"measured_data\");\nvar data = msg.measured_data\nvar meta = msg.meta_data\n//var meta = flow.get(\"meta_data\");\n\nif (msg.payload.length != 0) {\n    data.latitude = msg.payload[0].latitude,\n    data.longitude = msg.payload[0].longitude,\n    data.speed = msg.payload[0].speed,\n    data.course = msg.payload[0].course\n}else{\n    data.latitude = -999,\n    data.longitude = -999,\n    data.speed = -999,\n    data.course = -999\n}\n\nnewmsg = {\n    payload: [{\n        measurement: 'netcdf',\n        tags: meta,\n        fields: data,\n        //timestamp: new Date(flow.get(\"time\"))\n        timestamp: new Date(msg.time)\n    }]\n}\n\nreturn [newmsg]\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [
+                "e1c5e4c113a640c9",
+                "0d0b4055ae4c3101"
+            ]
+        ]
+    },
+    {
+        "id": "ad31105acd0d30a8",
+        "type": "mqtt in",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "",
+        "topic": "hyfive/data",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "46933c4a1bb5b82d"
+            ]
+        ]
+    },
+    {
+        "id": "4ef592a8d44db4d5",
+        "type": "influxdb in",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "influxdb": "c650078577625659",
+        "name": "ReadFromGpsBuffer",
+        "query": "",
+        "rawOutput": false,
+        "precision": "s",
+        "retentionPolicy": "3d",
+        "org": "hyfive",
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "310d826d26dfef7a"
+            ]
+        ]
+    },
+    {
+        "id": "b8718c8e6a1ded53",
+        "type": "debug",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "debug header",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9d9565291b6f4095",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "Prepare Header",
+        "func": "var newMsg = [];\nvar item;\n\nif(msg.payload.parameter == \"logger\"){\n    item = {\n        measurement: 'attributes',\n        tags: {\n            logger_id: parseInt(msg.payload.logger_id),\n            deployment_id: parseInt(msg.payload.deployment_id),\n            parameter: msg.payload.parameter,\n        },\n        fields: {\n            deckunit_id: parseInt(msg.payload.deckunit_id),\n            platform_id: parseInt(msg.payload.platform_id),\n            vessel_id: parseInt(msg.payload.vessel_id),\n            vessel_name: msg.payload.vessel_name,\n            contact_id: parseInt(msg.payload.deployment_contact_id),\n            contact_f_name: msg.payload.contact_first_name,\n            contact_l_name: msg.payload.contact_last_name\n        },\n        timestamp: new Date()\n    }\n}else{\n    item = {\n        measurement: 'attributes',\n        tags: {\n            logger_id: parseInt(msg.payload.logger_id),\n            deployment_id: parseInt(msg.payload.deployment_id),\n            parameter: msg.payload.sensor_type.parameter,\n        },\n        fields: {\n            unit: msg.payload.sensor_type.unit,\n            long_name: msg.payload.sensor_type.long_name,\n            sensor_id: parseFloat(msg.payload.sensor_id),\n            serial_number: msg.payload.serial_number,\n            sensor_type_id: parseInt(msg.payload.sensor_type.sensor_type_id),\n            k0: msg.payload.calib_coeff[0],\n            k1: msg.payload.calib_coeff[1],\n            k2: msg.payload.calib_coeff[2],\n            k3: msg.payload.calib_coeff[3],\n            k4: msg.payload.calib_coeff[4],\n            k5: msg.payload.calib_coeff[5],\n            k6: msg.payload.calib_coeff[6],\n            k7: msg.payload.calib_coeff[7],\n            k8: msg.payload.calib_coeff[8],\n            k9: msg.payload.calib_coeff[9],\n            manufacturer: msg.payload.sensor_type.manufacturer,\n            model_name: msg.payload.sensor_type.model,\n            accuracy: msg.payload.sensor_type.accuracy,\n            resolution: msg.payload.sensor_type.resolution,\n        },\n        timestamp: new Date()\n    }\n}\n\nnewMsg = {payload: [item]}\n\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 500,
+        "wires": [
+            [
+                "b8718c8e6a1ded53",
+                "0d0b4055ae4c3101"
+            ]
+        ]
+    },
+    {
+        "id": "0d0b4055ae4c3101",
+        "type": "influxdb batch",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "influxdb": "c650078577625659",
+        "precision": "",
+        "retentionPolicy": "",
+        "name": "Store data",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "hyfive",
+        "bucket": "localhyfive",
+        "x": 1120,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "84917fbb0fae34d4",
+        "type": "comment",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "Handeling Measuring Data\\n Receives measurement data from logger and merge data with GPS and store it into database",
+        "info": "",
+        "x": 370,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4764918d6abea7c3",
+        "type": "comment",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "Handling Meta Data (Header)\\n Receives the header data (containing meta information) and stores it into database",
+        "info": "",
+        "x": 340,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1b2cc7442e6c6128",
+        "type": "mqtt in",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "",
+        "topic": "hyfive/header",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "9d9565291b6f4095"
+            ]
+        ]
+    },
+    {
+        "id": "fc59a618461691d3",
+        "type": "mqtt in",
+        "z": "72118d9a33eeb04b",
+        "g": "1ab8d56511e7cdca",
+        "name": "",
+        "topic": "hyfive/nodeRedRequest",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            [
+                "7e10c7bdead866dc"
+            ]
+        ]
+    },
+    {
+        "id": "7e10c7bdead866dc",
+        "type": "mqtt out",
+        "z": "72118d9a33eeb04b",
+        "g": "1ab8d56511e7cdca",
+        "name": "",
+        "topic": "hyfive/nodeRedLogin",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed4cd49e795775da",
+        "x": 410,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "38f3c3aed764e5aa",
+        "type": "comment",
+        "z": "72118d9a33eeb04b",
+        "g": "1ab8d56511e7cdca",
+        "name": "Node-Red availability test for logger",
+        "info": "Befor the logger sends data to the MQTT broker of the router, it is checking via this flow, if Node-Red is listening",
+        "x": 190,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "f4c19fc05cda383f",
+        "type": "mqtt in",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "",
+        "topic": "hyfive/status",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 660,
+        "wires": [
+            [
+                "59fa7230a626a9ae",
+                "3504f8117221a3ff"
+            ]
+        ]
+    },
+    {
+        "id": "59fa7230a626a9ae",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "prep file and SFTP",
+        "func": "var newMsg = []\nvar date = Date.now()\n\nvar logger_id = parseInt(msg.payload.logger_id)\n\nvar content = {\n    logger_id: logger_id.toString(),\n    battery_remaining: msg.payload.battery_remaining/100,\n    memory_capacity_total: msg.payload.memory_capacity_total,\n    memory_capacity_used: msg.payload.memory_capacity_used,\n    deckbox_position_last: {\n        lat: flow.get(\"latitude\"),\n        lng: flow.get(\"longitude\"),\n        date: date\n    }\n}\n\nvar logger_name = \"logger_\"\nif(logger_id < 10){\n    logger_name += \"0\" + logger_id\n}else{\n    logger_name += logger_id//.toString()\n}\n\nvar file_name = logger_name + \"_status_\" + date + \".json\"\nvar local_path = \"/usr/src/node-red/\" + file_name\nvar remote_path = \"/in/status/\" + logger_name + \"/\" + file_name\n\n\nnewMsg = {\n    payload:        content,\n    filename:       file_name,\n    file_name:      file_name,\n    localFilePath:  local_path,\n    remoteFilePath: remote_path\n}\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "6b97dd5ba4ef2b03"
+            ]
+        ]
+    },
+    {
+        "id": "6b97dd5ba4ef2b03",
+        "type": "file",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 540,
+        "y": 660,
+        "wires": [
+            [
+                "a3d81c0e9380f386"
+            ]
+        ]
+    },
+    {
+        "id": "a3d81c0e9380f386",
+        "type": "SFTP-main",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "path": "/",
+        "method": "put",
+        "remoteFilePath": "",
+        "localFilePath": "",
+        "remoteDestPath": "/",
+        "useCompression": "",
+        "encoding": "utf8",
+        "mode": "",
+        "recursive": "false",
+        "server": "e43b951b5fb49639",
+        "x": 690,
+        "y": 660,
+        "wires": [
+            [
+                "1b34a36df074515e"
+            ]
+        ]
+    },
+    {
+        "id": "1b34a36df074515e",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "rm local file",
+        "func": "var newMsg = []\n\nnewMsg = {\n    payload:        \"rm \" + msg.file_name\n}\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 660,
+        "wires": [
+            [
+                "0871f0118c49c1a3"
+            ]
+        ]
+    },
+    {
+        "id": "0871f0118c49c1a3",
+        "type": "exec",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 1010,
+        "y": 660,
+        "wires": [
+            [
+                "26f5677f334eb9c5"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "26f5677f334eb9c5",
+        "type": "debug",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "debug status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "4e51b225ca86f4eb",
+        "type": "comment",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "Status file transmission and forwarding",
+        "info": "",
+        "x": 200,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "46933c4a1bb5b82d",
+        "type": "function",
+        "z": "72118d9a33eeb04b",
+        "g": "21d124a36b0900ee",
+        "name": "Parse data",
+        "func": "var newmsg = [];\n\nvar v;\nvar data = {};\nvar meta = {};\nvar metainformation = [\"logger_id\", \"deployment_id\"];\n\nfor(var i in msg.payload){\n    if(i === \"time\"){\n    }else if (metainformation.indexOf(i) >= 0){\n        meta[i] = parseInt(msg.payload[i])\n    }else{\n        data[i] = parseFloat(msg.payload[i])\n    }\n\n}\n\nvar date = msg.payload.time\nvar date2 = date.substring(0, 19) + '.999Z'\nnewmsg= {\n    time: msg.payload.time,\n    measured_data: data,\n    meta_data: meta,\n    query: 'from(bucket: \"GpsBuffer\") |> range(start:' + date + ' , stop:' + date2 + ') |> filter(fn: (r) => r[\"_measurement\"] == \"Buffer\") |> filter(fn: (r) => r[\"GpsReceiver\"] == \"1\") |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")'}\n\n\nreturn newmsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 360,
+        "wires": [
+            [
+                "4ef592a8d44db4d5"
+            ]
+        ]
+    },
+    {
+        "id": "3504f8117221a3ff",
+        "type": "debug",
+        "z": "72118d9a33eeb04b",
+        "g": "ff2c88ac7461d8ec",
+        "name": "hyfive/status",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0d7b930aa36390bf",
+        "type": "inject",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "900",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "5ff4dd191488ac57"
+            ]
+        ]
+    },
+    {
+        "id": "5ff4dd191488ac57",
+        "type": "exec",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "command": "python python_scripts/create_netcdf.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "60",
+        "winHide": false,
+        "oldrc": false,
+        "name": "create_netcdf.py",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "6f9c9ad7524e8bd2"
+            ],
+            [
+                "e84535c9519586cb",
+                "6f9c9ad7524e8bd2"
+            ]
+        ]
+    },
+    {
+        "id": "79e048ea4d1b5e28",
+        "type": "inject",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "inject manually",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "e84535c9519586cb"
+            ]
+        ]
+    },
+    {
+        "id": "e84535c9519586cb",
+        "type": "exec",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "command": "./handle_data/push_sftp.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "20",
+        "winHide": false,
+        "oldrc": false,
+        "name": "push_sftp.sh",
+        "x": 540,
+        "y": 240,
+        "wires": [
+            [
+                "86485098568d586b"
+            ],
+            [
+                "86485098568d586b"
+            ],
+            [
+                "88d1269955e51a8f",
+                "86485098568d586b"
+            ]
+        ]
+    },
+    {
+        "id": "36a28a55d4386408",
+        "type": "debug",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "remove .nc files",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b2d46da506f1dc81",
+        "type": "exec",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "command": "rm netcdf/*",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Remove files locally",
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            [
+                "36a28a55d4386408"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "88d1269955e51a8f",
+        "type": "function",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "Check for errors",
+        "func": "var newMsg = [];\nif (msg.payload.code == 0){\n    newMsg = {payload:{\n        filename:           \"rm netcdf/*\",\n    }}\n} else{\n    return;\n}\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "b2d46da506f1dc81"
+            ]
+        ]
+    },
+    {
+        "id": "61212d3dc70a81f9",
+        "type": "comment",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "Create netCDF Files and Transmit to Server\\n A Python file creates .nc files which are transmitted to the SFTP server by a bash script.\\n Files are removed after successfull transmission",
+        "info": "",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "12badd777954b29e",
+        "type": "comment",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "Please check in regularly, if the python scripts on your deck box are up to date",
+        "info": "",
+        "x": 320,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6f9c9ad7524e8bd2",
+        "type": "debug",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "Create .nc",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "86485098568d586b",
+        "type": "debug",
+        "z": "7a84f8dc4deb136f",
+        "g": "5afe377637f9bc74",
+        "name": "push_sftp.sh",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9ca2b54d0a53d2d6",
+        "type": "mqtt in",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "",
+        "topic": "hyfive/updateConfigRequest",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "8ff27869dc20e45f",
+                "066e70c6afd3b019"
+            ]
+        ]
+    },
+    {
+        "id": "21125eeea8acb647",
+        "type": "mqtt out",
+        "z": "62e03883e3d9883a",
+        "g": "0167c48cdd0f0320",
+        "name": "",
+        "topic": "hyfive/updateConfig",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed4cd49e795775da",
+        "x": 1080,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "9f0a63aa18952e8b",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "0167c48cdd0f0320",
+        "name": "updateConfig",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "f96b19daba1992e8",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "0167c48cdd0f0320",
+        "name": "packet size in bytes",
+        "func": "let size = 480; // packet size in bytes 480@512MQTT\nlet buffer = Buffer.from(msg.payload);\nlet parts = [];\n\nfor (let i = 0; i < buffer.length; i += size) {\n    let packet = buffer.slice(i, i + size);\n    parts.push({payload: packet});\n}\n\nreturn [parts]; ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 800,
+        "wires": [
+            [
+                "87b875ccaf64f3f9"
+            ]
+        ]
+    },
+    {
+        "id": "87b875ccaf64f3f9",
+        "type": "delay",
+        "z": "62e03883e3d9883a",
+        "g": "0167c48cdd0f0320",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1080,
+        "y": 840,
+        "wires": [
+            [
+                "9f0a63aa18952e8b",
+                "21125eeea8acb647"
+            ]
+        ]
+    },
+    {
+        "id": "9fd888f34f1e4f87",
+        "type": "mqtt in",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "",
+        "topic": "hyfive/ConfigError",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "e95f8e5b26aaa9f3",
+                "0c57bc33386189bd"
+            ]
+        ]
+    },
+    {
+        "id": "f97c978fe19de46c",
+        "type": "comment",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "Logger Config Update\\n A logger can ask for a config update by sending the file name of the current config file via MQTT. \\n This flow checks, if a newer config file is available on this deck box for the given logger ID. \\n If so, the file content is prepared and send via MQTT.",
+        "info": "",
+        "x": 370,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3d568f36220c7eab",
+        "type": "comment",
+        "z": "62e03883e3d9883a",
+        "g": "0167c48cdd0f0320",
+        "name": "transmission to the logger",
+        "info": "",
+        "x": 1090,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f26f78af8e2b2c70",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "Inject test message",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "logger_02_config_202401151229.json",
+        "payloadType": "str",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "066e70c6afd3b019"
+            ]
+        ]
+    },
+    {
+        "id": "fb235b5e4876452f",
+        "type": "comment",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "Error info\\n if an error message is sent by the logger during config update, it is stored in a file. \\n This file can be read out or deleted manually.",
+        "info": "",
+        "x": 330,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "32639dca115094d5",
+        "type": "exec",
+        "z": "62e03883e3d9883a",
+        "g": "0edc8b423f12853c",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 410,
+        "y": 1180,
+        "wires": [
+            [
+                "484c7785bdef8085"
+            ],
+            [
+                "484c7785bdef8085"
+            ],
+            [
+                "484c7785bdef8085"
+            ]
+        ]
+    },
+    {
+        "id": "454db1f43a1c0929",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "0edc8b423f12853c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ls config/logger_17",
+        "payloadType": "str",
+        "x": 170,
+        "y": 1180,
+        "wires": [
+            [
+                "32639dca115094d5"
+            ]
+        ]
+    },
+    {
+        "id": "484c7785bdef8085",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "0edc8b423f12853c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "354f1f7072f97ebf",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "updateConfigRequest result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "da9f31890053ad8e",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "list all configs",
+        "func": "var newMsg = [];\n\nvar file_name = msg.payload\nvar index_one = file_name.indexOf(\"_\")\nvar index_two = file_name.indexOf(\"_\", index_one + 1)\nvar index_three = file_name.indexOf(\"_\", index_two + 1)\nvar logger_name = file_name.substring(0, index_two)\nvar date_old = parseInt(file_name.substring(index_three + 1, file_name.indexOf(\".\")))\nflow.set(\"date_old\", date_old)\nnewMsg = {payload: \"ls config/\" + logger_name}\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "8b2c8074b4652ba9"
+            ]
+        ]
+    },
+    {
+        "id": "8b2c8074b4652ba9",
+        "type": "exec",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 770,
+        "y": 460,
+        "wires": [
+            [
+                "e62ccbcbc86ac048"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e62ccbcbc86ac048",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "check for newer config",
+        "func": "var newMsg = [];\n\nvar filenames = msg.payload.split(\"\\n\")\nfilenames.pop()\nvar last_file = filenames.pop()         // last in the list and therefore newest date\n\nvar index_one = last_file.indexOf(\"_\")\nvar index_two = last_file.indexOf(\"_\", index_one + 1)\nvar index_three = last_file.indexOf(\"_\", index_two + 1)\nvar date_most_recent = parseInt(last_file.substring(index_three + 1, last_file.indexOf(\".\")))\n\nvar date_old = flow.get(\"date_old\")\n\nvar to_send = \"\"\nif(date_most_recent > date_old){\n    to_send = last_file\n}else{\n    to_send = \"no_update_available\"\n}\n\nnewMsg = { payload: to_send }\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "354f1f7072f97ebf",
+                "f96b19daba1992e8"
+            ]
+        ]
+    },
+    {
+        "id": "254f4fca65c9cdb8",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "prep config data",
+        "func": "var newMsg = [];\nvar file_name = msg.payload\nvar index_one = file_name.indexOf(\"_\")\nvar index_two = file_name.indexOf(\"_\", index_one + 1)\nvar index_three = file_name.indexOf(\"_\", index_two + 1)\nvar logger_name = file_name.substring(0, index_two)\n\nnewMsg = {payload: \"cat config/\" + logger_name + \"/\" + file_name,\n        filename: \"config/\" + logger_name + \"/\" + file_name\n}\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "c0b54d915499663a"
+            ]
+        ]
+    },
+    {
+        "id": "c0b54d915499663a",
+        "type": "exec",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 770,
+        "y": 600,
+        "wires": [
+            [
+                "df6b67139e473768",
+                "f96b19daba1992e8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "df6b67139e473768",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "content of new config file",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f8c817f727ca9b57",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "Inject test message",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "logger_02_config_202401291305.json",
+        "payloadType": "str",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "083f1436bdb30664"
+            ]
+        ]
+    },
+    {
+        "id": "a3f58d993b35749a",
+        "type": "exec",
+        "z": "62e03883e3d9883a",
+        "g": "63ab58f928859832",
+        "command": "./handle_data/get_configs.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "60",
+        "winHide": false,
+        "oldrc": false,
+        "name": "get_configs.sh",
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [
+                "50bb02d184542fc0"
+            ],
+            [
+                "50bb02d184542fc0"
+            ],
+            [
+                "50bb02d184542fc0"
+            ]
+        ]
+    },
+    {
+        "id": "2b32d4db13b1991f",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "63ab58f928859832",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1800",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "a3f58d993b35749a"
+            ]
+        ]
+    },
+    {
+        "id": "c8d38f859964e32e",
+        "type": "comment",
+        "z": "62e03883e3d9883a",
+        "g": "63ab58f928859832",
+        "name": "Download all Config Files to Deck Box \\n All config files, which are available on the server, are downloaded in regular intervals to the deck box. \\n They are stored inside the 'nodeRed' docker container.",
+        "info": "File path to the config files on the Pi:\n/var/lib/docker/overlay2/a925343a104f0c83e49ca8348d71e11d759638b64810a8e31820b800fc8708d4/merged/usr/src/node-red/config/logger_02/logger_02_config_202401081423.json\n",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "066e70c6afd3b019",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "if 'logger_...'",
+        "func": "\nif (msg.payload.startsWith(\"logger_\")) {\n    node.send(msg);\n} else {\n    return null;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "da9f31890053ad8e"
+            ]
+        ]
+    },
+    {
+        "id": "8ff27869dc20e45f",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "if 'update successfull'",
+        "func": "\nif (msg.payload.startsWith(\"update successfull\")) {\n    node.send(msg);\n} else {\n    return null;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "cc5821d34b73945d"
+            ]
+        ]
+    },
+    {
+        "id": "eac989c33baa795e",
+        "type": "comment",
+        "z": "62e03883e3d9883a",
+        "g": "0edc8b423f12853c",
+        "name": "Print all config files on this deck box for specific logger id",
+        "info": "",
+        "x": 250,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "025377ba3e3119fa",
+        "type": "mqtt in",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "",
+        "topic": "hyfive/updateConfigUpload",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed4cd49e795775da",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "083f1436bdb30664"
+            ]
+        ]
+    },
+    {
+        "id": "083f1436bdb30664",
+        "type": "function",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "if 'logger_...'",
+        "func": "\nif (msg.payload.startsWith(\"logger_\")) {\n    node.send(msg);\n} else {\n    return null;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "254f4fca65c9cdb8"
+            ]
+        ]
+    },
+    {
+        "id": "50bb02d184542fc0",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "63ab58f928859832",
+        "name": "get_configs.sh",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e95f8e5b26aaa9f3",
+        "type": "file",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "hyfive_ConfigError",
+        "filename": "hyfive_ConfigError.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 450,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e260912a24efc3f",
+        "type": "file in",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "",
+        "filename": "hyfive_ConfigError.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 420,
+        "y": 940,
+        "wires": [
+            [
+                "afbfa98ee9c644a7"
+            ]
+        ]
+    },
+    {
+        "id": "afbfa98ee9c644a7",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "read out hyfive_ConfigError.txt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f9d212a04be44d46",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "read out",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "0e260912a24efc3f"
+            ]
+        ]
+    },
+    {
+        "id": "c0680d4de6fedf2b",
+        "type": "inject",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "delete file content",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 1000,
+        "wires": [
+            [
+                "53944c2daa6a286c"
+            ]
+        ]
+    },
+    {
+        "id": "53944c2daa6a286c",
+        "type": "file",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "hyfive_ConfigError",
+        "filename": "hyfive_ConfigError.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 450,
+        "y": 1000,
+        "wires": [
+            [
+                "e5bec25851038b7d"
+            ]
+        ]
+    },
+    {
+        "id": "e5bec25851038b7d",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "delete hyfive_ConfigError.txt",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "0c57bc33386189bd",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "7ad1b0b473847135",
+        "name": "ConfigError",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "cc5821d34b73945d",
+        "type": "debug",
+        "z": "62e03883e3d9883a",
+        "g": "3d9701ed261147c4",
+        "name": "config update successfull",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7fe51656adfef64a",
+        "type": "inject",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "Start the test",
+        "props": [
+            {
+                "p": "deployment_id",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "a16917a8f760894b"
+            ]
+        ]
+    },
+    {
+        "id": "a9fa19267e841df1",
+        "type": "split",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "splt": "",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "36ccb48ddb4dfe70"
+            ]
+        ]
+    },
+    {
+        "id": "41f2c481ed99c34a",
+        "type": "debug",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "test data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3a76b41d183438f5",
+        "type": "split",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "splt": "",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 470,
+        "y": 360,
+        "wires": [
+            [
+                "02731d5d1581dc9b"
+            ]
+        ]
+    },
+    {
+        "id": "d4b1e25929ebaa2f",
+        "type": "mqtt out",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "topic": "hyfive/header",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed4cd49e795775da",
+        "x": 1040,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f63bd2d0538e1050",
+        "type": "mqtt out",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "topic": "hyfive/data",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed4cd49e795775da",
+        "x": 1030,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "36ccb48ddb4dfe70",
+        "type": "json",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 280,
+        "wires": [
+            [
+                "4cc97390b9bff031",
+                "d4b1e25929ebaa2f"
+            ]
+        ]
+    },
+    {
+        "id": "8a065e0c0fc7d18f",
+        "type": "json",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "41f2c481ed99c34a",
+                "f63bd2d0538e1050"
+            ]
+        ]
+    },
+    {
+        "id": "a16917a8f760894b",
+        "type": "function",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "test data",
+        "func": "var header = [];\nvar values = []\nvar deployment_id = msg.deployment_id\n\nheader = {\n    payload: [\n        { \"logger_id\": 1, \"deployment_id\": 1, \"parameter\": \"logger\", \"deckunit_id\": 1, \"platform_id\": 1, \"vessel_id\": 1, \"vessel_name\": \"TEST\", \"deployment_contact_id\": deployment_id,\"contact_first_name\":\"Max\",\"contact_last_name\":\"Mustermann\"},\n        { \"sensor_id\": 1, \"sample_periode_multiplier\": \"1\", \"sample_cast_periode_multiplier\": \"1\", \"bus_address\": 1, \"calib_coeff\": { \"1\": 2, \"2\": 1, \"3\": 1, \"4\": 123, \"5\": 12, \"6\": 1, \"7\": 1 }, \"serial_number\": \"nan\", \"sensor_type\": { \"sensor_type_id\": 1, \"parameter\": \"temperature\", \"long_name\": \"temperature_in_sea_water\", \"unit\": \"mbar\", \"manufacturer\": \"test\", \"model\": \"test\", \"parameter_no\": 1, \"accuracy\": 0, \"resolution\": 0 }, \"logger_id\": 1, \"deployment_id\": deployment_id },\n        { \"sensor_id\": 2, \"sample_periode_multiplier\": \"1\", \"sample_cast_periode_multiplier\": \"1\", \"bus_address\": 2, \"calib_coeff\": {}, \"serial_number\": \"nan\", \"sensor_type\": { \"sensor_type_id\": 2, \"parameter\": \"conductivity\", \"long_name\": \"sea_water_conductivity\", \"unit\": \"mS/cm\", \"manufacturer\": \"test\", \"model\": \"test\", \"parameter_no\": 1, \"accuracy\": 5, \"resolution\": 0.01 }, \"logger_id\": 1, \"deployment_id\": deployment_id },\n        { \"sensor_id\": 3, \"sample_periode_multiplier\": \"1\", \"sample_cast_periode_multiplier\": \"1\", \"bus_address\": 4, \"calib_coeff\": {}, \"serial_number\": \"nan\", \"sensor_type\": { \"sensor_type_id\": 3, \"parameter\": \"pressure\", \"long_name\": \"sea_water_pressure\", \"unit\": \"mbar\", \"manufacturer\": \"test\", \"model\": \"test\", \"parameter_no\": 1, \"accuracy\": 5, \"resolution\": 0.01 }, \"logger_id\": 1, \"deployment_id\": deployment_id }\n    ]\n}\n\nvar myarray = []\nvar pressure = 993\nvar temperature = 15\nvar conductivity = 10\nvar factor = 1\nfor(var i = 30; i > 0; i--){\n    pressure += factor * 98\n    temperature += factor * 0.13\n    conductivity += factor * 0.122\n    if(i == 16){\n        factor = -1\n    }\n    var item = { \"logger_id\": 1, \"deployment_id\": deployment_id,\"pressure\": pressure,\"temperature\": temperature,\"conductivity\": conductivity,\"time\": new Date(msg.payload - 1000 * i)}\n    myarray.push(item)\n}\n\nvalues = {\n    payload: myarray\n}\n\nreturn [header, values];\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "a9fa19267e841df1"
+            ],
+            [
+                "3a76b41d183438f5"
+            ]
+        ]
+    },
+    {
+        "id": "4cc97390b9bff031",
+        "type": "debug",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "test header",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "02731d5d1581dc9b",
+        "type": "delay",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "Limiting to 20 msg/s",
+        "pauseType": "rate",
+        "timeout": "1000",
+        "timeoutUnits": "milliseconds",
+        "rate": "20",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "8a065e0c0fc7d18f"
+            ]
+        ]
+    },
+    {
+        "id": "0763e1fbe8cc7b1f",
+        "type": "influxdb in",
+        "z": "af6e47fcae886541",
+        "g": "20f3c98e15e2490e",
+        "influxdb": "c650078577625659",
+        "name": "get test data from database",
+        "query": "",
+        "rawOutput": false,
+        "precision": "s",
+        "retentionPolicy": "3d",
+        "org": "hyfive",
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "c32c63ee572062b6"
+            ]
+        ]
+    },
+    {
+        "id": "e8fbdc0e3cab8d49",
+        "type": "inject",
+        "z": "af6e47fcae886541",
+        "g": "20f3c98e15e2490e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 600,
+        "wires": [
+            [
+                "e31f083510691f5d"
+            ]
+        ]
+    },
+    {
+        "id": "c32c63ee572062b6",
+        "type": "debug",
+        "z": "af6e47fcae886541",
+        "g": "20f3c98e15e2490e",
+        "name": "read test from InfluxDB",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "eeb5f3d014fcfa05",
+        "type": "comment",
+        "z": "af6e47fcae886541",
+        "g": "431ae9b43686a66e",
+        "name": "TESTING YOUR DECKBOX \\n This flow simulates a logger sending measurement data via MQTT (with logger id 01 and deployment id 01.) \\n Inject \"start the test\" and start the netCDF flow manually.  \\n Check if the netcdf file is sent to the server. \\n ATTENTION: If this test is done once on your box, you need to delete deployment 01-01  \\n from python_scripts/recent_deployments.json in the nodeRed container (check docu on Github for this).",
+        "info": "",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "80901d13215adee5",
+        "type": "comment",
+        "z": "af6e47fcae886541",
+        "g": "20f3c98e15e2490e",
+        "name": "Check if test deployment is in local InfluxDB",
+        "info": "",
+        "x": 210,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e31f083510691f5d",
+        "type": "function",
+        "z": "af6e47fcae886541",
+        "g": "20f3c98e15e2490e",
+        "name": "Query",
+        "func": "var newmsg = [];\n\nvar date = String (new Date (msg.payload))\n// var date2 = date.substring(0, 19) + '.999Z'\nnewmsg= {\n    date: date,\n    query: 'from(bucket: \"localhyfive\")|> range(start: 2024-01-01T00:00:00Z)  |> filter(fn: (r) => r[\"deployment_id\"] == \"1\") |> filter(fn: (r) => r[\"logger_id\"] == \"1\")'\n    }\n\nreturn newmsg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 600,
+        "wires": [
+            [
+                "0763e1fbe8cc7b1f"
+            ]
+        ]
+    }
+]

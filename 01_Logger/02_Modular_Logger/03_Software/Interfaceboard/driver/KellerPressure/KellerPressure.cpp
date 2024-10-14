@@ -36,13 +36,19 @@ KellerPressure::~KellerPressure()
 uint8_t KellerPressure::getParameter(){
     return 0x02;
 }
-uint8_t KellerPressure::getVersion(){
-    return SELECTED_SENSOR;
+uint32_t KellerPressure::getVersion(){
+    return keller_pressure_series_20;
 }
 
 bool KellerPressure::setCalib(float cal, uint8_t coeffToSet)
 {
     //no calibration possible until now
+    return true;
+}
+
+bool KellerPressure::getCalibrated()
+{
+    //sensor does not need to get calibrated
     return true;
 }
 
@@ -115,8 +121,8 @@ bool KellerPressure::wakeup()
 
 bool KellerPressure::startConversion()
 {
-    read();
-    return true;
+
+    return read();
 }
 
 bool KellerPressure::getRAWValue(int64_t *aval)
@@ -151,7 +157,7 @@ void KellerPressure::setFluidDensity(float density) {
     fluidDensity = density;
 }
 
-void KellerPressure::read() {
+bool KellerPressure::read() {
     bool bResult;
     uint8_t answer[5];
     uint8_t status;
@@ -159,7 +165,7 @@ void KellerPressure::read() {
 
     bResult = sendBytes_i2c(1, &byteLo);
 
-    __delay_cycles(90000); // Max conversion time per datasheet
+    __delay_cycles(200000); //25ms
 
     bResult = readBytes_i2c(sizeof(answer), answer);
     status = answer[0];
@@ -172,6 +178,8 @@ void KellerPressure::read() {
 
     P_bar = (float(P)-16384)*(P_max-P_min)/32768 + P_min + P_mode;
     T_degc = ((T>>4)-24)*0.05-50;
+
+    return bResult;
 }
 
 uint16_t KellerPressure::readMemoryMap(uint8_t mtp_address) {

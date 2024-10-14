@@ -56,7 +56,7 @@ A pressure relief valve is integrated for several reasons. The valve is opened w
 
 Manually designing mounting, that connects more than two components in a three-dimensional room, can be a tiring and error prone job, especially if the position of the components is changing during development. To facilitate the design process, the generative design function of Fusion 360 was used. After defining surfaces, which shall be connected, and volumes, which are blocked, the software proposes different solutions. The results are organic looking, tree-like bodies, which can be easily adapted by changing the input and recalculation. 
 
-<figure>
+- <figure>
    <img src="media/electronic_mounting_modeled.png"  height="300" title="mounting_modeled">
    <img src="media/electronic_mounting_printed.jpg"  height="300" title="mounting_printed">
    
@@ -64,7 +64,7 @@ Manually designing mounting, that connects more than two components in a three-d
  </figure>
 
 ## Self-Designed Penetrators for Charging and Integration of LED and Magnetic Sensor
-These features are only available for the modular logger and descriped under [01_Logger/02_Modular_Logger/02_Mechanics/](../../02_Modular_Logger/02_Mechanics/README.md).
+These features are only available for the modular logger and descriped under [01_Logger/02_Modular_Logger/02_Mechanics/](../../02_Modular_Logger/02_Mechanics/).
 
 <figure> 
    <img src="media/logger_charging.jpg"  width="700" title="logger_charging">
@@ -73,7 +73,7 @@ These features are only available for the modular logger and descriped under [01
 </figure>
 
 ## Otter board mounting
-The logger can be deployed on a trawl. For this use case we developed an own mounting, which is described in the folder in [./04_otter_board_mounting](./04_otter_board_mounting/readme.md). 
+The logger can be deployed on a trawl. For this use case we developed an own mounting, which is described in the folder in [./04_otter_board_mounting](./04_otter_board_mounting/). 
 
 <figure> 
    <img src="media/otter_board_mounting.jpg"  width="700" title="otter_board_mounting">

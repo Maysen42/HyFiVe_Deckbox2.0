@@ -28,8 +28,9 @@ public:
     virtual bool getRAWValue(int64_t *aval);
     virtual bool getCalculatedValue(int64_t *aval);
     virtual uint8_t getParameter();
-    virtual uint8_t getVersion();
+    virtual uint32_t getVersion();
     virtual bool setCalib(float cal, uint8_t coeffToSet);
+    virtual bool getCalibrated();
     virtual ~pyroPicoO2();
 
     void setTemperature(int32_t sampleTemp);

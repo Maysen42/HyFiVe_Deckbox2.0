@@ -26,14 +26,17 @@ public:
     virtual bool getRAWValue(int64_t *aval);
     virtual bool getCalculatedValue(int64_t *aval);
     virtual uint8_t getParameter();
-    virtual uint8_t getVersion();
+    virtual uint32_t getVersion();
     virtual bool setCalib(float cal, uint8_t coeffToSet);
+    virtual bool getCalibrated();
     virtual ~CTSYS01();
 
 private:
 
+    uint8_t slaveAddress = 0;
     uint64_t D1_temp;
     int32_t TEMP;
+    bool calibrated = false;
 
     const uint8_t  TSYS01_RESET                       = 0x1E;
     const uint8_t  TSYS01_ADC_READ                    = 0x00;

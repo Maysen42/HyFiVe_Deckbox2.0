@@ -1,6 +1,6 @@
 # Mechanics: Differences of Modular Logger to Basic Logger
 
-The mechanic hardware is almost the same for the basic and the modular version of the logger. For a detailed description of this topic please go to [01_Logger/01_Basic_Logger/02_Mechanics](../../01_Basic_Logger/02_Mechanics/README.md).
+The mechanic hardware is almost the same for the basic and the modular version of the logger. For a detailed description of this topic please go to [01_Logger/01_Basic_Logger/02_Mechanics](../../01_Basic_Logger/02_Mechanics/).
 
 There are only two differences to the basic logger:
 
@@ -9,9 +9,9 @@ As the PCBs differ between the logger versions, their 3D-printed mountings diffe
 
 The interface PCBs have the shape of a semicircle and are positioned perpendicular to the cylinder axis (looking like rips). They are stacked and attached to the mounting by two M2.5 thread rods, so only two nuts need to be fasten on each side to fix the hole stack. 
 
-<figure> 
-   <img src="media/electronic_mounting_printed.jpg"  height="350" title="electronic_mounting_printed">
-   <img src="media/logger_modular.JPG"  height="350" title="logger_modular">
+- <figure> 
+   <img src="media/electronic_mounting_printed.jpg"  height="300" title="electronic_mounting_printed">
+   <img src="media/logger_modular.JPG"  height="300" title="logger_modular">
    
    <figurecaption><a name="figure1">*Figure 1:*</a> *Electronic mounting of modular logger without (left) and with electronics (right). Notice the tread rod to fix the interface boards, which are stacked and positioned as "rips"*</figurecaption>
 </figure>
@@ -21,9 +21,9 @@ The end cap of the modular logger, which is not equipped with sensors, is used t
 
 For charging batteries without opening the pressure housing, charging contacts need to be fed through the end cap. For this purpose, we designed a penetrator which offers 2 O-ring grooves, a flange to rest on the outside, a M10 thread for securing on the inside and a drill hole of 4 mm diameter to receive a banana plug. On the inside a wire is connected to the penetrator, by soldering it to an extension of a washer. 
 
-<figure> 
-	<img src="media/Charging_contacts.jpg"  height="300" title="charging_contacts">
-	<img src="media/end_cap_assembled.jpg"  height="300" title="finished_logger">
+- <figure> 
+	<img src="media/Charging_contacts.jpg"  height="350" title="charging_contacts">
+	<img src="media/end_cap_assembled.jpg"  height="350" title="finished_logger">
 
 <figurecaption><a name="figure2">*Figure 2:*</a> *Left: Self designed charging contact. Right: Charging contacts, LED and magnetic switch inserted into endcap - notice attachment of wires to charging contacts by soldering to an extension of a washer*</figurecaption>
 </figure>

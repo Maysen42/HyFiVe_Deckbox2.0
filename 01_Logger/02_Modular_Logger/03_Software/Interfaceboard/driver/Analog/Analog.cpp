@@ -41,20 +41,21 @@ bool Analog::setCalib(float cal, uint8_t coeffToSet)
         Co4 = cal;
         break;
     }
+    calibrated = true;
     return true;
 }
 
-uint8_t Analog::getParameter(){
-    #if SELECTED_SENSOR == 12
-        return 0x05;
-    #elif SELECTED_SENSOR == 13
-        return 0x06;
-    #else
-        return 0;
-    #endif
+bool Analog::getCalibrated()
+{
+    return calibrated;
 }
-uint8_t Analog::getVersion(){
-    return SELECTED_SENSOR;
+
+uint8_t Analog::getParameter(){
+        return 0x05;
+
+}
+uint32_t Analog::getVersion(){
+    return (turner_turbidity_CFlour_TRB ) | (turner_phycoerythrin_CFlour_PE << 8);
 }
 
 bool Analog::init()

@@ -30,8 +30,9 @@ public:
     virtual bool getRAWValue(int64_t *aval);
     virtual bool getCalculatedValue(int64_t *aval);
     virtual uint8_t getParameter();
-    virtual uint8_t getVersion();
+    virtual uint32_t getVersion();
     virtual bool setCalib(float cal, uint8_t coeffToSet);
+    virtual bool getCalibrated();
 
     /** Provide the density of the working fluid in kg/m^3. Default is for
      * seawater. Should be 997 for freshwater.
@@ -40,7 +41,7 @@ public:
 
     /** The read from I2C takes up for 40 ms, so use sparingly is possible.
      */
-    void read();
+    bool read();
 
     /** Checks if the attached sensor is connectored or not. */
     bool status();

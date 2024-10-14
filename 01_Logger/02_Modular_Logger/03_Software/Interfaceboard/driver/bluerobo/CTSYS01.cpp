@@ -12,6 +12,7 @@
 #include <driver/bluerobo/CTSYS01.h>
 #include <math.h>
 #include "sensor_config.h"
+#include <msp430.h>
 
 CTSYS01::~CTSYS01()
 {
@@ -21,8 +22,8 @@ CTSYS01::~CTSYS01()
 uint8_t CTSYS01::getParameter(){
     return 0x01;
 }
-uint8_t CTSYS01::getVersion(){
-    return SELECTED_SENSOR;
+uint32_t CTSYS01::getVersion(){
+    return blue_robotics_temperature_celsius_fast_response;
 }
 
 bool CTSYS01::setCalib(float cal, uint8_t coeffToSet)
@@ -45,7 +46,13 @@ bool CTSYS01::setCalib(float cal, uint8_t coeffToSet)
         Co5 = cal;
         break;
     }
+    calibrated = true;
     return true;
+}
+
+bool CTSYS01::getCalibrated()
+{
+    return calibrated;
 }
 
 bool CTSYS01::hibernate(){
@@ -89,10 +96,10 @@ bool CTSYS01::startConversion(){
     uint8_t data[3];
     D1_temp = 0;
     data[0] = TSYS01_ADC_TEMP_CONV;
-    if(!sendBytes_i2c(1, data))
-        return false;
+    if(!sendBytes_i2c(1, data)){
+        return false;}
 
-    __delay_cycles(80000);
+    __delay_cycles(180000);
 
     data[0] = TSYS01_ADC_READ;
     if(!sendBytes_i2c(1, data))

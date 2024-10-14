@@ -26,8 +26,8 @@ CMS5837::~CMS5837()
 uint8_t CMS5837::getParameter(){
     return 0x02;
 }
-uint8_t CMS5837::getVersion(){
-    return SELECTED_SENSOR;
+uint32_t CMS5837::getVersion(){
+    return blue_robotics_pressure_bar30;
 }
 
 bool CMS5837::setCalib(float cal, uint8_t coeffToSet)
@@ -53,6 +53,12 @@ bool CMS5837::setCalib(float cal, uint8_t coeffToSet)
         Co[5] = cal;
         break;
     }
+    return true;
+}
+
+bool CMS5837::getCalibrated()
+{
+    //sensor does not need to get calibrated
     return true;
 }
 

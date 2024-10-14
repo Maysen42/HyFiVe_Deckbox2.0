@@ -1,9 +1,15 @@
-Integrated sensors
-=======
+# Logger - Sensors
 
-The following sensors have been integrated and tested in hardware and software. Every sensor in this list has a brief description of how to place it into the lid, connect to the PCB, and 
-a link to the software to implement it. The positions in the lid can be taken from the drawings in the folder [*02_Mechanic*](../02_Mechanics/README.md). As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: Atlas Scientific K1.0, Blue Robotics Celsius fast response, 
-Keller Series 20, Pyroscience PICO-O2.
+## Research
+
+We spend significant time researching available sensors and made a comparison in respect to all aspects, relevant for integrating in our logger (e.g. openness and documentation of interfaces, price, accuracy, ...). We chose and tested the sensors described below. Nevertheless the system can easily integrate other sensors.
+
+## Integrated Sensors
+The following sensors have been integrated and tested in hardware and software. Every sensor in this list has a brief description of how to place it into the end cap, connect to the PCB, and a link to the software to implement it. The positions in the end cap can be taken from the drawings in the folder [*02_Mechanic*](../02_Mechanics/). As software the name of the folder with header and c++ file is given. The basic software is designed to implement the sensors: 
+- Atlas Scientific K1.0, 
+- Blue Robotics Celsius fast response, 
+- Keller Series 20, 
+- Pyroscience PICO-O2.
 
 Calibrate all sensors according to the manual.
 
@@ -11,7 +17,7 @@ Calibrate all sensors according to the manual.
 
 - Atlas Scientific K 0.1, K 1.0 (https://files.atlas-scientific.com/EC_K_0.1_probe.pdf)
 	- *Hardware:* 
-		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed desciption under [../02_Mechanics/](../02_Mechanics/README.md). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
+		1. To feed the sensor through the pressure housing we designed the sensor bushing, detailed description under [../02_Mechanics/](../02_Mechanics/). The figures below show how the bushing is glued to the sensor K1.0. Next to the sensor you will need the bushing and a spacer to place the bushing as high as possible. In this case we use the glue Relicon PUR Resin 33 to connect them.
 	
 		<figure> 
 			<img src="media/glue_preparation.png"  height="200" title="finished_logger">
@@ -21,11 +27,11 @@ Calibrate all sensors according to the manual.
 		<figurecaption><a name="figure1">*Figure 1:*</a> *Fitting the sensors into the bushing*</figurecaption>
 		</figure>
 		
-		2. The conductivity probes by Atlas Scientific are integrated by the EZO™ Conductivity Circuit (https://files.atlas-scientific.com/EC_EZO_Datasheet.pdf) through the Electrically Isolated EZO™ Carrier Board. Make sure to change the setup to I2C manualy before
-		usage (see datasheet of Conductivity Circuit).
+		2. The conductivity probes by Atlas Scientific are integrated by the EZO™ Conductivity Circuit (https://files.atlas-scientific.com/EC_EZO_Datasheet.pdf) through the Electrically Isolated EZO™ Carrier Board. Make sure to change the setup to I2C manually before
+		usage (see data sheet of Conductivity Circuit).
 		
 			The 5 pins of the Carrier Board are then soldered to the Molex Connector 15134-0502 as in the image below and then connected to I2C3_5Pin1 on the PCB. Double check the configuration with the layouts 
-			before using the sensor. The carrier board can be mounted ontop of the main PCB with spacers.
+			before using the sensor. The carrier board can be mounted on top of the main PCB with spacers.
 	
 		<figure> 
 			<img src="media/K1_0.png"  height="200" title="finished_logger">
@@ -38,25 +44,25 @@ Calibrate all sensors according to the manual.
 		
 	- *Software:* For integrating the sensor check the library ***AtlasScientific***. It includes the regular operation and a method for calibration.
 	
-		Before applying the sensor make sure that the Conductivity Circuit is configured to the right sensors type and is calibrated according to the datasheet. 
+		Before applying the sensor make sure that the Conductivity Circuit is configured to the right sensors type and is calibrated according to the data sheet. 
 
 - AML XChange CT
 	- *Hardware:* The sensor can be directly integrated in the pressure housing, as it offers O-rings and a thread for securing. The specification of the needed hole in the end cap can be provided by AML. Attach the wires to the Uart2_RS485_V8 with the correct pin settings.
-	- *Software:* The sensor can be integrated in software with the library ***AML***. This sensor must be setup individualy though to output the right information (string format) and at the right frequency. Set 
+	- *Software:* The sensor can be integrated in software with the library ***AML***. This sensor must be setup individually though to output the right information (string format) and at the right frequency. Set 
 	this up to your needs.
 
 ### Temperature
 
 - Blue Robotics Celsius fast response (https://bluerobotics.com/store/sensors-sonars-cameras/sensors/celsius-sensor-r1/)
 	- *Hardware:* 
-		1. The sensor can be placed into the designated spot in the lid according to the instructions of BlueRobotics without and further preparation.
+		1. The sensor can be placed into the designated hole in the end cap according to the instructions of BlueRobotics without and further preparation.
 		<figure> 
 			<img src="media/celsius_fast.png"  height="200" title="finished_logger">
 
 		<figurecaption><a name="figure3">*Figure 3:*</a> *Celsius fast response*</figurecaption>
 		</figure>
 		
-		2. The BlueRobotics temperature sensor can directy be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct.
+		2. The BlueRobotics temperature sensor can directly be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct.
 	
 	- *Software:* For integrating the sensor check the library ***CelsiusFR***. It is a modified version of the library by BlueRobotics.
 
@@ -67,17 +73,20 @@ Calibrate all sensors according to the manual.
 
 - Blue Robotics Bar 30 (https://bluerobotics.com/store/sensors-cameras/sensors/bar30-sensor-r1/)
 	- *Hardware:* 
-		1. The sensor can be placed into the designated spot in the lid according to the instructions of BlueRobotics without and further preparation.
+		1. The sensor can be placed into the designated hole in the end cap according to the instructions of BlueRobotics without and further preparation.
 		
-		2. The BlueRobotics pressure sensor can directy be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct.
+		2. The BlueRobotics pressure sensor can directly be plugged into a BM04B-GHS-TBT connector that is placed as I2C1 or I2C2 on the PCB. The wires are connected correct. Regarding the pin assignment: 
+  
 	
 	- *Software:* To integrate the sensor with software, download the Blue Robotics MS5837 Library in PlatformIO an implement it accordingly.
 
-- Keller Series 20 (https://keller-druck.com/en/products/pressure-transducers/oem-pressure-transducers-with-thread/series-20)
+- Keller Series 20D (https://keller-druck.com/en/products/pressure-transducers/oem-pressure-transducers-with-thread/series-20)
 	- *Hardware:*
-		1. The sensors is directy screwed into the inside of the lid at the according position. Make sure to add some lube on the O-ring and tighten it properly.
+		1. The sensors is directly screwed into the inside of the end cap at the according position. Make sure to add some lube on the O-ring and tighten it properly (as the pressure works against the sealing in this case).
 		
 		2. The sensor is connected by a Keller connector board described in the folder *01_Electronics*. It can then be connected to the Molex 53261-0471 on I2C1 or I2C2 with a Molex 15134-0402.
+  		3. Comment on Keller data sheets: Be aware that we used 20D sensor, which is the I2C version. The pin assignment of this sensor can be found in the communication protocol of the 4LD to 9LD sensors (which are incorporated in the 20 series)
+  
 		<figure> 
 			<img src="media/keller_side.png"  height="200" title="finished_logger">
 			<img src="media/keller_top.png"  height="200" title="finished_logger">
@@ -93,9 +102,9 @@ Calibrate all sensors according to the manual.
 
 - Pyroscience PICO-O2 (https://www.pyroscience.com/en/products/all-meters/pico-o2)
 	- *Hardware:*
-		1. The sensors can be placed into the lid according to the manufacturers instructions at the designated position without further preparation.
+		1. The sensors can be placed into the end cap according to the manufacturers instructions at the designated hole without further preparation.
 		
-		2. The sensor is directy connected to the PCB. Attach the cables of the Molex Connector 15134-0402 to the supplied connector as in the figure below (double check with the layouts). The sensor
+		2. The sensor is directly connected to the PCB. Attach the cables of the Molex Connector 15134-0402 to the supplied connector as in the figure below (double check with the layouts). The sensor
 		can then be attached to the Molex 53261-0471 on Uart2 of the PCB.
 		<figure> 
 			<img src="media/pico_o2.png"  height="150" title="finished_logger">

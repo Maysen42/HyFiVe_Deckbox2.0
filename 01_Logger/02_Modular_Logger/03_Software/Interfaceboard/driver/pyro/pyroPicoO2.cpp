@@ -22,8 +22,8 @@ pyroPicoO2::~pyroPicoO2()
 uint8_t pyroPicoO2::getParameter(){
     return 0x03;
 }
-uint8_t pyroPicoO2::getVersion(){
-    return SELECTED_SENSOR;
+uint32_t pyroPicoO2::getVersion(){
+    return (pyroscience_oxygen_oxycap_sub) | (pyroscience_oxygen_oxycap_hs_sub << 8) ;
 }
 
 bool pyroPicoO2::init()
@@ -79,6 +79,12 @@ bool pyroPicoO2::init()
 bool pyroPicoO2::setCalib(float cal, uint8_t coeffToSet)
 {
     //no calibration possible until now
+    return true;
+}
+
+bool pyroPicoO2::getCalibrated()
+{
+    //sensor does not need to get calibrated
     return true;
 }
 

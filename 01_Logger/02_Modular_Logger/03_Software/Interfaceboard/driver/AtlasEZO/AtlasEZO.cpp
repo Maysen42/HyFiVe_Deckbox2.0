@@ -22,13 +22,23 @@ AtlasEZO::~AtlasEZO()
 uint8_t AtlasEZO::getParameter(){
     return 0x04;
 }
-uint8_t AtlasEZO::getVersion(){
-        return SELECTED_SENSOR;
+//uint32_t AtlasEZO::getVersion(){
+//        return myID;
+//}
+
+uint32_t AtlasEZO::getVersion(){
+    return (atlas_scientific_conductivity_k01 ) | (atlas_scientific_conductivity_k10 << 8);
 }
 
 bool AtlasEZO::setCalib(float cal, uint8_t coeffToSet)
 {
     //no calibration possible until now
+    return true;
+}
+
+bool AtlasEZO::getCalibrated()
+{
+    //sensor does not need to get calibrated
     return true;
 }
 
@@ -62,18 +72,17 @@ bool AtlasEZO::init()
     __delay_cycles(10000);
     uart.readBytes_uart(sizeof(answer), (uint8_t *)answer,500 );
 
-    #if SELECTED_SENSOR == 10
-    c = "K,1.0\r";
-    #elif SELECTED_SENSOR == 3
-    c = "K,0.1\r";
-    #endif
-
-    // c = "K,1.0\r";
+    c = "K,?\r";
+    //c = "K,0.1\r";
     strcpy(commandToSend, c.c_str());
     uart.sendBytes_uart(c.length(), (uint8_t *)commandToSend);
     __delay_cycles(10000);
     uart.readBytes_uart(sizeof(answer), (uint8_t *)answer,500 );
-    //
+
+    if (strncmp(answer, "?K,1.0", 6) == 0)
+        myID = atlas_scientific_conductivity_k10;
+    else if (strncmp(answer, "?K,0.1", 6) == 0)
+        myID = atlas_scientific_conductivity_k01;
 
     __delay_cycles(10000);
 

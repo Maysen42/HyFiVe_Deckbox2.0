@@ -1,0 +1,117 @@
+{
+  "logger_id": 10,
+  "operation_mode": "Profiles",
+  "fw_version": "base",
+  "num_sensors": 4,
+  "wifi": [
+	{
+      "ssid": "name",
+      "pw": "*****"
+    }
+   ],
+  "config_update_periode": 1000,
+  "status_upload_periode": 1000,
+  "sample_periode": 1,
+  "sample_cast_enable": 1,
+  "sample_cast_periode": 1,
+  "cast_det_sensor": 36,
+  "cast_det_sensor_threshold": 3,
+  "wet_det_sensor": 34,
+  "wet_det_periode": 15,
+  "wet_det_threshold": 1.1,
+  "dry_det_sensor": 34,
+  "dry_det_threshold": 0.8,
+  "dry_det_verify_delay": 5,
+  "data_upload_retry_periode": 501,
+  "deckunit_id": 4,
+  "platform_id": 9,
+  "vessel_id": 9,
+  "vessel_name": "any",
+  "deployment_contact_id": 4,
+  "contact_first_name": "Max",
+  "contact_last_name": "Mustermann",
+  "sensors": [
+    {
+      "sensor_id": 34,
+      "sample_periode_multiplier": "1",
+      "sample_cast_periode_multiplier": "1",
+      "bus_address": 3,
+      "calib_coeff": {},
+      "serial_number": "0",
+      "sensor_type": {
+        "sensor_type_id": 3,
+        "parameter": "conductivity",
+        "long_name": "sea_water_electrical_conductivity",
+        "unit": "mS_cm-1",
+        "manufacturer": "atlas_scientific",
+        "model": "k0.1",
+        "parameter_no": 1,
+        "accuracy": 4,
+        "resolution": 0.1
+      }
+    },
+    {
+      "sensor_id": 36,
+      "sample_periode_multiplier": "1",
+      "sample_cast_periode_multiplier": "1",
+      "bus_address": 1,
+      "calib_coeff": {},
+      "serial_number": "1645421",
+      "sensor_type": {
+        "sensor_type_id": 6,
+        "parameter": "pressure",
+        "long_name": "sea_water_pressure",
+        "unit": "mbar",
+        "manufacturer": "keller",
+        "model": "series_20",
+        "parameter_no": 1,
+        "accuracy": 5,
+        "resolution": 0.01
+      }
+    },
+    {
+      "sensor_id": 44,
+      "sample_periode_multiplier": "1",
+      "sample_cast_periode_multiplier": "1",
+      "bus_address": 2,
+      "calib_coeff": {},
+      "serial_number": "23450032",
+      "sensor_type": {
+        "sensor_type_id": 11,
+        "parameter": "oxygen",
+        "long_name": "partial_pressure_of_oxygen_in_sea_water",
+        "unit": "mbar",
+        "manufacturer": "pyroscience",
+        "model": "oxycap_hs_sub",
+        "parameter_no": 1,
+        "accuracy": -1,
+        "resolution": -1
+      }
+    },
+    {
+      "sensor_id": 50,
+      "sample_periode_multiplier": "1",
+      "sample_cast_periode_multiplier": "1",
+      "bus_address": 4,
+      "calib_coeff": {
+        "1": 33993,
+        "2": 22586,
+        "3": 15996,
+        "4": 7338,
+        "5": 5714
+      },
+      "serial_number": "0",
+      "sensor_type": {
+        "sensor_type_id": 2,
+        "parameter": "temperature",
+        "long_name": "sea_water_temperature",
+        "unit": "degree_C",
+        "manufacturer": "blue_robotics",
+        "model": "celsius_fast_response",
+        "parameter_no": 1,
+        "accuracy": 0.1,
+        "resolution": 0.01
+      }
+    }
+  ]
+}

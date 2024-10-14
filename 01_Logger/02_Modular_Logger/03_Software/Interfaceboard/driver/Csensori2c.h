@@ -36,8 +36,9 @@ public:
     virtual bool getRAWValue(int64_t *aval) = 0;
     virtual bool getCalculatedValue(int64_t *aval) = 0;
     virtual uint8_t getParameter() = 0;
-    virtual uint8_t getVersion() = 0;
+    virtual uint32_t getVersion() = 0;
     virtual bool setCalib(float cal, uint8_t coeffToSet) = 0;
+    virtual bool getCalibrated() = 0;
     virtual ~Csensor_i2c();
 //    virtual bool writeSampleTemp(int32_t sampleTemp) = 0;
 //    virtual bool writeSampleSal(int32_t sampleSal) = 0;

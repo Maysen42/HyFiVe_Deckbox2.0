@@ -1,6 +1,8 @@
-# How to Manufacture a HyFiVe Deck Box - Hardware
+# Deck Box - Hardware
 
 ## Bill of Material
+
+The following parts are needed to manufacture a HyFiVe deck box.
 
 | #  | Amount | Unit | Name                                                                                                                        | GTIN                                  |
 | -- | ------ | ---- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -11,7 +13,7 @@
 | 4  | 1      | pc   | Network cable, short, small bending radius (e.g. 0.2 m)                                                                     | e.g. 4052792024371                    |
 |    |        |      | **Internal power supply**                                                                                                       |                                       |
 | 5  | 1      | pc   | Self designed PCB  for power distribution incl. fuse and diodes                                                             | self manufactured                     |
-| 6  | 1      | pc   | ACDC, 12 or 24 V output, min 20 W, e.g. Mean Well LPV-20-12 LED Trafo                                                       | 4021087006965                         |
+| 6  | 1      | pc   | ACDC converter, 12 or 24 V output, min 20 W, e.g. Mean Well LPV-20-12 LED Trafo                                                       | 4021087006965                         |
 | 7  | 1      | pc   | DCDC Converter, Input 8-58V, output: 5V, max. 15 W, e.g. K480503                                                            | 8852090466622                         |
 | 8  | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
 | 9  | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact                                               | product numbers 0039039042 430300038  |
@@ -19,7 +21,7 @@
 | 11 | 1      | pc   | Wire 15 cm, 2 x ~0.75mm², red and black                                                                                     |                                       |
 |    |        |      | **External power supply**                                                                                                       |                                       |
 | 12 | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
-|    |        |      | For connection to 230 V                                                                                                     |                                       |
+|    |        |      | **For connection to 230  V**                                                                                                     |                                       |
 | 13 | 1      | pc   | Socket Weipu SP2212/P3-1N, male, 3 pins, IP68                                                                               | 2050001515001                         |
 | 14 | 1      | pc   | Plug Weipu SP2110 / S 3 I, female, 3 pins, IP68                                                                             | 2050001514738                         |
 | 15 | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
@@ -50,7 +52,6 @@
 | 37 | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
 
 
-
 Needed tools:
 
 - Drilling machines for 2 and 21 mm holes 
@@ -58,17 +59,23 @@ Needed tools:
 - 2x wrench 27 mm 
 - Reader for micro SD
 
+**Comment on Rittal case**: The above listed Rittal case is rated IP66 and despite successful deployments in the beginning, we encountered water intake during some campaigns. We fixed this temporarily by applying sealing tape and plan to migrate to an IP67 case (Fibox PC 180x180x150). For switching to this new case we need to change the internal 3D printed mountings.
+
+
 ## Self-Manufactured Components
 
 The following components need to be manufactured according to design files provided in this Github repository:
-- PCB for power distribution: See folder XXXX 
-- 3D printed mountings: Use a 3D printer to manufacture 1 x mounting for antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in this Git repository (LINK XXXXX). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5).
-- Water-cutted mounting: If you want to mount the deck box on a reeling, you can use a water-cutted mounting plate as shown in the picture below. You can use the step file provided in this Git repository (LINK XXXXX) and order at a manufacturer of your choice (price approx. 60 €). 
+- PCB for power distribution: 
+   - Both power inputs of the deck box (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse. 
+   - The function of the PCB is also depicted in the flow diagram below
+   - To reproduce the PCB, you find all necessary infos in the subfolder [./02_electronic/PCB_DC_PowerDistrubution/](./02_electronic/PCB_DC_PowerDistrubution/). Order the PCB at a manufacturer of your choice and fit the parts included in the Bill of Material. 
+- 3D printed mountings: Use a 3D printer to manufacture 1 x mounting for antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in [./01_mechanic/01_internal_mounting/](./01_mechanic/01_internal_mounting/). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5).
+- Water-cut mounting: If you want to mount the deck box on a reeling, you can use a water-cut mounting plate as shown in the picture below. You can use the step file provided in [./01_mechanic/02_external_mounting/](./01_mechanic/02_external_mounting/) and order at a manufacturer of your choice (price approx. 60 €). 
 
 <figure> 
    <img src="media/deckbox_on_deck2.jpg"  width="900" title="deckbox_on_deck">
 
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Deck box mounted on deck with water-cutted mounting plate and steel straps*</figurecaption>
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Deck box mounted on deck with water-cut mounting plate and steel straps*</figurecaption>
 </figure>
 
 ## Mount Internal Components
@@ -92,8 +99,6 @@ To assemble the deck box follow these steps:
    <figurecaption>*Positions of drilling holes*</figurecaption>
 </figure>
 
->TODO: Picture will be replaced
-
 5. Attach electronic components to mounting: 
    1. DCDC unit using M3,9 tapping screws, 
    2. ACDC unit using M2,9 tapping screws, 
@@ -115,14 +120,13 @@ To assemble the deck box follow these steps:
 11. Attach third level of antenna mounting using M2,9 tapping screws. 
 12. Insert antenna mounting into lid of deck box, pay attention to orientation of lid (sides differ by 2 mm). Clamp antenna mounting into lid by fastening M3x16 screws.
 
-<figure> 
-   <img src="media/antenna_mounting_2.jpg"  width="400" title="antenna_mounting_2">
-   <img src="media/antenna_mounting_3.jpg"  width="400" title="antenna_mounting_3">
-   <img src="media/antenna_mounting_4.jpg"  width="400" title="antenna_mounting_4">
+- <figure> 
+   <img src="media/antenna_mounting_2.jpg"  width="30%" title="antenna_mounting_2">
+   <img src="media/antenna_mounting_3.jpg"  width="30%" title="antenna_mounting_3">
+   <img src="media/antenna_mounting_4.jpg"  width="30%" title="antenna_mounting_4">
 
    <figurecaption>*Assembly steps of antenna mounting*</figurecaption>
 </figure>
-TODO: Better picture of clamped mounting and of reeled cables, cut pictures to same height.
 
 ## Connect Components
 
@@ -148,7 +152,7 @@ The internal components inside the deck box are connected as shown in the follow
 ## Manufacture Power Cable for 230 V
 Depending on the power source available on the chosen vessel, you can manufacture the corresponding power cable. 
 
-Safety caution: When dealing with 230 V make sure that you do not endanger yourself and that your product is safe for usage by other people. Make sure that you have the necessary training and permits.
+Safety caution: When dealing with 230 V make sure that you do not endanger yourself and that your product is safe for usage by other people. Make sure that you have the necessary training and follow the local laws.
 
 24. Cut 15 m cable (or length suitable for your application)
 26. Attach Schuko plug including cap on one side

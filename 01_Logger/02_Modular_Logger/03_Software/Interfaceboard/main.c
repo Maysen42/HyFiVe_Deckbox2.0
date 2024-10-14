@@ -24,7 +24,6 @@
 #include "sensor_config.h"
 
 #define MCLK_FREQ_MHZ 8                     // MCLK = 8MHz
-
 unsigned char getOwnI2CAddress(void);
 void setPins(void);
 
@@ -47,19 +46,27 @@ volatile uint8_t par[5] = {PAR_UNKNOWN, PAR_UNKNOWN, PAR_UNKNOWN, PAR_UNKNOWN, P
 volatile uint8_t res[8] = {RES_ERROR, RES_ERROR, RES_ERROR, RES_ERROR, RES_ERROR, RES_ERROR, RES_ERROR, RES_ERROR};
 
 volatile uint8_t  byteCount      = 0;
-uint8_t version = 0xFF;
+uint8_t FW_VERSION = 0;
+uint32_t version = 0x0;
 uint8_t parameter = 0xFF;
 volatile int64_t values[2]      = {0, 0};
 volatile int64_t rawValues[2]      = {0, 0};
 volatile uint8_t startConversion    = 1; //used as command flag and readyflag and errorflag
-                                //0: nothing happening / ready
-                                //1: conversion in progress
+                                //0: conversion in progress
+                                //1: nothing happening / ready
                                 //2: fault in conversion
 volatile int32_t  lastTemperature = -2999; //last Temperature in centigrad
 volatile bool    setTemperature   = false;
 volatile bool    setCalib   = false;
+volatile bool calibrated = false;
+volatile bool goToSleep = false;
+volatile bool wakeUp = false;
+volatile bool sleepOrWarmup = false;
 volatile uint8_t calibToSet = 0;
 volatile float   floatToSet = 0.0;
+
+// Sensor WakeUp Time
+uint16_t sensorWakeUpTime = 0;
 
 void process_cmd(unsigned char cmd, unsigned char* par0)
 {
@@ -75,21 +82,46 @@ void process_cmd(unsigned char cmd, unsigned char* par0)
         byteCount = 1;
         res[0] = RES_PONG;
         break;
+
     case CMD_GETVER:
-        byteCount = 1;
-        res[0]    = version;
+        byteCount = 4;
+        res[0]    = version & 0xFF;
+        res[1]    = (version & 0xFF00)               >> 8;;
+        res[2]    = (version & 0xFF0000)             >> 16;;
+        res[3]    = (version & 0xFF000000)           >> 24;;
         break;
+
     case CMD_GET_PARAMETER:
         byteCount = 1;
         res[0]    = parameter;
         break;
+
     case CMD_GET_RDY:
         byteCount = 1;
         //respond with 0 if something is in progress, 1 if ready, 2 is error
-        if (setCalib || setTemperature) //if set calib or set Temperature is in progress, we are not ready
+        if (setCalib || setTemperature || sleepOrWarmup) //if set calib or set Temperature is in progress, we are not ready
             res[0] = 0;
         else
             res[0]    = startConversion;
+        break;
+
+    case CMD_GET_CALIBRATED:
+        byteCount = 1;
+        if (calibrated) // we are already calibrated
+            res[0] = 1;
+        else
+            res[0]    = 0;
+        break;
+
+    case CMD_GET_SENSOR_WAKEUP_TIME:
+               byteCount = 2;
+               res[0] = sensorWakeUpTime & 0xFF;
+               res[1] = (sensorWakeUpTime >> 8) & 0xFF;
+               break;
+
+    case CMD_GET_FW_VERSION:
+        byteCount = 1;
+        res[0] = FW_VERSION;
         break;
 
     case CMD_GETVALUE1:
@@ -164,56 +196,45 @@ void process_cmd(unsigned char cmd, unsigned char* par0)
         break;
 
     case CMD_SENSOR_WAKEUP:
+        wakeUp = true;
         res[0] = RES_PONG;
         break;
 
     case CMD_SENSOR_SLEEP:
+        goToSleep = true;
         res[0] = RES_PONG;
     break;
 
+    case CMD_SOFTWARE_RESET:
+        WDTCTL = 0xDEAD;
+    break;
+
+
     case CMD_GET_SENSORVOLTAGE:
         byteCount = 1;
-        //res[0] = (NEED3V3) | (NEED5V << 1) | (NEED12V << 2);
 
-        // Bluerobotics_Bar30 | 1 | //I2C_v1: Bluerobotics | pressure| bar30 | sea_water_pressure | mbar
         #if SELECTED_SENSOR == 1
         res[0] = (1) | (0 << 1) | (0 << 2);
 
-        // Bluerobotics_C_TSYS | 2 | //I2C_v1: Bluerobotics CTSYS01 | temperature | celsius_fast_response | sea_water_temperature | degree_C
         #elif SELECTED_SENSOR == 2
         res[0] = (1) | (0 << 1) | (0 << 2);
 
-        // Turner  | 12 | //Analog_v1 5V: | turbidity | C-Flour_TRB | sea_water_turbidity_in_NTU  | NTU
-        #elif SELECTED_SENSOR == 12
-        res[0] = (1) | (1 << 1) | (0 << 2);
-
-        // Turner  | 13 | //Analog_v1 5V: | phycoerythrin | C-Flour_PE | phycoerythrin_in_ppb  | ppb
-        #elif SELECTED_SENSOR == 13
-        res[0] = (1) | (1 << 1) | (0 << 2);
-
-        // Atlas_EZO_Cond_k1_0 | 10 | //UART_v1 : Atlas Scientific EZO | conductivity | k1.0 | sea_water_electrical_conductivity | mS_cm-1
-        #elif SELECTED_SENSOR == 10
-        res[0] = (1) | (0 << 1) | (0 << 2);
-
-        // Atlas_EZO_Cond_k0_1 | 3 | //UART_v1 : Atlas Scientific EZO | conductivity | k0.1 | sea_water_electrical_conductivity | mS_cm-1
         #elif SELECTED_SENSOR == 3
         res[0] = (1) | (0 << 1) | (0 << 2);
 
-        // PyroPicoO2_oxycap_sub | 9 | //UART_v1 : PyroPicoO2 | oxygen | oxycap_sub| partial_pressure_of_oxygen_in_sea_water : mbar
-        #elif SELECTED_SENSOR == 9
-        res[0] = (1) | (0 << 1) | (0 << 2);
+        #elif SELECTED_SENSOR == 4
+       res[0] = (1) | (0 << 1) | (0 << 2);
 
-        // PyroPicoO2_oxycap_hs_sub | 11 | //UART_v1 : PyroPicoO2 | oxygen | oxycap_hs_sub | partial_pressure_of_oxygen_in_sea_water : mbar
-        #elif SELECTED_SENSOR == 11
-        res[0] = (1) | (0 << 1) | (0 << 2);
+        #elif SELECTED_SENSOR == 5
+       res[0] = (1) | (0 << 1) | (0 << 2);
 
-        // Keller_Pressure_20D | 6 | //I2C_v1: Keller | pressure | series_20 | sea_water_pressure | mbar
         #elif SELECTED_SENSOR == 6
-        res[0] = (1) | (0 << 1) | (0 << 2);
+        res[0] = (1) | (1 << 1) | (0 << 2);
 
         #endif
 
         break;
+
     default :
         res[0] = RES_ERROR;
     }
@@ -245,7 +266,11 @@ void receive_cb(unsigned char receive)
             cmd == CMD_SENSOR_WAKEUP ||
             cmd == CMD_SENSOR_SLEEP ||
             cmd == CMD_GET_PARAMETER ||
-            cmd == CMD_GET_RDY
+            cmd == CMD_GET_RDY      ||
+            cmd == CMD_GET_CALIBRATED ||
+            cmd == CMD_GET_SENSOR_WAKEUP_TIME ||
+            cmd == CMD_GET_FW_VERSION ||
+            cmd == CMD_SOFTWARE_RESET
             )
         {
             process_cmd(cmd, (uint8_t *)par);
@@ -328,32 +353,45 @@ int main(void)
 	__bis_SR_register(GIE);
 
 	// Select Sensor via SELECTED_SENSOR in sesnor_config.h
+
+	// ID | Manufacturer        | Parameter                     | Model                          / sensor_type_ID     | FW
+	//----:---------------------:-------------------------------:--------------------------------:--------------------:-----
+	// 1  : blue_robotics       : pressure                      : bar30                          : 1                  : 1
+	// 2  : blue_robotics       : temperature                   : celsius_fast_response          : 2                  : 1
+	// 3  : keller              : pressure                      : series_20                      : 6                  : 1
+	// 4  : atlas_scientific    : conductivity                  : k0.1 | k1.0                    : 3 | 10             : 1
+	// 5  : pyroscience         : oxygen                        : oxycap_sub | oxycap_hs_sub     : 9 | 11             : 1
+	// 6  : Turner              : turbidity | phycoerythrin     : C-Flour_TRB | C-Flour_PE       : 12 | 13            : 1
+
 	#if SELECTED_SENSOR == 1
-        CMS5837::CMS5837 sensor(0x76); // Bluerobotics_Bar30 | 1 | //I2C_v1: Bluerobotics | pressure| bar30 | sea_water_pressure | mbar
+	FW_VERSION = 1;
+	    sensorWakeUpTime = 1000;
+        CMS5837::CMS5837 sensor(0x76);
 
     #elif SELECTED_SENSOR == 2
-        CTSYS01 sensor(0x77); // Bluerobotics_C_TSYS | 2 | //I2C_v1: Bluerobotics CTSYS01 | temperature | celsius_fast_response | sea_water_temperature | degree_C
-
-    #elif SELECTED_SENSOR == 12
-        Analog::Analog sensor(0);  // Turner : turbidity : C-Flour_TRB : sea_water_turbidity_in_NTU : NTU
-
-    #elif SELECTED_SENSOR == 13
-        Analog::Analog sensor(0); // Turner : phycoerythrin : C-Flour_PE : phycoerythrin_in_ppb : ppb
-
-    #elif SELECTED_SENSOR == 10
-        AtlasEZO::AtlasEZO sensor(0); // Atlas_EZO_Cond_k1_0 | 10 | //UART_v1 : Atlas Scientific EZO | conductivity | k1.0 | sea_water_electrical_conductivity | mS_cm-1
+        FW_VERSION = 1;
+        sensorWakeUpTime = 1000;
+        CTSYS01 sensor(0x77);
 
     #elif SELECTED_SENSOR == 3
-        AtlasEZO::AtlasEZO sensor(0); // Atlas_EZO_Cond_k0_1 | 3 | //UART_v1 : Atlas Scientific EZO | conductivity | k0.1 | sea_water_electrical_conductivity | mS_cm-1
+        FW_VERSION = 2;
+        sensorWakeUpTime = 1000;
+        KellerPressure sensor(0x40);
 
-    #elif SELECTED_SENSOR == 9
-        pyroPicoO2 sensor(0); // PyroPicoO2_oxycap_sub | 9 | //UART_v1 : PyroPicoO2 | oxygen | oxycap_sub| partial_pressure_of_oxygen_in_sea_water : mbar
+    #elif SELECTED_SENSOR == 4
+        FW_VERSION = 1;
+        sensorWakeUpTime = 2000;
+        AtlasEZO::AtlasEZO sensor(0);
 
-    #elif SELECTED_SENSOR == 11
-        pyroPicoO2 sensor(0); // PyroPicoO2_oxycap_hs_sub | 11 | //UART_v1 : PyroPicoO2 | oxygen | oxycap_hs_sub | partial_pressure_of_oxygen_in_sea_water : mbar
+    #elif SELECTED_SENSOR == 5
+        FW_VERSION = 1;
+        sensorWakeUpTime = 1000;
+        pyroPicoO2 sensor(0);
 
     #elif SELECTED_SENSOR == 6
-        KellerPressure sensor(0x40); // Keller_Pressure_20D | 6 | //I2C_v1: Keller | pressure | series_20 | sea_water_pressure | mbar
+        FW_VERSION = 1;
+        sensorWakeUpTime = 1000;
+        Analog::Analog sensor(0);
 
     #endif
 
@@ -361,6 +399,7 @@ int main(void)
 	sensor.init();
 	version = sensor.getVersion();
 	parameter = sensor.getParameter();
+	calibrated = sensor.getCalibrated();
 
 	while(1) //endless loop waiting for i2c command
 	{
@@ -368,6 +407,34 @@ int main(void)
         while (UCB0CTL1 & UCTXSTP); // Ensure stop condition exists
         //check I2C command
 
+
+        if (goToSleep)
+        {
+            //mater wants us to put the sensor to low power mode
+            //we switch the mosfet off:
+            //signal that we are not ready anymore
+            sleepOrWarmup = true;
+            P3OUT &= ~BIT5;
+            __delay_cycles(180000);
+            P2OUT &= ~BIT7;
+            __delay_cycles(180000);
+            goToSleep = false;
+        }
+        if (wakeUp)
+        {
+            //we switch the mosfet on:
+            P3OUT |= BIT5;
+            __delay_cycles(180000);
+            P2OUT |= BIT7;
+            __delay_cycles(180000);
+            //reinit sensor
+            sensor.init();
+            //wait for warm up time
+
+            //signal that we are ready
+            sleepOrWarmup = false;
+            wakeUp = false;
+        }
         if(setTemperature)
         {
             sensor.setTemperature(lastTemperature);
@@ -376,6 +443,7 @@ int main(void)
         if (setCalib)
         {
             sensor.setCalib(floatToSet, calibToSet);
+            calibrated = sensor.getCalibrated();
             setCalib = false;
         }
         if(startConversion == 0)
@@ -384,6 +452,8 @@ int main(void)
             if (!sensor.startConversion())
             {
                 startConversion=2;
+                //sensor.init();
+                //WDTCTL = 0xDEAD;
             }
 
             if (!sensor.getRAWValue((int64_t*)rawValues)) //first get raw value, some drivers get value when this is called

@@ -28,8 +28,9 @@ public:
     virtual bool getRAWValue(int64_t *aval);
     virtual bool getCalculatedValue(int64_t *aval);
     virtual uint8_t getParameter();
-    virtual uint8_t getVersion();
+    virtual uint32_t getVersion();
     virtual bool setCalib(float cal, uint8_t coeffToSet);
+    virtual bool getCalibrated();
     virtual ~AtlasEZO();
 
 private:
@@ -40,6 +41,7 @@ private:
     char     answer[40];
     char     cal[K01CALCOEFF][12];
     float    val;
+    uint8_t  myID = 0;
 };
 
 #endif /* DRIVER_ATLASEZO_ATLASEZO_H_ */
