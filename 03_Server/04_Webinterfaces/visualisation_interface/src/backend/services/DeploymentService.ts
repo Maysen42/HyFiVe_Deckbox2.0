@@ -85,7 +85,7 @@ export class DeploymentService extends BackendDbService {
       )
       .where("processedData.valid", "=", 1)
       .where(sql`ST_AsText(sensorData.measuring_location)`, "!=", "POINT(-999 -999)")
-      .innerJoin("PlatformContainsLogger", (join) =>
+      .leftJoin("PlatformContainsLogger", (join) =>
         join
           .on((eb) =>
             eb.and([
@@ -97,7 +97,7 @@ export class DeploymentService extends BackendDbService {
       )
       .leftJoin("Platform", "Platform.platform_id", "PlatformContainsLogger.platform_id")
       .leftJoin("Vessel", "Platform.platform_id", "Vessel.platform_id")
-      .innerJoin("Deployment", (join) =>
+      .leftJoin("Deployment", (join) =>
         join
           .onRef("Deployment.deployment_id", "=", "sensorData.deployment_id")
           .onRef("Deployment.logger_id", "=", "sensorData.logger_id")
@@ -174,21 +174,90 @@ export class DeploymentService extends BackendDbService {
    * @returns {Promise<any>} - A promise that resolves with the deployment details.
    */
   async getDeploymentById(logger_id: number, deployment_id: number) {
-    const result = await db
-      .selectFrom("Deployment")
-      .where(({ eb, and }) =>
-        and([eb("Deployment.logger_id", "=", logger_id), eb("Deployment.deployment_id", "=", deployment_id)])
+    const sensorDataAggregation = db
+      .selectFrom("RawValue as rawValue")
+      .leftJoin("ProcessedValueHasRawValue as linkTable", (join) =>
+        join
+          .onRef("rawValue.raw_value_id", "=", "linkTable.raw_value_id")
+          .onRef("rawValue.deployment_id", "=", "linkTable.deployment_id")
+          .onRef("rawValue.logger_id", "=", "linkTable.logger_id")
+          .onRef("rawValue.sensor_id", "=", "linkTable.sensor_id")
       )
-      .innerJoin("PlatformContainsLogger", "PlatformContainsLogger.logger_id", "Deployment.logger_id")
-      .innerJoin("Vessel", "Vessel.platform_id", "PlatformContainsLogger.platform_id")
+      .leftJoin("ProcessedValue as processedValue", "linkTable.processed_value_id", "processedValue.processed_value_id")
+      .where(({ eb, and }) =>
+        and([
+          eb("rawValue.logger_id", "=", logger_id),
+          eb("rawValue.deployment_id", "=", deployment_id),
+          eb("processedValue.valid", "=", 1),
+        ])
+      )
+      .select([
+        "processedValue.processed_value_id",
+        "processedValue.measuring_time",
+        sql`MAX(processedValue.processing_time)`.as("latest_processing_time"),
+        "processedValue.pressure",
+        "processedValue.value",
+        "processedValue.position",
+        "rawValue.sensor_id",
+        "rawValue.raw_value_id",
+        "rawValue.logger_id",
+        "rawValue.deployment_id",
+      ])
+      .groupBy(["rawValue.sensor_id", "rawValue.raw_value_id", "rawValue.logger_id", "rawValue.deployment_id"]);
+
+    // Main query with better naming and join logic
+    let query = db
+      .selectFrom("ProcessedValue as processedData")
+      .leftJoin("ProcessedValueHasRawValue as dataLink", (join) =>
+        join.onRef("processedData.processed_value_id", "=", "dataLink.processed_value_id")
+      )
+      .leftJoin(sensorDataAggregation.as("aggregatedData"), (join) =>
+        join
+          .onRef("processedData.processing_time", "=", "aggregatedData.latest_processing_time")
+          .onRef("dataLink.sensor_id", "=", "aggregatedData.sensor_id")
+          .onRef("dataLink.raw_value_id", "=", "aggregatedData.raw_value_id")
+      )
+      .leftJoin("RawValue as sensorData", (join) =>
+        join
+          .onRef("sensorData.raw_value_id", "=", "dataLink.raw_value_id")
+          .onRef("sensorData.deployment_id", "=", "dataLink.deployment_id")
+          .onRef("sensorData.logger_id", "=", "dataLink.logger_id")
+          .onRef("sensorData.sensor_id", "=", "dataLink.sensor_id")
+      )
+      .where("processedData.valid", "=", 1)
+      .where(sql`ST_AsText(sensorData.measuring_location)`, "!=", "POINT(-999 -999)")
+      .leftJoin("PlatformContainsLogger", (join) =>
+        join
+          .on((eb) =>
+            eb.and([
+              eb("sensorData.measuring_time", ">=", eb.ref("PlatformContainsLogger.time_start")),
+              eb("sensorData.measuring_time", "<=", eb.ref("PlatformContainsLogger.time_end")),
+            ])
+          )
+          .onRef("sensorData.logger_id", "=", "PlatformContainsLogger.logger_id")
+      )
+      .leftJoin("Platform", "Platform.platform_id", "PlatformContainsLogger.platform_id")
+      .leftJoin("Vessel", "Platform.platform_id", "Vessel.platform_id")
+      .leftJoin("Deployment", (join) =>
+        join
+          .onRef("Deployment.deployment_id", "=", "sensorData.deployment_id")
+          .onRef("Deployment.logger_id", "=", "sensorData.logger_id")
+      )
+      .where(({ eb, and }) =>
+        and([
+          eb("sensorData.logger_id", "=", logger_id),
+          eb("sensorData.deployment_id", "=", deployment_id),
+          eb("processedData.valid", "=", 1),
+        ])
+      )
       .select([
         "Deployment.time_start",
         "Deployment.time_end",
         "Deployment.position_start",
         "Deployment.position_end",
         "Vessel.name",
-      ])
-      .executeTakeFirst();
-    return result;
+      ]);
+
+    return query.executeTakeFirst();
   }
 }
