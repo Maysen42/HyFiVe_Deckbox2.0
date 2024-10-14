@@ -5,17 +5,20 @@
 1. Place the battery into the battery holder.
 2. Attach the Wi-Fi antenna.
 
-<img src="media/assembly(1).jpg"  width="600">
+<table>
+  <tr>
+    <td><img src="media/assembly(1).jpg"  width="600"></td>
+    <td><img src="media/assembly(2).jpg" width="300"></td>
+    <td><img src="media/assembly(3).jpg" width="300"></td>
+    <td><img src="media/assembly(4).jpg"  width="400"></td>
+  </tr>
+</table>
 
-<img src="media/assembly(2).jpg"  width="300">
-
-<img src="media/assembly(3).jpg"  width="300">
-
-<img src="media/assembly(4).jpg"  width="400">
 
 ## 2. Measurement Sensors
 
 Attach the measurement sensors.
+
 <img src="media/assembly(5).jpg"  width="600">
 
 ## 3. Mainboard and Interface Board
@@ -23,11 +26,13 @@ Attach the measurement sensors.
 1. Connect the mainboard to the interface board.
 2. Ensure the correct polarity of the connector.
 
-<img src="media/assembly(6).jpg"  width="300">
-
-<img src="media/assembly(7).jpg"  width="600">
-
-<img src="media/assembly(8).jpg"  width="600">
+<table>
+  <tr>
+    <td><img src="media/assembly(6).jpg"  width="300"></td>
+    <td><img src="media/assembly(7).jpg" width="600"></td>
+    <td><img src="media/assembly(8).jpg" width="600"></td>
+  </tr>
+</table>
 
 ## 4. Screw Components and Connect Plugs
 
@@ -36,11 +41,14 @@ Attach the measurement sensors.
 3. Plug in the LED and reed switch connectors.
 4. Connect the charging plug.
 <img src="media/assembly(9).jpg"  width="600">
-<img src="media/assembly(10).jpg"  width="600">
 
-<img src="media/assembly(11).jpg"  width="600">
-
-<img src="media/assembly(12).jpg"  width="300">
+<table>
+  <tr>
+    <td><img src="media/assembly(10).jpg" width="600"></td>
+    <td><img src="media/assembly(11).jpg" width="600"></td>
+    <td><img src="media/assembly(12).jpg" width="300"></td>
+  </tr>
+</table>
 
 ## 5. LED and Reed Switch
 
@@ -88,8 +96,10 @@ Example for Wi-Fi configuration:
 2. Press the Boot-BMS button.
 3. The board starts and can be assembled.
 
-<img src="media/assembly(14).jpg"  width="300">
-
-<img src="media/assembly(15).jpg"  width="500">
-
-<img src="media/assembly(16).jpg"  width="500">
+<table>
+  <tr>
+    <td><img src="media/assembly(14).jpg" width="300"></td>
+    <td><img src="media/assembly(15).jpg" width="500"></td>
+    <td><img src="media/assembly(16).jpg" width="500"></td>
+  </tr>
+</table>
