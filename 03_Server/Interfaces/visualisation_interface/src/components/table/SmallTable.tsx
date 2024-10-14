@@ -24,11 +24,11 @@ export interface SmallTableProps {
  */
 const formatValue = (value: string | Date | Point, dataKey: string): string => {
   if (dataKey === "time_start" || dataKey === "time_end")
-    return value ? new Date(value.toString()).toLocaleString("de-DE", DateTimeLocaleOptions) : "no data";
+    return value ? new Date(value?.toString()).toLocaleString("de-DE", DateTimeLocaleOptions) : "no data";
 
   if (dataKey === "position_start" || dataKey === "position_end") return `${(value as Point).x}, ${(value as Point).y}`;
 
-  return value.toString();
+  return value?.toString();
 };
 
 const SmallTable = ({ tableData }: SmallTableProps): JSX.Element => {
@@ -38,13 +38,14 @@ const SmallTable = ({ tableData }: SmallTableProps): JSX.Element => {
         Object.keys(tableData).map((dataKey) => {
           if (Object(TableDataKeys)[dataKey]) {
             const value = formatValue((tableData as any)[dataKey], dataKey);
+
             return (
               <div
                 className="flex text-danube-900 text-sm odd:bg-danube-100 even:bg-danube-50 items-center border-white last:border-b-0 border-b flex-col sm:flex-row"
                 key={dataKey}
               >
                 <div className="flex-0 py-1 px-2 min-w-full sm:min-w-44">{Object(TableDataKeys)[dataKey]}</div>
-                <div className="border-l-0 border-white flex-1 py-1 px-2 sm:border-l-2">{value}</div>
+                <div className="border-l-0 border-white flex-1 py-1 px-2 sm:border-l-2">{value ? value : "-"}</div>
               </div>
             );
           }
