@@ -163,7 +163,8 @@
  ![Build Debug_TI(2)](media/Build_Debug_TI(2).jpg)
 
 3. The project will now compile and should run without errors.
-
+> - if msp430ware is not installed, install it offline via `View` -> `Resource Explorer`. 
+> - if libmath.a is not found, change it through `Project` -> `Properties` -> `MSP430 Linker` -> `File Search Path` -> libmath.a to C:\ti\ccs1281\ccs\ccs_base\msp430\lib\5xx_6xx_FRxx\libmath.a. Make sure the path is correct on your system -> Apply and Close
 ### 5. Flashing Firmware and Debugging
 
 ![Debug Flash](media/Debug_Flash.jpg)
