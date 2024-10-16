@@ -109,9 +109,15 @@
 ### 4. Flashing and Debugging
 
 1. Connect the UART programmer to the ESP32 board, [see UART Serial Port Connector for ESP32](../01_Electronics/README.md).
-2. Flash the firmware:
+
+2. Preparation for flashing:
+   - Press and hold the 'SW Push ESP32' button.
+   - Additionally, short-circuit the 'Reset Connector' for 5 seconds using a reed switch.
+   - After 5 seconds have elapsed, you can release both.
+
+3. Flash the firmware:
    - Click on the arrow icon (Upload) ![Upload](media/Upload.jpg) in the status bar or use `Ctrl+Alt+U`.
-3. Open the Serial Monitor for monitoring:
+4. Open the Serial Monitor for monitoring:
    - Click on the plug icon (Serial Monitor) ![Serial_Monitor](media/Serial_Monitor.jpg) or use `Ctrl+Alt+S`.
 
 ### 5. Alternative Firmware Update Method (Updates without Programming Device)
