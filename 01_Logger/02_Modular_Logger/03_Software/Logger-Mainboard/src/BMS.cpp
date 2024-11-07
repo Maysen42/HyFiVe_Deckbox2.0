@@ -12,6 +12,7 @@
 #include "BMS_lib.h"
 #include "DS3231TimeNtp.h"
 #include "DebuggingSDLog.h"
+#include "DeepSleep.h"
 #include "Led.h"
 #include "SDCard.h"
 #include "SensorManagement.h"
@@ -38,18 +39,46 @@ void initBmsAndRtc()
  */
 void logBmsStatus()
 {
+  uint8_t ERROR_THRESHOLD = 3;
+  Log(LogCategoryBMS, LogLevelDEBUG, "BMS ", "Status: ", " CellVoltage[mV]: ", String(getTotalBatteryCellVoltage()), " :Remaining[%]: ", String(getRemainingBatteryPercentage()), " :Capacity[mAh]: ", String(getRemainingBatteryCapacity()), " :Temperature Battery[degC]: ", String((BMS.getTS1Temp() / 10) - 273.15), " :getSafetyAlertAB: ", String(BMS.getSafetyAlertAB()), " :getSafetyStatusAB: ", String(BMS.getSafetyStatusAB()), " :getSafetyAlertCD: ", String(BMS.getSafetyAlertCD()), " :getSafetyStatusCD: ", String(BMS.getSafetyStatusCD()), " :getCell1_V: ", String(BMS.getCell1_V()), " :getCell2_V: ", String(BMS.getCell2_V()), " :getCell3_V: ", String(BMS.getCell3_V()), " :getCell4_V: ", String(BMS.getCell4_V()), " :getCell1_I: ", String(BMS.getCell1_I()), " :getCell2_I: ", String(BMS.getCell2_I()), " :getCell3_I: ", String(BMS.getCell3_I()), " :getCell4_I: ", String(BMS.getCell4_I()));
+
+  if (BMS.getSafetyAlertAB() == 16384 || BMS.getSafetyStatusAB() == 16384)
+  {
+    if (getRemainingBatteryPercentage() <= 15)
+    {
+      Log(LogCategoryBMS, LogLevelDEBUG, "BMS ", "Status: ", " CellVoltage[mV]: ", String(getTotalBatteryCellVoltage()), " Remaining[%]: ", String(getRemainingBatteryPercentage()), " Capacity[mAh]: ", String(getRemainingBatteryCapacity()), " Temperature Battery[degC]: ", String((BMS.getTS1Temp() / 10) - 273.15));
+      Log(LogCategoryBMS, LogLevelDEBUG, "BMS ", "Log: ", "getSafetyAlertAB: ", String(BMS.getSafetyAlertAB()), " getSafetyStatusAB: ", String(BMS.getSafetyStatusAB()), " getSafetyAlertCD: ", String(BMS.getSafetyAlertCD()), " getSafetyStatusCD: ", String(BMS.getSafetyStatusCD()));
+      Log(LogCategoryBMS, LogLevelDEBUG, "BMS ", "Log: ", "getCell1_V: ", String(BMS.getCell1_V()), " getCell2_V: ", String(BMS.getCell2_V()), " getCell3_V: ", String(BMS.getCell3_V()), " getCell4_V: ", String(BMS.getCell4_V()));
+      Log(LogCategoryBMS, LogLevelDEBUG, "BMS ", "Log: ", "getCell1_I: ", String(BMS.getCell1_I()), " getCell2_I: ", String(BMS.getCell2_I()), " getCell3_I: ", String(BMS.getCell3_I()), " getCell4_I: ", String(BMS.getCell4_I()));
+      //* Battery management
+      batteryCompletelyCharged();
+      connectionOfPowerSupplyBeginChargingOfBatteries();
+      espDeepSleepSec(0);
+      return;
+    }
+  }
+
   if (BMS.getSafetyAlertAB() != 0 || BMS.getSafetyStatusAB() != 0 || BMS.getSafetyAlertCD() != 0 || BMS.getSafetyStatusCD() != 0)
   {
-    Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Status: ", " CellVoltage[mV]: ", String(getTotalBatteryCellVoltage()), " Remaining[%]: ", String(getRemainingBatteryPercentage()), " Capacity[mAh]: ", String(getRemainingBatteryCapacity()), " Temperature Battery[degC]: ", String((BMS.getTS1Temp() / 10) - 273.15));
-    Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Error Log: ", "getSafetyAlertAB: ", String(BMS.getSafetyAlertAB()), " getSafetyStatusAB: ", String(BMS.getSafetyStatusAB()), " getSafetyAlertCD: ", String(BMS.getSafetyAlertCD()), " getSafetyStatusCD: ", String(BMS.getSafetyStatusCD()));
-    Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Error Log: ", "getCell1_V: ", String(BMS.getCell1_V()), " getCell2_V: ", String(BMS.getCell2_V()), " getCell3_V: ", String(BMS.getCell3_V()), " getCell4_V: ", String(BMS.getCell4_V()));
+    bmsErrorCounter++;
+    if (bmsErrorCounter >= ERROR_THRESHOLD)
+    {
+      Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Status: ", " CellVoltage[mV]: ", String(getTotalBatteryCellVoltage()), " Remaining[%]: ", String(getRemainingBatteryPercentage()), " Capacity[mAh]: ", String(getRemainingBatteryCapacity()), " Temperature Battery[degC]: ", String((BMS.getTS1Temp() / 10) - 273.15));
+      Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getSafetyAlertAB: ", String(BMS.getSafetyAlertAB()), " getSafetyStatusAB: ", String(BMS.getSafetyStatusAB()), " getSafetyAlertCD: ", String(BMS.getSafetyAlertCD()), " getSafetyStatusCD: ", String(BMS.getSafetyStatusCD()));
+      Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getCell1_V: ", String(BMS.getCell1_V()), " getCell2_V: ", String(BMS.getCell2_V()), " getCell3_V: ", String(BMS.getCell3_V()), " getCell4_V: ", String(BMS.getCell4_V()));
+      Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getCell1_I: ", String(BMS.getCell1_I()), " getCell2_I: ", String(BMS.getCell2_I()), " getCell3_I: ", String(BMS.getCell3_I()), " getCell4_I: ", String(BMS.getCell4_I()));
 
-    disable3V();
-    Log(LogCategoryBMS, LogLevelINFO, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
-    Log(LogCategoryBMS, LogLevelINFO, "BMS: charging process aborted");
-    batteryCompletlyCharged = true;
-
-    // generalAlarmLed();
+      disable3V();
+      Log(LogCategoryBMS, LogLevelINFO, "BMS: charging process aborted");
+      batteryCompletlyCharged = true;
+      bmsErrorCounter = 0;
+      // generalAlarmLed();
+    }
+    delay(100);
+  }
+  else
+  {
+    bmsErrorCounter = 0;
   }
 }
 

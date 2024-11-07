@@ -1189,10 +1189,13 @@ bool checkWetSensorAndNodeRed()
  */
 void handleSensorError(uint16_t threshold)
 {
-  if (bootCounter >= threshold)
+  if (!chargingStatus)
   {
-    compareRtcWithJsonConfig();  //* RTC configuration comparison
-    performInitialMeasurement(); //* Sensor error detection
-    bootCounter = 0;
+    if (bootCounter >= threshold)
+    {
+      compareRtcWithJsonConfig();  //* RTC configuration comparison
+      performInitialMeasurement(); //* Sensor error detection
+      bootCounter = 0;
+    }
   }
 }
