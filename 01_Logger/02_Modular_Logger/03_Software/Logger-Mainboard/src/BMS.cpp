@@ -34,6 +34,18 @@ void initBmsAndRtc()
   initRTC(&i2c);                                    // DS3231 initialisieren
 }
 
+bool getCellCurrent()
+{
+  if (BMS.getCell1_I() < 100 && BMS.getCell2_I() < 100 && BMS.getCell3_I() < 100 && BMS.getCell4_I() < 100)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
 /**
  * @brief Checks for battery errors and performs necessary actions.
  */
@@ -102,6 +114,12 @@ void checkForBatteryErrors()
       ESP.restart();
     }
   }
+}
+
+void bmsReset()
+{
+  BMS.setRESET();
+  Log(LogCategoryBMS, LogLevelDEBUG, "BMS RESET");
 }
 
 /**

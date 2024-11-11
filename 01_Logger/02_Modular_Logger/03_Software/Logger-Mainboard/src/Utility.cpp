@@ -1000,11 +1000,19 @@ void batteryCompletelyCharged()
     }
 
     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
+    
     if (getRemainingBatteryPercentage() >= 100 && !batteryCompletlyCharged)
     {
       disable3V();
       Log(LogCategoryPowerManagement, LogLevelINFO, "Battery completly charged");
       batteryCompletlyCharged = true;
+    }
+    
+    if (!batteryCompletlyCharged && getRemainingBatteryPercentage() >= 90 && getCellCurrent())
+    {
+     Log(LogCategoryPowerManagement, LogLevelDEBUG, "Battery completly charged > 100%");
+     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
+     bmsReset();
     }
   }
   else

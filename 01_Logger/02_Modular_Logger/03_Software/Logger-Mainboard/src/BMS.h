@@ -20,10 +20,13 @@ void initBmsAndRtc();
 void logBmsStatus();
 void saveBatteryErrorLog();
 void checkForBatteryErrors();
+void bmsReset();
 
 float getRemainingBatteryPercentage();
 
 uint16_t getTotalBatteryCellVoltage();
 uint16_t getRemainingBatteryCapacity();
+
+bool getCellCurrent();
 
 #endif
