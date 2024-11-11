@@ -1000,11 +1000,19 @@ void batteryCompletelyCharged()
     }
 
     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
+    
     if (getRemainingBatteryPercentage() >= 100 && !batteryCompletlyCharged)
     {
       disable3V();
       Log(LogCategoryPowerManagement, LogLevelINFO, "Battery completly charged");
       batteryCompletlyCharged = true;
+    }
+    
+    if (!batteryCompletlyCharged && getRemainingBatteryPercentage() >= 90 && getCellCurrent())
+    {
+     Log(LogCategoryPowerManagement, LogLevelDEBUG, "Battery completly charged > 100%");
+     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
+     bmsReset();
     }
   }
   else
@@ -1189,10 +1197,13 @@ bool checkWetSensorAndNodeRed()
  */
 void handleSensorError(uint16_t threshold)
 {
-  if (bootCounter >= threshold)
+  if (!chargingStatus)
   {
-    compareRtcWithJsonConfig();  //* RTC configuration comparison
-    performInitialMeasurement(); //* Sensor error detection
-    bootCounter = 0;
+    if (bootCounter >= threshold)
+    {
+      compareRtcWithJsonConfig();  //* RTC configuration comparison
+      performInitialMeasurement(); //* Sensor error detection
+      bootCounter = 0;
+    }
   }
 }

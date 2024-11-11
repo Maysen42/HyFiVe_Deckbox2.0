@@ -109,9 +109,15 @@
 ### 4. Flashing and Debugging
 
 1. Connect the UART programmer to the ESP32 board, [see UART Serial Port Connector for ESP32](../01_Electronics/README.md).
-2. Flash the firmware:
+
+2. Preparation for flashing:
+   - Press and hold the 'SW Push ESP32' button.
+   - Additionally, short-circuit the 'Reset Connector' for 5 seconds using a reed switch.
+   - After 5 seconds have elapsed, you can release both.
+
+3. Flash the firmware:
    - Click on the arrow icon (Upload) ![Upload](media/Upload.jpg) in the status bar or use `Ctrl+Alt+U`.
-3. Open the Serial Monitor for monitoring:
+4. Open the Serial Monitor for monitoring:
    - Click on the plug icon (Serial Monitor) ![Serial_Monitor](media/Serial_Monitor.jpg) or use `Ctrl+Alt+S`.
 
 ### 5. Alternative Firmware Update Method (Updates without Programming Device)
@@ -163,7 +169,8 @@
  ![Build Debug_TI(2)](media/Build_Debug_TI(2).jpg)
 
 3. The project will now compile and should run without errors.
-
+> - if msp430ware is not installed, install it offline via `View` -> `Resource Explorer`. 
+> - if libmath.a is not found, change it through `Project` -> `Properties` -> `MSP430 Linker` -> `File Search Path` -> libmath.a to C:\ti\ccs1281\ccs\ccs_base\msp430\lib\5xx_6xx_FRxx\libmath.a. Make sure the path is correct on your system -> Apply and Close
 ### 5. Flashing Firmware and Debugging
 
 ![Debug Flash](media/Debug_Flash.jpg)

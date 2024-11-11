@@ -95,6 +95,7 @@ Example for Wi-Fi configuration:
 1. Connect the battery voltage to the mainboard.
 2. Press the Boot-BMS button.
 3. The board starts and can be assembled.
+4. Leak test still needs to be carried out
 
 <table>
   <tr>
