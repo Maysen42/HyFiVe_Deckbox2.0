@@ -59,7 +59,7 @@ const Table = ({ data, maxHeight, textSize, hasTableWrapper, isLoading }: TableP
       case "deepest":
         return getDepthFromPressure(Number(value)).val + "m";
       default:
-        return value.toString();
+        return value?.toString();
     }
   };
 

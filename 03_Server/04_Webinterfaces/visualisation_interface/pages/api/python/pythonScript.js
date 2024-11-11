@@ -1,5 +1,6 @@
 import { spawn } from "child_process";
 
+
 /**
  * Handles the execution of a Python script with the provided measurements.
  * @param {NextApiRequest} req - The Next.js API request object.
@@ -9,8 +10,7 @@ import { spawn } from "child_process";
 export default function handler(req, res) {
   const { measurements } = req.body;
   const path = require("path");
-  const scriptPath = path.join(__dirname, process.env.PYTHON_FILE_PATH);
-
+  const scriptPath = path.join(process.cwd(), process.env.PYTHON_FILE_PATH);
   const pythonProcess = spawn("python3", [scriptPath]);
 
   let stdoutData = "";
