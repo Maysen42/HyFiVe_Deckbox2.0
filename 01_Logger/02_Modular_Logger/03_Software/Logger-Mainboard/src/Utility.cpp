@@ -694,6 +694,33 @@ void performPeriodicConfigUpdate()
 }
 
 /**
+ * @brief Manages firmware update process.
+ *        Checks conditions, downloads firmware via MQTT, and initiates update.
+ * @note Attempts download up to 3 times before failing
+ */
+void getFirmwareUpdate()
+{
+  if (checkWetSensorAndNodeRed())
+  {
+    if (SD.exists("/updateFW/firmware.bin"))
+    {
+      SD.remove("/updateFW/firmware.bin");
+    }
+    for (int i = 0; i < 3 && !isFirmwareUpdate; i++)
+    {
+      transmitUpdateMessage("fwRequest", "hyfive/updateFwSHA256Request");
+      updateFWViaMqtt();
+    }
+    if (!isFirmwareUpdate)
+    {
+      Log(LogCategoryGeneral, LogLevelERROR, "firmware download not successful");
+    }
+    transmitUpdateMessage("fw_download_successfull", "hyfive/updateFwSHA256Request");
+    updateFirmware();
+  }
+}
+
+/**
  * @brief Calculates available space on the SD card.
  * @return int64_t Available space in bytes.
  */
@@ -1000,19 +1027,19 @@ void batteryCompletelyCharged()
     }
 
     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
-    
+
     if (getRemainingBatteryPercentage() >= 100 && !batteryCompletlyCharged)
     {
       disable3V();
       Log(LogCategoryPowerManagement, LogLevelINFO, "Battery completly charged");
       batteryCompletlyCharged = true;
     }
-    
+
     if (!batteryCompletlyCharged && getRemainingBatteryPercentage() >= 90 && getCellCurrent())
     {
-     Log(LogCategoryPowerManagement, LogLevelDEBUG, "Battery completly charged > 100%");
-     Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
-     bmsReset();
+      Log(LogCategoryPowerManagement, LogLevelDEBUG, "Battery completly charged > 100%");
+      Log(LogCategoryGeneral, LogLevelDEBUG, "batteryRemaining: ", String(getRemainingBatteryPercentage()), " %");
+      bmsReset();
     }
   }
   else
@@ -1037,6 +1064,8 @@ void configUpdatePeriodeFunktion(uint32_t config_update_periode)
       if (checkWetSensorAndNodeRed())
       {
         performPeriodicConfigUpdate();
+        getFirmwareUpdate();
+
         isDataUploadRetryEnabled = hasTransmissionUpdateError;
       }
 

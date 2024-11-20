@@ -16,77 +16,25 @@
 #include "firmwareUpdate.h"
 
 /**
- * @brief Updates the firmware from a file on the SD card.
- */
-void updateFirmware()
-{
-  File updateFile = SD.open("/updateFW/firmware.bin");
-  if (updateFile)
-  {
-    if (Update.begin(updateFile.size()))
-    {
-      size_t written = Update.writeStream(updateFile);
-      if (written == updateFile.size())
-      {
-        Serial.println("Firmware update successful!");
-      }
-      else
-      {
-        Serial.println("Firmware update failed!");
-      }
-      if (Update.end())
-      {
-        if (Update.isFinished())
-        {
-          SD.remove("/updateFW/firmware.bin");
-          delay(1000);
-          ESP.restart();
-        }
-        else
-        {
-          Serial.println("Update not completed. Error!");
-        }
-      }
-      else
-      {
-        Serial.printf("Error when ending the update");
-      }
-    }
-    else
-    {
-      Serial.printf("Not enough memory for the update.");
-    }
-    updateFile.close();
-  }
-  else
-  {
-    Serial.println("Error opening the firmware file.");
-  }
-}
-
-/**
  * @brief Calculates the SHA-256 hash of the firmware file.
  */
-void calculateSha256()
+String calculateCurrentHash()
 {
-  File file = SD.open("/updateFW/firmware.bin", FILE_READ); // mit der datei soll der SHA gemacht werden
+  File file = SD.open("/updateFW/firmware.bin", FILE_READ);
   if (!file)
   {
-    Serial.println("File could not be opened!");
-    return;
+    return "";
   }
 
-  // Initialize the SHA-256 algorithm
   mbedtls_md_context_t ctx;
   mbedtls_md_type_t md_type = MBEDTLS_MD_SHA256;
-  const size_t hash_size = 32; // SHA-256 produziert einen Hash von 32 Bytes
+  const size_t hash_size = 32;
   unsigned char hash[hash_size];
 
   mbedtls_md_init(&ctx);
   mbedtls_md_setup(&ctx, mbedtls_md_info_from_type(md_type), 0);
   mbedtls_md_starts(&ctx);
 
-  // Read the file and calculate the hash
   while (file.available())
   {
     char buf[128];
@@ -98,11 +46,142 @@ void calculateSha256()
   mbedtls_md_finish(&ctx, hash);
   mbedtls_md_free(&ctx);
 
-  // Output of the calculated hash in hexadecimal form
-  Serial.print("SHA-256 Hash: ");
+  String hash_str = "";
   for (int i = 0; i < hash_size; i++)
   {
-    Serial.printf("%02x", hash[i]);
+    char hex[3];
+    sprintf(hex, "%02x", hash[i]);
+    hash_str += hex;
   }
-  Serial.println();
+  return hash_str;
+}
+
+/**
+ * @brief Updates the firmware from a file on the SD card.
+ */
+void updateFirmware()
+{
+  if (SD.exists("/updateFW/firmware.bin"))
+  {
+    File updateFile = SD.open("/updateFW/firmware.bin");
+    if (updateFile)
+    {
+      if (Update.begin(updateFile.size()))
+      {
+        size_t written = Update.writeStream(updateFile);
+        if (written == updateFile.size())
+        {
+          Serial.println("Firmware update successful!");
+
+          File hashFile = SD.open("/updateFW/current_firmware.sha256", FILE_WRITE);
+          if (hashFile)
+          {
+            String currentHash = calculateCurrentHash();
+            hashFile.print(currentHash);
+            hashFile.close();
+            Serial.println("Hash saved to /updateFW/current_firmware.sha256");
+          }
+          else
+          {
+            Serial.println("Error saving hash file!");
+          }
+        }
+        else
+        {
+          Serial.println("Firmware update failed!");
+          SD.remove("/updateFW/firmware.bin");
+        }
+        if (Update.end())
+        {
+          if (Update.isFinished())
+          {
+            updateFile.close();
+            SD.remove("/updateFW/firmware.bin");
+            delay(1000);
+            ESP.restart();
+          }
+          else
+          {
+            Serial.println("Update not completed. Error!");
+            SD.remove("/updateFW/firmware.bin");
+          }
+        }
+        else
+        {
+          Serial.printf("Error when ending the update");
+          SD.remove("/updateFW/firmware.bin");
+        }
+      }
+      else
+      {
+        Serial.printf("Not enough memory for the update.");
+        SD.remove("/updateFW/firmware.bin");
+      }
+      updateFile.close();
+    }
+    else
+    {
+      Serial.println("Error opening the firmware file.");
+      SD.remove("/updateFW/firmware.bin");
+    }
+  }
+}
+
+/**
+ * @brief Calculates and verifies SHA-256 hash of firmware file against provided hash
+ * @param received_sha256 SHA-256 hash to verify against
+ * @return true if hashes match, false if error or mismatch
+ */
+bool calculateSha256(String received_sha256)
+{
+  if (SD.exists("/updateFW/firmware.bin"))
+  {
+    File file = SD.open("/updateFW/firmware.bin", FILE_READ);
+    if (!file)
+    {
+      Serial.println("File could not be opened!");
+      return false;
+    }
+
+    // Initialize the SHA-256 algorithm
+    mbedtls_md_context_t ctx;
+    mbedtls_md_type_t md_type = MBEDTLS_MD_SHA256;
+    const size_t hash_size = 32;
+    unsigned char hash[hash_size];
+
+    mbedtls_md_init(&ctx);
+    mbedtls_md_setup(&ctx, mbedtls_md_info_from_type(md_type), 0);
+    mbedtls_md_starts(&ctx);
+
+    // Read the file and calculate the hash
+    while (file.available())
+    {
+      char buf[128];
+      int l = file.readBytes(buf, sizeof(buf));
+      mbedtls_md_update(&ctx, (const unsigned char *)buf, l);
+    }
+    file.close();
+
+    mbedtls_md_finish(&ctx, hash);
+    mbedtls_md_free(&ctx);
+
+    String calculated_hash = "";
+    for (int i = 0; i < hash_size; i++)
+    {
+      char hex[3];
+      sprintf(hex, "%02x", hash[i]);
+      calculated_hash += hex;
+    }
+
+    Serial.print("Calculated SHA-256: ");
+    Serial.println(calculated_hash);
+    Serial.print("Received SHA-256:  ");
+    Serial.println(received_sha256);
+
+    return (calculated_hash == received_sha256);
+  }
+  else
+  {
+    return false;
+  }
 }

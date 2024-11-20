@@ -34,6 +34,10 @@ void initBmsAndRtc()
   initRTC(&i2c);                                    // DS3231 initialisieren
 }
 
+/**
+ * @brief Checks if current of all cells is below 100mA
+ * @return true if all cells are below 100mA, false otherwise
+ */
 bool getCellCurrent()
 {
   if (BMS.getCell1_I() < 100 && BMS.getCell2_I() < 100 && BMS.getCell3_I() < 100 && BMS.getCell4_I() < 100)
@@ -116,6 +120,9 @@ void checkForBatteryErrors()
   }
 }
 
+/**
+* @brief Performs BMS reset
+*/
 void bmsReset()
 {
   BMS.setRESET();

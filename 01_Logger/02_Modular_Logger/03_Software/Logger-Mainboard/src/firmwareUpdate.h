@@ -13,6 +13,6 @@
 #define FIRMWAREUPDATE_H
 
 void updateFirmware();
-void calculateSha256();
+bool calculateSha256(String received_sha256);
 
 #endif

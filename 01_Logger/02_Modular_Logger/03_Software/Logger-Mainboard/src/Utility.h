@@ -61,5 +61,6 @@ void configUpdatePeriodeFunktion(uint32_t config_update_periode);
 void statusUploadPeriodeFunktion(uint32_t status_upload_periode);
 void wetDetPeriodeFunktion(uint32_t wet_det_periode);
 void dataUploadRetryPeriodeFunktion(uint32_t data_upload_retry_periode);
+void getFirmwareUpdate();
 
 #endif

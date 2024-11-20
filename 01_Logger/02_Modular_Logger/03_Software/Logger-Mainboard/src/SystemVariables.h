@@ -23,7 +23,7 @@ extern std::atomic<bool> ledMeasurementsOff;
 
 // Configuration variables
 
-inline float fwVersionLoggerMainboard = 0.71;
+inline float fwVersionLoggerMainboard = 0.80;
 inline int maxMeasurementCountForLed = 5;           // in count
 inline int sampleCastIntervals = 3;                 // in count
 inline int waitAfterUnderwaterMeasurementTime = 30; // in seconds
@@ -85,7 +85,7 @@ inline RTC_DATA_ATTR bool hasMqttMeasurementError = false;
 inline RTC_DATA_ATTR bool isDataUploadRetryEnabled = false;
 inline bool isNodeRedAvailable = false;
 inline bool isNodeRedLogin = false;
-inline bool isFirmware = false;
+inline bool isFirmwareUpdate = false;
 inline bool isfirstBootLed = false;
 inline RTC_DATA_ATTR bool chargingStatus = false;
 inline RTC_DATA_ATTR bool batteryCompletlyCharged = false;

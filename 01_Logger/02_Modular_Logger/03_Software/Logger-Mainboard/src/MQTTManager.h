@@ -18,6 +18,7 @@ void uploadStatus();
 void updateConfigViaMqtt();
 void handleMqttCallback(char *topic, byte *message, unsigned int length);
 void requestNodeRedStatus();
+void updateFWViaMqtt();
 
 bool transmitUpdateMessage(const char *updateInfo, const char *mqtt_topic);
 bool errorInloggerIdOrTimestamp();

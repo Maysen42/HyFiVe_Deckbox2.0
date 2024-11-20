@@ -240,10 +240,12 @@ bool loggerIDError = false;
 
 bool noUpdateAvaiable = true;
 bool configUpdateAvaiable = true;
+bool FWUpdateAvaiable = true;
 bool messageMqttReceive = false;
 unsigned long lastMessageTime = 0;
-bool leseDateiEin = false;
+bool readFileIn = false;
 File dataFile;
+String received_sha256 = "";
 
 /**
  * @brief Received MQTT message.
@@ -268,6 +270,14 @@ void handleReceivedMessage(MQTTClient *client, char *topic, char *payload, int l
       return;
     }
 
+    if (messageTemp == "no_firmware_update")
+    {
+      messageMqttReceive = true;
+      isFirmwareUpdate = true;
+      Log(LogCategoryMQTT, LogLevelDEBUG, "no_firmware_update");
+      return;
+    }
+
     if (messageTemp == "no_update_available")
     {
       messageMqttReceive = true;
@@ -275,6 +285,49 @@ void handleReceivedMessage(MQTTClient *client, char *topic, char *payload, int l
       return;
     }
     noUpdateAvaiable = false;
+  }
+
+  if (FWUpdateAvaiable)
+  {
+    if (String(topic) == "hyfive/updateFirmwareSHA256")
+    {
+      messageMqttReceive = true;
+      noUpdateAvaiable = false;
+
+      received_sha256 = messageTemp;
+
+      if (SD.exists("/updateFW/current_firmware.sha256"))
+      {
+        File file = SD.open("/updateFW/current_firmware.sha256");
+
+        if (file)
+        {
+          String stored_sha256 = file.readStringUntil('\n');
+          file.close();
+
+          if (stored_sha256 == received_sha256)
+          {
+            Serial.println("sha256 value is equal");
+            isFirmwareUpdate = true;
+            return;
+          }
+        }
+      }
+
+      FWUpdateAvaiable = false;
+      readFileIn = true;
+
+      dataFile = SD.open("/updateFW/firmware.bin", FILE_APPEND);
+      if (!dataFile)
+      {
+        Serial.println("Error opening the file on the SD card.");
+      }
+      else
+      {
+        transmitUpdateMessage((messageTemp).c_str(), "hyfive/updateFWRequest");
+        return;
+      }
+    }
   }
 
   if (configUpdateAvaiable)
@@ -304,7 +357,7 @@ void handleReceivedMessage(MQTTClient *client, char *topic, char *payload, int l
       if (isFirstFileOlder(std::string(findLatestConfigurationFile("/loggerConfig").c_str()), std::string(messageTemp.c_str())))
       {
         configUpdateAvaiable = false;
-        leseDateiEin = true;
+        readFileIn = true;
 
         deleteAllFilesInFolder("/updateConfig");
 
@@ -314,7 +367,7 @@ void handleReceivedMessage(MQTTClient *client, char *topic, char *payload, int l
         dataFile = SD.open(pfad.c_str(), FILE_APPEND);
         if (!dataFile)
         {
-          Serial.println("Fehler beim Öffnen der Datei auf der SD-Karte.");
+          Serial.println("Error opening the file on the SD card.");
         }
         else
         {
@@ -335,11 +388,11 @@ void handleReceivedMessage(MQTTClient *client, char *topic, char *payload, int l
     }
   }
 
-  if (leseDateiEin)
+  if (readFileIn)
   {
     for (int i = 0; i < length; i++)
     {
-      Serial.print(payload[i]);
+      // Serial.print(payload[i]);
       dataFile.print(payload[i]);
     }
   }
@@ -384,7 +437,8 @@ bool connectToMqtt()
 
         // Subscribe to the topics
         client.subscribe("hyfive/updateConfig", 2);
-        client.subscribe("hyfive/updateFW", 2);
+        client.subscribe("hyfive/updateFirmwareSHA256", 2);
+        client.subscribe("hyfive/updateFW", 0);
         client.subscribe("hyfive/nodeRedLogin", 2);
 
         // Set up callback function for incoming messages
@@ -410,6 +464,7 @@ bool connectToMqtt()
 
 /**
  * @brief Updates the logger configuration via MQTT.
+ * @note Timeout or completion will end the process
  */
 void updateConfigViaMqtt()
 {
@@ -427,11 +482,66 @@ void updateConfigViaMqtt()
         transmitUpdateMessage(("Error in: updateConfig - no message received from the deckbox"), "hyfive/ConfigError");
       }
 
-      if (leseDateiEin)
+      if (readFileIn)
       {
         dataFile.close();
       }
-      leseDateiEin = false;
+      readFileIn = false;
+      break;
+    }
+  }
+}
+
+/**
+ * @brief Performs firmware update via MQTT.
+ *        Receives firmware data through MQTT messages and verifies SHA256.
+ * @note Timeout or completion will end the process
+ */
+void updateFWViaMqtt()
+{
+  isFirmwareUpdate = false;
+  configUpdateAvaiable = false;
+  lastMessageTime = millis();
+  while (1)
+  {
+    client.loop();
+    delay(10);
+
+    if (millis() - lastMessageTime > 1500)
+    {
+
+      if (readFileIn)
+      {
+        dataFile.close();
+      }
+      readFileIn = false;
+
+      noUpdateAvaiable = true;
+      FWUpdateAvaiable = true;
+      if (!isFirmwareUpdate)
+      {
+        if (calculateSha256(received_sha256))
+        {
+          Serial.println("SHA256 Hash matches!");
+          isFirmwareUpdate = true;
+          client.unsubscribe("hyfive/updateFW");
+          client.unsubscribe("hyfive/updateFirmwareSHA256");
+        }
+        else
+        {
+          Serial.println("SHA256 Hash mismatch!");
+
+          if (!SD.exists("/updateFW/firmware.bin"))
+          {
+            isFirmwareUpdate = true;
+          }
+          else
+          {
+            SD.remove("/updateFW/firmware.bin");
+            isFirmwareUpdate = false;
+          }
+        }
+      }
       break;
     }
   }
