@@ -53,10 +53,11 @@ bool connectToWifiAndSyncNTP()
       if (strlen(configRTC.wificonfig[j].ssid) > 0)
       {
         Log(LogCategoryWiFi, LogLevelDEBUG, "Trying to connect to network: ", String(configRTC.wificonfig[j].ssid));
-        for (int attempt = 0; attempt < 3; ++attempt)
+        for (int attempt = 0; attempt < 2; ++attempt)
         {
           WiFi.begin(configRTC.wificonfig[j].ssid, configRTC.wificonfig[j].pw);
-
+          for (int i = 0; i < 2; i++)
+          {
             if (WiFi.status() == WL_CONNECTED)
             {
               Log(LogCategoryWiFi, LogLevelDEBUG, "Connected to network: ", String(configRTC.wificonfig[j].ssid));
@@ -65,6 +66,7 @@ bool connectToWifiAndSyncNTP()
               return true;
             }
             delay(1000);
+          }
 
           Log(LogCategoryWiFi, LogLevelDEBUG, "Connection failed for network: ", String(configRTC.wificonfig[j].ssid));
           hasWifiConnection = false;
