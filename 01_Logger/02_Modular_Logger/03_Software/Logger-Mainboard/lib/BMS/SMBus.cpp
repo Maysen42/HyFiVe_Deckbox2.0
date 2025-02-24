@@ -63,6 +63,133 @@ void SMBus::write_Word(uint8_t Command, uint16_t Data)
 	_i2cPort->endTransmission();
 }
 
+void SMBus::undervoltageProtection()
+{
+	_i2cPort->beginTransmission(this->BMS_address);
+	_i2cPort->write(0x44);
+	_i2cPort->write(0x22);
+	_i2cPort->write(0xC0);
+	_i2cPort->write(0x4B);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x0C);
+	_i2cPort->write(0xC4); // 2500
+	_i2cPort->write(0x09); 
+	_i2cPort->write(0x02);
+	_i2cPort->write(0xB8);
+	_i2cPort->write(0x0B);
+	_i2cPort->write(0xC4); // 2500
+	_i2cPort->write(0x09); 
+	_i2cPort->write(0x02);
+	_i2cPort->write(0xB8);
+	_i2cPort->write(0x0B);
+	_i2cPort->write(0xCC);
+	_i2cPort->write(0x10);
+	_i2cPort->write(0xCC);
+	_i2cPort->write(0x10);
+	_i2cPort->write(0xCC);
+	_i2cPort->write(0x10);
+	_i2cPort->write(0xCC);
+	_i2cPort->write(0x10);
+	_i2cPort->write(0xCC);
+	_i2cPort->write(0x10);
+	_i2cPort->write(0x02);
+	_i2cPort->write(0x3C);
+	_i2cPort->write(0x0F);
+	_i2cPort->write(0x3C);
+	_i2cPort->write(0x0F);
+	_i2cPort->write(0x3C);
+	_i2cPort->write(0x0F);
+	_i2cPort->write(0x3C);
+	_i2cPort->write(0x0F);
+	_i2cPort->write(0x3C);
+	_i2cPort->write(0x08);
+	_i2cPort->endTransmission();
+
+	delay(100);
+
+	_i2cPort->beginTransmission(this->BMS_address);
+	_i2cPort->write(0x44);
+	_i2cPort->write(0x22);
+	_i2cPort->write(0xE0);
+	_i2cPort->write(0x4A);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x16);
+	_i2cPort->write(0xEA);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0xAC);
+	_i2cPort->write(0x0D);
+	_i2cPort->write(0xBE); // 2750
+	_i2cPort->write(0x0A); // 2750
+	_i2cPort->write(0x0A);
+	_i2cPort->write(0xD6);
+	_i2cPort->write(0x06);
+	_i2cPort->write(0x0A);
+	_i2cPort->write(0xC4);
+	_i2cPort->write(0x09);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0xB8);
+	_i2cPort->write(0x0B);
+	_i2cPort->write(0x64);
+	_i2cPort->write(0x64);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x05);
+	_i2cPort->write(0xDE);
+	_i2cPort->write(0x0A);
+	_i2cPort->write(0x6E);
+	_i2cPort->write(0x0C);
+	_i2cPort->write(0x05);
+	_i2cPort->write(0xC3);
+	_i2cPort->endTransmission();
+
+	delay(100);
+
+	_i2cPort->beginTransmission(this->BMS_address);
+	_i2cPort->write(0x44);
+	_i2cPort->write(0x22);
+	_i2cPort->write(0xA0);
+	_i2cPort->write(0x4B);
+	_i2cPort->write(0x01);
+	_i2cPort->write(0x1A);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x07);
+	_i2cPort->write(0x03);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0xE8);
+	_i2cPort->write(0x03);
+	_i2cPort->write(0x96);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x64);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x14);
+	_i2cPort->write(0x64);
+	_i2cPort->write(0x64);
+	_i2cPort->write(0x01);
+	_i2cPort->write(0x03);
+	_i2cPort->write(0x0C);
+	_i2cPort->write(0x05);
+	_i2cPort->write(0xD0);
+	_i2cPort->write(0x07);
+	_i2cPort->write(0x00);
+	_i2cPort->write(0x3F);
+	_i2cPort->write(0x3A);
+	_i2cPort->write(0xED);
+	_i2cPort->endTransmission();
+}
+
 void SMBus::write_dWord_BE(uint8_t Command, uint32_t Data)
 { // Big-Endian-Reihenfolge
 	_i2cPort->beginTransmission(this->BMS_address);

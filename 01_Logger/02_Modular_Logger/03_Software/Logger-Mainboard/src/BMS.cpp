@@ -103,6 +103,18 @@ void logBmsStatus()
  */
 void checkForBatteryErrors()
 {
+  enable3V3();
+  delay(50);
+  disable3V();
+  delay(50);
+
+  BMS.setUndervoltageProtection();
+
+  Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Status: ", " CellVoltage[mV]: ", String(getTotalBatteryCellVoltage()), " Remaining[%]: ", String(getRemainingBatteryPercentage()), " Capacity[mAh]: ", String(getRemainingBatteryCapacity()), " Temperature Battery[degC]: ", String((BMS.getTS1Temp() / 10) - 273.15));
+  Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getSafetyAlertAB: ", String(BMS.getSafetyAlertAB()), " getSafetyStatusAB: ", String(BMS.getSafetyStatusAB()), " getSafetyAlertCD: ", String(BMS.getSafetyAlertCD()), " getSafetyStatusCD: ", String(BMS.getSafetyStatusCD()));
+  Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getCell1_V: ", String(BMS.getCell1_V()), " getCell2_V: ", String(BMS.getCell2_V()), " getCell3_V: ", String(BMS.getCell3_V()), " getCell4_V: ", String(BMS.getCell4_V()));
+  Log(LogCategoryBMS, LogLevelINFO, "BMS ", "Log: ", "getCell1_I: ", String(BMS.getCell1_I()), " getCell2_I: ", String(BMS.getCell2_I()), " getCell3_I: ", String(BMS.getCell3_I()), " getCell4_I: ", String(BMS.getCell4_I()));
+  
   pinMode(20, INPUT);
   int pin20Status_ = digitalRead(20);
   if (pin20Status_ == LOW) // NT angeschloßen
@@ -116,6 +128,10 @@ void checkForBatteryErrors()
       Log(LogCategoryBMS, LogLevelERROR, "BMS RESET");
       delay(5000);
       ESP.restart();
+    }
+    else
+    {
+      enable3V3();
     }
   }
 }

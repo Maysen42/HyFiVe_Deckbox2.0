@@ -340,6 +340,12 @@ uint8_t BMS_IC::getcheckFETStatus()
     return FET_EN_Status;
 }
 
+void BMS_IC::setUndervoltageProtection()
+{
+    _SMBus.undervoltageProtection();
+    delay(50);
+}
+
 uint32_t BMS_IC::setRESET()
 {
     _SMBus.write_dWord_BE(CMD_RESET, 0x02410022); // 0x02410022 -> Big-Endian-Reihenfolge -> 0xE8002202

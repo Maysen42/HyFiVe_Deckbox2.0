@@ -23,7 +23,7 @@ extern std::atomic<bool> ledMeasurementsOff;
 
 // Configuration variables
 
-inline float fwVersionLoggerMainboard = 0.81;
+inline float fwVersionLoggerMainboard = 0.82;
 inline int maxMeasurementCountForLed = 5;           // in count
 inline int sampleCastIntervals = 3;                 // in count
 inline int waitAfterUnderwaterMeasurementTime = 30; // in seconds
