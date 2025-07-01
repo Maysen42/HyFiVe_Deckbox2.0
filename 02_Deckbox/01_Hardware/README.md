@@ -71,7 +71,7 @@ The following components need to be manufactured according to design files provi
    - Both power inputs of the deck box (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse. 
    - The function of the PCB is also depicted in the [flow diagram below](#connect-components)
    - To reproduce the PCB, you find all necessary infos in the subfolder [./02_electronic/PCB_DC_PowerDistrubution/](./02_electronic/PCB_DC_PowerDistrubution/). Order the PCB at a manufacturer of your choice and fit the parts included in the Bill of Material. 
-- 3D printed mountings: Use a 3D printer to manufacture 1 x mounting for antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in [./01_mechanic/01_internal_mounting/](./01_mechanic/01_internal_mounting/). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5).
+- 3D printed mountings: Use a 3D printer to manufacture one set of parts for mounting the antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in [./01_mechanic/01_internal_mounting/](./01_mechanic/01_internal_mounting/). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5).
 - Water-cut mounting: If you want to mount the deck box on a reeling, you can use a water-cut mounting plate as shown in the picture below. You can use the step file provided in [./01_mechanic/02_external_mounting/](./01_mechanic/02_external_mounting/) and order at a manufacturer of your choice (price approx. 60 €). 
 
 <figure> 
@@ -91,7 +91,7 @@ At the end the whole assembly should look like this:
 
 To assemble the deck box follow these steps:
 
-1. Drill 21 mm holes for Weipu power sockets, position: Centre of lower section on short side of box (180 mm), one hole in each side (see picture below).
+1. Drill 22 mm holes for Weipu power sockets, position: Centre of lower section on short side of box (180 mm), one hole in each side (see picture below).
 2. Insert Weipu sockets with 2 and 3 pins in drilled holes, fasten tightly with 27 mm wrenches (important for water tightness).
 3. Attach printed mounting for electronic components to mounting plate: Position the mounting on the plate in such way, that their corners are congruent, see picture below. Mark and drill the needed 2 mm holes, screw mounting to plate with M2,9 tapping screws.
 4. Attach router to mounting plate: Position the router as shown on picture above, mark and drill needed 2mm holes, screw router to plate with M2,9 tapping screws
