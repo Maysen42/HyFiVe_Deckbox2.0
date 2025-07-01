@@ -1,4 +1,4 @@
-# Deck Box - Hardware
+# Deck Box 2.0 - Hardware
 
 ## Bill of Material
 
@@ -34,8 +34,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 | 21 | 2      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
 | 22 | 1      | pc   | Plug of your coice for connection to low voltage grid                                                                       |                                       |
 |    |        |      | **Case incl. internal mountings**                                                                                              |                                       |
-| 23 | 1      | pc   | Rittal-PK-9518.000 Case 182x180x111 (Art.-Nr.: W84179)                                                                      | 4028177139657                         |
-| 24 | 1      | pc   | Rittal-PK-9548.000 Mounting plate                                                                                           | 4028177140097                         |
+| 23  | 1      | pc   | FIBOX Case 180x180x150 (Product-No.: 6011323)                                                                               | 6418074052216                         |
 | 25 | 1      | pc   | 3D printed mounting for electronic components                                                                               | self manufactured                     |
 | 26 | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers                                                      | self manufactured                     |
 | 27 | 2      | pc   | Threaded inserts to melt into 3D print, M3x6x5                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
@@ -52,14 +51,17 @@ The following parts are needed to manufacture a HyFiVe deck box.
 | 37 | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
 
 
-Needed tools:
+# Needed tools
 
 - Drilling machines for 2 and 21 mm holes 
 - Soldering station, including equipment e.g. shrinking tubes
+	- adapter tip for melting in press nuts
 - 2x wrench 27 mm 
 - Reader for micro SD
+- Screwdriver PH1 + PH2
+- Screwdriver flathead (2,5)
+- caliper
 
-**Comment on Rittal case**: The above listed Rittal case is rated IP66 and despite successful deployments in the beginning, we encountered water intake during some campaigns. We fixed this temporarily by applying sealing tape and plan to migrate to an IP67 case (Fibox PC 180x180x150). For switching to this new case we need to change the internal 3D printed mountings.
 
 
 ## Self-Manufactured Components
@@ -67,7 +69,7 @@ Needed tools:
 The following components need to be manufactured according to design files provided in this Github repository:
 - PCB for power distribution: 
    - Both power inputs of the deck box (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse. 
-   - The function of the PCB is also depicted in the flow diagram below
+   - The function of the PCB is also depicted in the [flow diagram below](#connect-components)
    - To reproduce the PCB, you find all necessary infos in the subfolder [./02_electronic/PCB_DC_PowerDistrubution/](./02_electronic/PCB_DC_PowerDistrubution/). Order the PCB at a manufacturer of your choice and fit the parts included in the Bill of Material. 
 - 3D printed mountings: Use a 3D printer to manufacture 1 x mounting for antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in [./01_mechanic/01_internal_mounting/](./01_mechanic/01_internal_mounting/). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5).
 - Water-cut mounting: If you want to mount the deck box on a reeling, you can use a water-cut mounting plate as shown in the picture below. You can use the step file provided in [./01_mechanic/02_external_mounting/](./01_mechanic/02_external_mounting/) and order at a manufacturer of your choice (price approx. 60 €). 
