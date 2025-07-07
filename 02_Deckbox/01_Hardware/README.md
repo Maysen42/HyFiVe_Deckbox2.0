@@ -85,30 +85,49 @@ The following components need to be manufactured according to design files provi
 ## Deck Box Top
 ### Antenna Mount (Top level)
 Insert Wi-Fi and mobile antennas into the holder. The same antennas should be orthogonal to each other.
+
 ![[IMG_0075.heic]]
+
 The antenna should click when it is locked into the bracket.
+
 ![[IMG_0077.heic]]
+
 Guide the cables through the corresponding slots
+
 ![[IMG_0079.heic]]
 ![[IMG_0080.heic]]
+
 Guide the GPS antenna cable and click the antenna into place.
+
 ![[IMG_0084.heic]]
 ### Middle level
 Insert the middle level of the antenna mount and guide all 5 cables through.
+
 ![[IMG_0085.heic]]
 ![[IMG_0086.heic]]
+
 Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) starting from the center and then the corners.
+
 ![[IMG_0088.heic]]
 ![[IMG_0089.heic]]
+
 Bundle the cables with cable ties (2.5mm) and attach them to the middle level
+
 ![[IMG_0090.heic]]
+
 Wind the cables together at the middle level, leaving 30 cm of each cable loose, and guide them back through the second opening (Note: Wi-Fi cables are shorter than the others!). It is recommended to keep the winding flat so that the cables can be easily guided back.
+
 ![[IMG_0092.heic]]
 ![[IMG_0094.heic]]
+
 Bundle the cables again and secure them with cable ties
+
 ![[IMG_0096.heic]]
+
+
 #### Bottom level
 Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the press nuts into the corners of the top level. Place the press nuts on the soldering iron with tweezers (!Warning! Hot!). If necessary, first free the hole by screwing in an M3 cylinder head screw.
+
 ![[IMG_0101.heic]]
 ![[IMG_0103.heic]]
 ![[IMG_0105.heic]]
@@ -117,43 +136,68 @@ Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the p
 ![[IMG_0107.heic]]
 ![[IMG_0108.heic]]
 ![[IMG_0110.heic]]
+
 For later attachment to the deck box lid, screw 4 cylinder head screws from the inside into the threads.
+
 ![[IMG_0112.heic]]
 ![[IMG_0111.heic]]
+
 Guide the cables through the middle opening of the bottom level and place them on the middle level.
+
 ![[IMG_0113.heic]]
+
 Screw the bottom level into place using 10 metal screws, similar to the top level
+
 ![[IMG_0117.heic]]
+
 Place the entire mount in the deck box lid and secure it with screws in the corners.
 
 ---
+
 ## Deck Box Bottom
 Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm from the top edge).
+
 !!! DRAWING !!!
 IMG_0260
+
+
 ### Installing the Bottom Plate
 Insert the bottom plate into the deck box, paying attention to the recess for the Weipu connectors.
+
 ![[IMG_0131 1.heic]]
+
 Secure the plate with 4 plastic washers and 4 metal screws (3.8 x 9).
+
 ![[IMG_0136.heic]]
+
 ### AC/DC Converter
 Press the AC/DC converter into the housing and secure the housing to the bottom plate with 2 metal screws (2.9 x 9.5mm).
+
 ![[IMG_0137.heic]]
+
 Cable sides see photo
+
 ![[IMG_0138.heic]]
+
+
 ### PCB on AC/DC Housing
 Screw the PCB onto the AC/DC housing with 2 metal screws (2.2 x 6.5 mm).
+
 ![[IMG_0141.heic]]
 
 
 ### Connecting Weipu Connectors
 ### AC Connector (3-Pole)
 Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter. Guide the cables outward through the hole.
+
 ![[IMG_0153.heic]]
+
 Shorten the AC cable to 10 cm from the deck box and strip the insulation.
 Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 2 of the connector (it also works the other way around). Pole 3 (Ground) is not connected.
 
 ![[IMG_0162.heic]]
+
+
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
 Required:
 - Sikaflex
@@ -170,6 +214,7 @@ Procedure
 ![[IMG_0168.heic]]
 
 ![[IMG_0163.heic]]
+
 ### DC Connector (2-Pole)
 #### Required:
 - Weipu connector 2-pole
@@ -181,11 +226,18 @@ Procedure
 - Vice
 - Wire stripping pliers
 - Crimping pliers
+
 ####
+
 Unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
+
 ![[IMG_0157.heic]]
+
 Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input
+
 ![[IMG_0158.heic]]
+
+
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
 Required:
 - Sikaflex
@@ -206,10 +258,13 @@ Required:
 
 ### Mounting the Raspberry Pi
 Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
+
 ![[IMG_0142.heic]]
 ![[IMG_0143.heic]]
 ![[IMG_0144.heic]]
+
 Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm).
+
 ![[IMG_0145.heic]]
 ![[IMG_0146 1.heic]]
 
@@ -220,17 +275,24 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 - Screw the cable into place on the input side of the PCB
 
 ![[IMG_0159.heic]]
+
 ### Installing the DC/DC Converter
 - Install the DC/DC converter with the holder and screw it into place
+
 ![[IMG_0167.heic]]
+
 ![[IMG_0155.heic]]
+
 - Solder the USB-C connector to the output (black and yellow cable) at a 90° angle
 - Use heat shrink tubing
 - @SEBASTIAN: PLEASE ADD HERE
 - Screw the input into the PCB
 - Insert the USB-C connector into the Raspberry Pi
+
 ### Connecting the Router Antennas
+
 - Screw the antennas onto the router
+
 
 ![[IMG_0170.heic]]
 ![[IMG_0172.heic]]
@@ -243,14 +305,21 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 ![[IMG_0175.heic]]
 
 - Insert the Ethernet and power (12V) cables
+
 ![[IMG_0176.heic]]
+
 - Power cable 270mm
+
 ![[IMG_0177.heic]]
+
 - Twisted pair (2x0.5^2)
 - 1. End 2x wire and sleeves
 - 2. End crimp 2824-20
+
 ### Assembling the Deck Box
+
 ![[IMG_0179.heic]]
+
 requires:
 - 4x nuts M4
 - 4x washers M4
