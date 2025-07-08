@@ -85,15 +85,18 @@ The following components need to be manufactured according to design files provi
 # Assembly
 ## Deck Box Top
 ### Antenna Mount (Top level)
-Insert Wi-Fi and mobile antennas into the holder. The same antennas should be orthogonal to each other.
+- Insert Wi-Fi and mobile antennas into the holder. The same antennas should be orthogonal to each other.
+- The antenna should click when it is locked into the bracket.
+- Guide the cables through the corresponding slots
 
-![[IMG_0075.heic]]
-
-The antenna should click when it is locked into the bracket.
-
-![[IMG_0077.heic]]
-
-Guide the cables through the corresponding slots
+<table>
+  <caption>Table 1: Mounting antennas
+  <tr>
+    <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 ![[IMG_0079.heic]]
 ![[IMG_0080.heic]]
