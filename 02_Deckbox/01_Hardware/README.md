@@ -60,6 +60,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 - Screwdriver PH1 + PH2
 - Screwdriver flathead (2,5)
 - caliper
+- Sikaflex (e.g. 291i  or some other marine certified adhesive sealant)
 
 
 # Self-Manufactured Components
