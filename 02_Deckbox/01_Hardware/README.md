@@ -93,17 +93,19 @@ The following components need to be manufactured according to design files provi
   <caption>Table 1: Mounting antennas
   <tr>
     <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
-    <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
-    <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/mounting_antennas_01a.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/mounting_antennas_03.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
 
-![[IMG_0079.heic]]
-![[IMG_0080.heic]]
-
 Guide the GPS antenna cable and click the antenna into place.
+<figure> 
+   <img src="media/mounting_antennas_04.jpg"  width="900" title="GPS Antenna">
 
-![[IMG_0084.heic]]
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the GPS antenna and click into place*</figurecaption>
+</figure>
+
+
 ### Middle level
 Insert the middle level of the antenna mount and guide all 5 cables through.
 
