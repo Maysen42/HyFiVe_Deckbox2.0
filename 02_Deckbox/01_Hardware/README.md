@@ -52,7 +52,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 
 # Needed tools
 
-- Drilling machines for 2 and 21 mm holes 
+- Drilling machines for 2 and 22 mm holes (e.g. Step Drill)
 - Soldering station, including equipment e.g. shrinking tubes
 	- adapter tip for melting in press nuts
 - 2x wrench 27 mm 
@@ -162,8 +162,7 @@ Place the entire mount in the deck box lid and secure it with screws in the corn
 Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm from the top edge).
 
 !!! DRAWING !!!
-IMG_0260
-
+weipu_drill_holes.jpg
 
 ### Installing the Bottom Plate
 Insert the bottom plate into the deck box, paying attention to the recess for the Weipu connectors.
