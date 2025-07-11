@@ -200,45 +200,77 @@ For later attachment to the deck box lid, screw 4 cylinder head screws from the 
 ## Deck Box Bottom
 Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm from the top edge).
 
-!!! DRAWING !!!
-weipu_drill_holes.jpg
+<figure> 
+   <img src="media/weipu_holes_drawing.jpg"  width="400" title="drawing for weipu sockets">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *drawing for positioning of the holes*</figurecaption>
+</figure>
+
+<figure> 
+   <img src="media/weipu_holes.jpg"  width="400" title="control holes weipu sockets">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *control drilled holes*</figurecaption>
+</figure>
+
 
 ### Installing the Bottom Plate
 Insert the bottom plate into the deck box, paying attention to the recess for the Weipu connectors.
-
-![[IMG_0131 1.heic]]
-
 Secure the plate with 4 plastic washers and 4 metal screws (3.8 x 9).
 
-![[IMG_0136.heic]]
+<table>
+  <caption>Table 1: wind cables in middle level
+  <tr>
+    <td><img src="media/bottom_part_plate.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_part_plate_02.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+
 
 ### AC/DC Converter
 Press the AC/DC converter into the housing and secure the housing to the bottom plate with 2 metal screws (2.9 x 9.5mm).
 
-![[IMG_0137.heic]]
+<figure> 
+   <img src="media/bottom_part_acdc_01.jpg"  width="400" title="ACDC converter with holder">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *put ACDC converter in 3D printed hosuing*</figurecaption>
+</figure>
 
 Cable sides see photo
 
-![[IMG_0138.heic]]
+<figure> 
+   <img src="media/bottom_part_acdc_02.jpg"  width="400" title="ACDC converter on bottom plate">
 
+   <figurecaption><a name="figure1">*Figure 1:*</a> *orientation of converter on bottom plate*</figurecaption>
+</figure>
 
 ### PCB on AC/DC Housing
 Screw the PCB onto the AC/DC housing with 2 metal screws (2.2 x 6.5 mm).
 
-![[IMG_0141.heic]]
+<figure> 
+   <img src="media/bottom_part_pcb.jpg"  width="400" title="PCB on ACDC housing">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Screw the PCB onto the ACDC housing with 2 metal screws (2.2 x 6.5 mm).*</figurecaption>
+</figure>
 
 
 ### Connecting Weipu Connectors
 ### AC Connector (3-Pole)
 Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter. Guide the cables outward through the hole.
 
-![[IMG_0153.heic]]
+<figure> 
+   <img src="media/weipu_sockets_01.jpg"  width="400" title="install weipu sockets 01">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the cables outward through the hole*</figurecaption>
+</figure>
 
 Shorten the AC cable to 10 cm from the deck box and strip the insulation.
 Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 2 of the connector (it also works the other way around). Pole 3 (Ground) is not connected.
 
-![[IMG_0162.heic]]
+<figure> 
+   <img src="media/weipu_sockets_02.jpg"  width="400" title="install weipu sockets 02">
 
+   <figurecaption><a name="figure1">*Figure 1:*</a> *solder cables to weipu socket*</figurecaption>
+</figure>
 
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
 Required:
@@ -253,9 +285,13 @@ Procedure
 - Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
 - Scrape off excess sealant
 
-![[IMG_0168.heic]]
-
-![[IMG_0163.heic]]
+<table>
+  <caption>Table 1: apply sikaflex to seal the socket
+  <tr>
+    <td><img src="media/weipu_sockets_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 ### DC Connector (2-Pole)
 #### Required:
@@ -271,14 +307,8 @@ Procedure
 
 ####
 
-Unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
-
-![[IMG_0157.heic]]
-
+Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
 Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input
-
-![[IMG_0158.heic]]
-
 
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
 Required:
