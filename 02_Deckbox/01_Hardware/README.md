@@ -100,7 +100,7 @@ The following components need to be manufactured according to design files provi
 
 Guide the GPS antenna cable and click the antenna into place.
 <figure> 
-   <img src="media/mounting_antennas_04.jpg"  width="900" title="GPS Antenna">
+   <img src="media/Mounting_antennas_GPS.jpg"  width="500" title="GPS Antenna">
 
    <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the GPS antenna and click into place*</figurecaption>
 </figure>
@@ -109,54 +109,91 @@ Guide the GPS antenna cable and click the antenna into place.
 ### Middle level
 Insert the middle level of the antenna mount and guide all 5 cables through.
 
-![[IMG_0085.heic]]
-![[IMG_0086.heic]]
+<figure> 
+   <img src="media/middle_level_01.jpg"  width="500" title="middle level">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *Insert middle level and guide cables through*</figurecaption>
+</figure>
 
 Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) starting from the center and then the corners.
 
-![[IMG_0088.heic]]
-![[IMG_0089.heic]]
+<table>
+  <caption>Table 1: fix middle level
+  <tr>
+    <td><img src="media/middle_level_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/middle_level_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/middle_level_04.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 Bundle the cables with cable ties (2.5mm) and attach them to the middle level
 
-![[IMG_0090.heic]]
+<figure> 
+   <img src="media/middle_level_cable_01.jpg"  width="500" title="middle level cable">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *fix the cables with cable ties*</figurecaption>
+</figure>
 
 Wind the cables together at the middle level, leaving 30 cm of each cable loose, and guide them back through the second opening (Note: Wi-Fi cables are shorter than the others!). It is recommended to keep the winding flat so that the cables can be easily guided back.
-
-![[IMG_0092.heic]]
-![[IMG_0094.heic]]
-
 Bundle the cables again and secure them with cable ties
 
-![[IMG_0096.heic]]
-
+<table>
+  <caption>Table 1: wind cables in middle level
+  <tr>
+    <td><img src="media/middle_level_cable_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/middle_level_cable_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/middle_level_05.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 #### Bottom level
 Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the press nuts into the corners of the top level. Place the press nuts on the soldering iron with tweezers (!Warning! Hot!). If necessary, first free the hole by screwing in an M3 cylinder head screw.
 
-![[IMG_0101.heic]]
-![[IMG_0103.heic]]
-![[IMG_0105.heic]]
-![[IMG_0104.heic]]
-![[IMG_0106.heic]]
-![[IMG_0107.heic]]
-![[IMG_0108.heic]]
-![[IMG_0110.heic]]
+<figure> 
+   <img src="media/bottom_level_press_nuts_01.jpg"  width="500" title="requirements for bottom level">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *bottom part, press nuts and soldering iron*</figurecaption>
+</figure>
+
+<table>
+  <caption>Table 5: preparation to press in nuts
+  <tr>
+    <td><img src="media/bottom_level_press_nuts_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_level_press_nuts_solder_iron_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_level_press_nuts_solder_iron_02.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+	  
+<table>
+  <caption>Table 5: press in nuts
+  <tr>
+    <td><img src="media/bottom_level_press_nuts_03.jpg" width="200" height="200" loading="lazy"></td>
+    <td><img src="media/bottom_level_press_nuts_04.jpg" width="200" height="200" loading="lazy"></td>
+    <td><img src="media/bottom_level_press_nuts_05.jpg" width="200" height="200" loading="lazy"></td>
+    <td><img src="media/bottom_level_press_nuts_06.jpg" width="200" height="200" loading="lazy"></td>
+  </tr>
+</table>
 
 For later attachment to the deck box lid, screw 4 cylinder head screws from the inside into the threads.
 
-![[IMG_0112.heic]]
-![[IMG_0111.heic]]
+<figure> 
+   <img src="media/bottom_level_fixation.jpg"  width="400" title="screws in nuts">
 
-Guide the cables through the middle opening of the bottom level and place them on the middle level.
+   <figurecaption><a name="figure1">*Figure 1:*</a> *insert screws into the nuts*</figurecaption>
+</figure>
 
-![[IMG_0113.heic]]
+- Guide the cables through the middle opening of the bottom level and place them on the middle level.
+- Screw the bottom level into place using 10 metal screws, similar to the top level.
+- Place the entire mount in the deck box lid and secure it with screws in the corners.
 
-Screw the bottom level into place using 10 metal screws, similar to the top level
-
-![[IMG_0117.heic]]
-
-Place the entire mount in the deck box lid and secure it with screws in the corners.
+<table>
+  <caption>Table 5: preparation to press in nuts
+  <tr>
+    <td><img src="media/bottom_level_fixation_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_level_fixation_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_level_fixation_04.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 ---
 
