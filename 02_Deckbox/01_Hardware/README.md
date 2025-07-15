@@ -43,9 +43,9 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 30  | 2      | pc   | Tapping screw 2.2 x 4.5                                                                                      | 4043952720745                         |
 | 30  | 2      | pc   | Tapping screw 2.2 x 9.5                                                                                      | 4043377162205                         |
 | 31  | ~25    | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
-| 32  | 2      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
+| 32  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
 | 33  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                             |                                       |
-| 33  | 1      | pc   | (plastic) washers for 3.9 mm                                                                                             |                                       |
+| 33  | 4      | pc   | (plastic) washers for 3.9 mm                                                                                             |                                       |
 |     |        |      | **Mounting for box on reeling**                                                                                             |                                       |
 | 34  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
 | 35  | 4      | pc   | Hexagonal screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                             |                                       |
