@@ -16,7 +16,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 | 6   | 1      | pc   | ACDC converter, 12 or 24 V output, min 20 W, e.g. Mean Well LPV-20-12 LED Trafo                                             | 4021087006965                         |
 | 7   | 1      | pc   | DCDC Converter, Input 8-58V, output: 5V, max. 15 W, e.g. K480503                                                            | 8852090466622                         |
 | 8   | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
-| 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact                                               | product numbers 0039039042 430300038  |
+| 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact  2824-20                                      | product numbers 0039039042 430300038  |
 | 10  | 1      | pc   | Wire 15 cm, 2 x ~0.5mm², red and black                                                                                      |                                       |
 | 11  | 1      | pc   | TODO **update USB-Plug!**  ~~USB C plug, rectangular, e.g. cut from cable~~                                                 | e.g. 4064161155296                    |
 |     |        |      | **External power supply**                                                                                                   |                                       |
@@ -61,7 +61,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 - Screwdriver flathead (2,5)
 - caliper
 - Sikaflex (e.g. 291i  or some other marine certified adhesive sealant)
-- Crimp-Tools for TODO **find size of Crimp contacts**
+- Crimp-Tools for 2824-20
 
 
 # Self-Manufactured Components
@@ -312,7 +312,7 @@ Similar to AC-Connector, unscrew the nut and thread it onto the black and red ca
 Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input.
 
 <figure> 
-   <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="install weipu sockets 02">
+   <img src="media/bottom_part_dc_01.jpg"  width="400" title="install weipu sockets 02">
 
    <figurecaption><a name="figure1">*Figure 1:*</a> *fit cable into PCB*</figurecaption>
 </figure>
@@ -360,51 +360,69 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 
 ----
 
-### Connecting AC/DC Converter
-- Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation
-- Screw the cable into place on the input side of the PCB
-
-![[IMG_0159.heic]]
-
 ### Installing the DC/DC Converter
-- Install the DC/DC converter with the holder and screw it into place
-
-![[IMG_0167.heic]]
-
-![[IMG_0155.heic]]
-
 - Solder the USB-C connector to the output (black and yellow cable) at a 90° angle
 - Use heat shrink tubing
 - @SEBASTIAN: PLEASE ADD HERE
-- Screw the input into the PCB
+
+- Install the DC/DC converter with the holder and screw it into place
+
+<figure> 
+   <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="connect dcdc PCB">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *fixate dc/dc converter with holder*</figurecaption>
+</figure>
+
 - Insert the USB-C connector into the Raspberry Pi
+
+
+### Connecting AC/DC converter to PCB
+- Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation
+- Screw the cable into place on the input side of the PCB
+
+<figure> 
+   <img src="media/bottom_part_acdc_pcb.jpg"  width="400" title="connect acdc PCB">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *screw cable to input of PCB*</figurecaption>
+</figure>
+
 
 ### Connecting the Router Antennas
 
 - Screw the antennas onto the router
 
+<figure> 
+   <img src="media/bottom_part_router_antennas_01.jpg"  width="400">
 
-![[IMG_0170.heic]]
-![[IMG_0172.heic]]
-![[IMG_0171.heic]]
+   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
+</figure>
 
 - Screw the router onto the bottom plate (2.3 x 9.5)
 
-![[IMG_0173.heic]]
-![[IMG_0174.heic]]
-![[IMG_0175.heic]]
-
+<table>
+  <tr>
+    <td><img src="media/bottom_part_router_plate_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_part_router_plate_02.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 - Insert the Ethernet and power (12V) cables
+<figure> 
+   <img src="media/bottom_part_router_plate_03.jpg"  width="400">
 
-![[IMG_0176.heic]]
+   <figurecaption><a name="figure1">*Figure 1:*</a> *connect ethernet and power cables*</figurecaption>
+</figure>
 
-- Power cable 270mm
+#### prepare power cable for router
 
-![[IMG_0177.heic]]
+If you are not reusing the power cable from the RUT955 you need to make your own cable.
 
-- Twisted pair (2x0.5^2)
+TODO: **Image needed**
+
+- Twisted pair (2x0.5^2) 270 mm
 - 1. End 2x wire and sleeves
-- 2. End crimp 2824-20
+- 2. End crimp molex 2824-20
+
+Take the cable and crimp down wire sleeves on one end. Crimp the molex 2824-connectors on the other end. Insert molex connectors into the top part of 4x4 molex plug.
 
 ### Assembling the Deck Box
 
