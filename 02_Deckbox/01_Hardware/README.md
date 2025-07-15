@@ -289,8 +289,8 @@ Procedure
 <table>
   <caption>Table 1: apply sikaflex to seal the socket
   <tr>
-    <td><img src="media/weipu_sockets_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/weipu_sockets_04.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
 
@@ -334,8 +334,8 @@ Required:
 <table>
   <caption>Table 1: apply sikaflex to seal the socket
   <tr>
-    <td><img src="media/weipu_sockets_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/weipu_sockets_05.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
 
