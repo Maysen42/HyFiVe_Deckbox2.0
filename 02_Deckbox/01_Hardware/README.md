@@ -40,7 +40,7 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 27  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
 | 28  | 4      | pc   | Hexagonal screws M3x16                                                                                                      |                                       |
 | 29  | 2      | pc   | Cable ties small                                                                                                            |                                       |
-| 30  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                      | 4043377162205                         |
+| 30  | 2      | pc   | Tapping screw 2.2 x 4.5                                                                                      | 4043952720745                         |
 | 30  | 2      | pc   | Tapping screw 2.2 x 9.5                                                                                      | 4043377162205                         |
 | 31  | ~25    | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
 | 32  | 2      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
