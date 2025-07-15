@@ -1,8 +1,8 @@
-# Deck Box - Hardware
+# deckbox - Hardware
 
 # Bill of Material
 
-The following parts are needed to manufacture a HyFiVe deck box.
+The following parts are needed to manufacture a HyFiVe deckbox.
 
 | #   | Amount | Unit | Name                                                                                                                        | GTIN                                  |
 | --- | ------ | ---- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -70,21 +70,21 @@ The following parts are needed to manufacture a HyFiVe deck box.
 
 The following components need to be manufactured according to design files provided in this Github repository:
 - PCB for power distribution: 
-   - Both power inputs of the deck box (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse. 
+   - Both power inputs of the deckbox (DC and AC) are fed into this PCB (AC after converting to DC). The PCB holds a fuse and two diodes for backflow protection. So both power inputs can be connected at the same time without damage, and also both inputs are fed through the fuse. 
    - The function of the PCB is also depicted in the [flow diagram below](#connect-components)
    - To reproduce the PCB, you find all necessary infos in the subfolder [./02_electronic/PCB_DC_PowerDistrubution/](./02_electronic/PCB_DC_PowerDistrubution/). Order the PCB at a manufacturer of your choice and fit the parts included in the Bill of Material.
      TODO **Update PCB Schematics with bigger clams for Cables with "Aderendhülsen"**
 - 3D printed mountings: Use a 3D printer to manufacture 1 x mounting for antennas (consisting of 3 subcomponents called levels) and 1 x mounting for electronic parts (consisting of 3 subcomponents). Use the stl files provided in [./01_mechanic/01_internal_mounting/](./01_mechanic/01_internal_mounting/). Printer settings can be chosen as you like (we used ABS, 20% infill, fast mode on an Ultimaker S5). TODO **Check Subcomponents! Are Settings still up to date?** 
-- Water-cut mounting: If you want to mount the deck box on a reeling, you can use a water-cut mounting plate as shown in the picture below. You can use the step file provided in [./01_mechanic/02_external_mounting/](./01_mechanic/02_external_mounting/) and order at a manufacturer of your choice (price approx. 60 €). 
+- Water-cut mounting: If you want to mount the deckbox on a reeling, you can use a water-cut mounting plate as shown in the picture below. You can use the step file provided in [./01_mechanic/02_external_mounting/](./01_mechanic/02_external_mounting/) and order at a manufacturer of your choice (price approx. 60 €). 
 
 <figure> 
    <img src="media/deckbox_on_deck2.jpg"  width="900" title="deckbox_on_deck">
 
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Deck box mounted on deck with water-cut mounting plate and steel straps*</figurecaption>
+   <figurecaption><a name="figure1">*Figure 1:*</a> *deckbox mounted on deck with water-cut mounting plate and steel straps*</figurecaption>
 </figure>
 
 # Assembly
-## Deck Box Top
+## deckbox Top
 ### Antenna Mount (Top level)
 - Insert Wi-Fi and mobile antennas into the holder. The same antennas should be orthogonal to each other.
 - The antenna should click when it is locked into the bracket.
@@ -175,7 +175,7 @@ Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the p
   </tr>
 </table>
 
-For later attachment to the deck box lid, screw 4 cylinder head screws from the inside into the threads.
+For later attachment to the deckbox lid, screw 4 cylinder head screws from the inside into the threads.
 
 <figure> 
    <img src="media/bottom_level_fixation.jpg"  width="400" title="screws in nuts">
@@ -185,7 +185,7 @@ For later attachment to the deck box lid, screw 4 cylinder head screws from the 
 
 - Guide the cables through the middle opening of the bottom level and place them on the middle level.
 - Screw the bottom level into place using 10 metal screws, similar to the top level.
-- Place the entire mount in the deck box lid and secure it with screws in the corners.
+- Place the entire mount in the deckbox lid and secure it with screws in the corners.
 
 <table>
   <caption>Table 5: preparation to press in nuts
@@ -198,7 +198,7 @@ For later attachment to the deck box lid, screw 4 cylinder head screws from the 
 
 ---
 
-## Deck Box Bottom
+## deckbox Bottom
 Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm from the top edge).
 
 <figure> 
@@ -215,7 +215,7 @@ Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm f
 
 
 ### Installing the Bottom Plate
-Insert the bottom plate into the deck box, paying attention to the recess for the Weipu connectors.
+Insert the bottom plate into the deckbox, paying attention to the recess for the Weipu connectors.
 Secure the plate with 4 plastic washers and 4 metal screws (3.8 x 9).
 
 <table>
@@ -229,7 +229,6 @@ Secure the plate with 4 plastic washers and 4 metal screws (3.8 x 9).
 
 ### AC/DC Converter
 Press the AC/DC converter into the housing and secure the housing to the bottom plate with 2 metal screws (2.9 x 9.5mm).
-
 <figure> 
    <img src="media/bottom_part_acdc_01.jpg"  width="400" title="ACDC converter with holder">
 
@@ -257,6 +256,7 @@ Screw the PCB onto the AC/DC housing with 2 metal screws (2.2 x 6.5 mm).
 ### Connecting Weipu Connectors
 ### AC Connector (3-Pole)
 Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter. Guide the cables outward through the hole.
+TODO: **Make new photos**
 
 <figure> 
    <img src="media/weipu_sockets_01.jpg"  width="400" title="install weipu sockets 01">
@@ -264,7 +264,7 @@ Unscrew the nut and thread it onto the blue and brown cables of the AC/DC conver
    <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the cables outward through the hole*</figurecaption>
 </figure>
 
-Shorten the AC cable to 10 cm from the deck box and strip the insulation.
+Shorten the AC cable to 10 cm from the deckbox and strip the insulation.
 Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 2 of the connector (it also works the other way around). Pole 3 (Ground) is not connected.
 
 <figure> 
@@ -273,7 +273,7 @@ Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 
    <figurecaption><a name="figure1">*Figure 1:*</a> *solder cables to weipu socket*</figurecaption>
 </figure>
 
-#### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
+#### Glueing / Sealing with Sikaflex instead of a gasket, as the deckbox wall is too thick.
 Required:
 - Sikaflex
 - Cleaning alcohol
@@ -281,7 +281,7 @@ Required:
 - Spatula
 
 Procedure
-- Clean the surfaces of the deck box and Weipu connector in the contact area with alcohol.
+- Clean the surfaces of the deckbox and Weipu connector in the contact area with alcohol.
 - Apply Sikaflex (291i) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
 - Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
 - Scrape off excess sealant
@@ -307,6 +307,7 @@ Procedure
 - Crimping pliers
 
 ####
+TODO: **Make new photos**
 
 Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
 Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input.
@@ -317,14 +318,14 @@ Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) a
    <figurecaption><a name="figure1">*Figure 1:*</a> *fit cable into PCB*</figurecaption>
 </figure>
 
-#### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
+#### Glueing / Sealing with Sikaflex instead of a gasket, as the deckbox wall is too thick.
 Required:
 - Sikaflex
 - Cleaning alcohol
 - Cleaning wipes
 - Spatula
 
-- Clean the surfaces of the deck box and Weipu connector in the contact area with alcohol.
+- Clean the surfaces of the deckbox and Weipu connector in the contact area with alcohol.
 - Apply Sikaflex (2911) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
 - Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
 - Scrape off excess sealant
@@ -341,6 +342,7 @@ Required:
 ### Mounting the Raspberry Pi
 Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
 
+
 <table>
   <caption>Table 1: apply sikaflex to seal the socket
   <tr>
@@ -349,6 +351,7 @@ Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of
   </tr>
 </table>
 Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm).
+
 
 <table>
   <caption>Table 1: apply sikaflex to seal the socket
@@ -364,9 +367,11 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 - Solder the USB-C connector to the output (black and yellow cable) at a 90° angle
 - Use heat shrink tubing
 - @SEBASTIAN: PLEASE ADD HERE
+TODO: **Make new photos**
 
 - Install the DC/DC converter with the holder and screw it into place
 
+TODO: **Make new photos**
 <figure> 
    <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="connect dcdc PCB">
 
@@ -416,7 +421,7 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 
 If you are not reusing the power cable from the RUT955 you need to make your own cable.
 
-TODO: **Image needed**
+TODO: **Make new photos**
 
 - Twisted pair (2x0.5^2) 270 mm
 - 1. End 2x wire and sleeves
@@ -424,43 +429,58 @@ TODO: **Image needed**
 
 Take the cable and crimp down wire sleeves on one end. Crimp the molex 2824-connectors on the other end. Insert molex connectors into the top part of 4x4 molex plug.
 
-### Assembling the Deck Box
+Up until now the deckbox lower part should look something like this
+<figure> 
+   <img src="media/bottom_part_complete.jpg"  width="400">
+</figure>
 
-![[IMG_0179.heic]]
+### Finishing Deckbox and attaching the Deckbox cage
 
 requires:
 - 4x nuts M4
 - 4x washers M4
 - 4x flat head screws M4x16
 - Stainless steel cage
+<figure> 
+   <img src="media/cage_00.jpg"  width="400">
+</figure>
 
-- Screw the stainless steel cage onto the deck box bottom (M4)
-- Clean the seal of the deck box
+- Screw the stainless steel cage onto the deckbox bottom (M4)
+
+<table>
+  <tr>
+    <td><img src="media/cage_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/cage_02.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+
+- Clean the seal of the deckbox
 - Place the lid on top and screw it into place
+
+<figure> 
+   <img src="media/cage_04.jpg"  width="400">
+</figure>
+
 - Attach the connector caps
-- Apply stickers
 
-![[IMG_0180.heic]]
+<figure> 
+   <img src="media/cage_05.jpg"  width="400">
+</figure>
 
-![[IMG_0182.heic]]
+- (optional) Apply stickers
 
-![[IMG_0183.heic]]
-
-![[IMG_0184.heic]]
-
-![[IMG_0185.heic]]
 
 ## Manufacture Power Cable for 230 V
 Depending on the power source available on the chosen vessel, you can manufacture the corresponding power cable. 
 
-Safety caution: When dealing with 230 V make sure that you do not endanger yourself and that your product is safe for usage by other people. Make sure that you have the necessary training and follow the local laws.
+**Safety caution: When dealing with 230 V make sure that you do not endanger yourself and that your product is safe for usage by other people. Make sure that you have the necessary training and follow the local laws.**
 
-24. Cut 15 m cable (or length suitable for your application)
-26. Attach Schuko plug including cap on one side
-27. Attach Weipu 3 pin plug on the other side (use pin 1 and 2)
+- Cut 15 m cable (or length suitable for your application)
+- Attach Schuko plug including cap on one side
+- Attach Weipu 3 pin plug on the other side (use pin 1 and 2)
 
 ## Manufacure Power Cable for 9-30 V
-28. Cut 15 m cable (or length suitable for your application)
-29. Use brown wire as plus. Use blue wire as minus
-30. Attach Weipu 2 pin plug including cap to one side. Use pin 1 as minus, pin 2 as plus
-31. Attach plug of your choice to second end of cable
+- Cut 15 m cable (or length suitable for your application)
+- Use brown wire as plus. Use blue wire as minus
+- Attach Weipu 2 pin plug including cap to one side. Use pin 1 as minus, pin 2 as plus
+- Attach plug of your choice to second end of cable
