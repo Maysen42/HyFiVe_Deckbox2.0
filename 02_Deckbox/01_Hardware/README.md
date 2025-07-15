@@ -30,15 +30,15 @@ The following parts are needed to manufacture a HyFiVe deck box.
 |     |        |      | **For connection to 12/24 V**                                                                                               |                                       |
 | 18  | 1      | pc   | Socket Weipu SP2212/P2-1N, male, 2 pins, IP68                                                                               | 2050001514998                         |
 | 19  | 1      | pc   | Plug Weipu SP2110 / S 2 I, female, 2 pins, IP68                                                                             | 2050001514721                         |
-| 20  | 2      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
-| 21  | 2      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
+| 20  | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
+| 21  | 1      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
 | 22  | 1      | pc   | Plug of your coice for connection to low voltage grid                                                                       |                                       |
 |     |        |      | **Case incl. internal mountings**                                                                                           |                                       |
 | 23  | 1      | pc   | FIBOX Case 180x180x150 (Product-No.: 6011323)                                                                               | 6418074052216                         |
 | 25  | 1      | pc   | 3D printed mounting for electronic components TODO **Link to STEP files**                                                   | self manufactured                     |
 | 26  | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers<br>TODO **Link to STEP files**                       | self manufactured                     |
-| 27  | 2      | pc   | Threaded inserts to melt into 3D print, M3x6x5                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
-| 28  | 2      | pc   | Hexagonal screws M3x16                                                                                                      |                                       |
+| 27  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
+| 28  | 4      | pc   | Hexagonal screws M3x16                                                                                                      |                                       |
 | 29  | 2      | pc   | Cable ties small                                                                                                            |                                       |
 | 30  | 4      | pc   | Tapping screw (Belchschraube) M2,2x9,5                                                                                      | 4043377162205                         |
 | 31  | ~25    | pc   | Tapping screw (Belchschraube) M2,9x9,5                                                                                      | 4043952537589                         |
@@ -61,6 +61,7 @@ The following parts are needed to manufacture a HyFiVe deck box.
 - Screwdriver flathead (2,5)
 - caliper
 - Sikaflex (e.g. 291i  or some other marine certified adhesive sealant)
+- Crimp-Tools for TODO **find size of Crimp contacts**
 
 
 # Self-Manufactured Components
@@ -308,7 +309,13 @@ Procedure
 ####
 
 Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
-Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input
+Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input.
+
+<figure> 
+   <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="install weipu sockets 02">
+
+   <figurecaption><a name="figure1">*Figure 1:*</a> *fit cable into PCB*</figurecaption>
+</figure>
 
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deck box wall is too thick.
 Required:
@@ -323,22 +330,33 @@ Required:
 - Scrape off excess sealant
 
 
-![[IMG_0168.heic]]
-
-![[IMG_0163.heic]]
-
+<table>
+  <caption>Table 1: apply sikaflex to seal the socket
+  <tr>
+    <td><img src="media/weipu_sockets_02.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 ### Mounting the Raspberry Pi
 Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
 
-![[IMG_0142.heic]]
-![[IMG_0143.heic]]
-![[IMG_0144.heic]]
-
+<table>
+  <caption>Table 1: apply sikaflex to seal the socket
+  <tr>
+    <td><img src="media/bottom_part_rpi_01.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_part_rpi_02.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm).
 
-![[IMG_0145.heic]]
-![[IMG_0146 1.heic]]
+<table>
+  <caption>Table 1: apply sikaflex to seal the socket
+  <tr>
+    <td><img src="media/bottom_part_rpi_03.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/bottom_part_rpi_04.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 ----
 
