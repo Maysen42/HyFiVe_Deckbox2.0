@@ -40,10 +40,12 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 27  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
 | 28  | 4      | pc   | Hexagonal screws M3x16                                                                                                      |                                       |
 | 29  | 2      | pc   | Cable ties small                                                                                                            |                                       |
-| 30  | 4      | pc   | Tapping screw (Belchschraube) M2,2x9,5                                                                                      | 4043377162205                         |
-| 31  | ~25    | pc   | Tapping screw (Belchschraube) M2,9x9,5                                                                                      | 4043952537589                         |
-| 32  | 2      | pc   | Tapping screw (Belchschraube) M3,9x9,5                                                                                      | 4043377159625                         |
-| 33  | 1      | pc   | Sealing tape for water tightness                                                                                            |                                       |
+| 30  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                      | 4043377162205                         |
+| 30  | 2      | pc   | Tapping screw 2.2 x 9.5                                                                                      | 4043377162205                         |
+| 31  | ~25    | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
+| 32  | 2      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
+| 33  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                             |                                       |
+| 33  | 1      | pc   | (plastic) washers for 3.9 mm                                                                                             |                                       |
 |     |        |      | **Mounting for box on reeling**                                                                                             |                                       |
 | 34  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
 | 35  | 4      | pc   | Hexagonal screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                             |                                       |
@@ -216,7 +218,7 @@ Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm f
 
 ### Installing the Bottom Plate
 Insert the bottom plate into the deckbox, paying attention to the recess for the Weipu connectors.
-Secure the plate with 4 plastic washers and 4 metal screws (3.8 x 9).
+Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
 
 <table>
   <caption>Table 1: wind cables in middle level
@@ -244,7 +246,8 @@ Cable sides see photo
 </figure>
 
 ### PCB on AC/DC Housing
-Screw the PCB onto the AC/DC housing with 2 metal screws (2.2 x 6.5 mm).
+Screw the PCB onto the AC/DC housing with 2 metal screws **(2.2 x 6.5 mm)**.
+**Attention: DO NOT confuse the screws with 9.5 mm length, otherwise the AC/DC-converter might take damage**
 
 <figure> 
    <img src="media/bottom_part_pcb.jpg"  width="400" title="PCB on ACDC housing">
