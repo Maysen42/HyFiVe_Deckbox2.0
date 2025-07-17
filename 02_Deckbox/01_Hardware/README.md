@@ -17,53 +17,58 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 7   | 1      | pc   | DCDC Converter, Input 8-58V, output: 5V, max. 15 W, e.g. K480503                                                            | 8852090466622                         |
 | 8   | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
 | 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact  2824-20                                      | product numbers 0039039042 430300038  |
-| 10  | 1      | pc   | Wire 15 cm, 2 x ~0.5mm², red and black                                                                                      |                                       |
-| 11  | 1      | pc   | TODO **update USB-Plug!**  ~~USB C plug, rectangular, e.g. cut from cable~~                                                 | e.g. 4064161155296                    |
+| 10  | 2      | pc   | Wire 25 cm, 2 x ~0.5mm², red and black                                                                                      |                                       |
+| 11  | 4      | pc   | Ferrules 0.5mm² ||
+| 12  | 4      | pc   | Heat-shrink tubing 20mm x 3mm ||
+| 13  | 1      | pc   | **TODO USB-C Stecker Bausatz raussuchen (3-teilig)**                                                | e.g. 4064161155296                    |
 |     |        |      | **External power supply**                                                                                                   |                                       |
-| 12  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
+| 14  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
 |     |        |      | **For connection to 230  V**                                                                                                |                                       |
-| 13  | 1      | pc   | Socket Weipu SP2212/P3-1N, male, 3 pins, IP68                                                                               | 2050001515001                         |
-| 14  | 1      | pc   | Plug Weipu SP2110 / S 3 I, female, 3 pins, IP68                                                                             | 2050001514738                         |
-| 15  | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
-| 16  | 1      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
-| 17  | 1      | pc   | Protected contact plug (Schuko) for connection to 230 V grid                                                                | 4011160604126                         |
+| 15  | 1      | pc   | Socket Weipu SP2212/P3-1N, male, 3 pins, IP68                                                                               | 2050001515001                         |
+| 16  | 1      | pc   | Plug Weipu SP2110 / S 3 I, female, 3 pins, IP68                                                                             | 2050001514738                         |
+| 17  | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
+| 18  | 1      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
+| 19  | 1      | pc   | Protected contact plug (Schuko) for connection to 230 V grid                                                                | 4011160604126                         |
 |     |        |      | **For connection to 12/24 V**                                                                                               |                                       |
-| 18  | 1      | pc   | Socket Weipu SP2212/P2-1N, male, 2 pins, IP68                                                                               | 2050001514998                         |
-| 19  | 1      | pc   | Plug Weipu SP2110 / S 2 I, female, 2 pins, IP68                                                                             | 2050001514721                         |
-| 20  | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
-| 21  | 1      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
-| 22  | 1      | pc   | Plug of your coice for connection to low voltage grid                                                                       |                                       |
+| 20  | 1      | pc   | Socket Weipu SP2212/P2-1N, male, 2 pins, IP68                                                                               | 2050001514998                         |
+| 21  | 1      | pc   | Plug Weipu SP2110 / S 2 I, female, 2 pins, IP68                                                                             | 2050001514721                         |
+| 22  | 1      | pc   | Cover Weipu SP2110-Cap                                                                                                      | 2050001515353                         |
+| 23  | 1      | pc   | Cover Weipu SP2111-Cap                                                                                                      | 2050001515360                         |
+| 24  | 1      | pc   | Plug of your coice for connection to low voltage grid                                                                       |                                       |
 |     |        |      | **Case incl. internal mountings**                                                                                           |                                       |
-| 23  | 1      | pc   | FIBOX Case 180x180x150 (Product-No.: 6011323)                                                                               | 6418074052216                         |
-| 25  | 1      | pc   | 3D printed mounting for electronic components TODO **Link to STEP files**                                                   | self manufactured                     |
-| 26  | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers<br>TODO **Link to STEP files**                       | self manufactured                     |
-| 27  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
-| 28  | 4      | pc   | Hexagonal screws M3x16                                                                                                      |                                       |
-| 29  | 2      | pc   | Cable ties small                                                                                                            |                                       |
-| 30  | 2      | pc   | Tapping screw 2.2 x 4.5                                                                                      | 4043952720745                         |
-| 30  | 2      | pc   | Tapping screw 2.2 x 9.5                                                                                      | 4043377162205                         |
-| 31  | ~25    | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
-| 32  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
-| 33  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                             |                                       |
-| 33  | 4      | pc   | (plastic) washers for 3.9 mm                                                                                             |                                       |
+| 25  | 1      | pc   | FIBOX Case 180x180x150 (Product-No.: 6011323)                                                                               | 6418074052216                         |
+| 26  | 1      | pc   | 3D printed mounting for electronic components, consisting of four parts TODO **Link to STEP files**                         | self manufactured                     |
+| 27  | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers<br>TODO **Link to STEP files**                       | self manufactured                     |
+| 28  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
+| 29  | 4      | pc   | Allen screws M3x16                                                                                                      |                                       |
+| 30  | 2      | pc   | Cable ties small                                                                                                            |                                       |
+| 31  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                      | 4043952720745                         |
+| 32  | 28     | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
+| 33  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
+| 34  | 4      | pc   | (plastic) washers for 3.9 mm with large outer diameter                                                                      |                                       |
+| 35  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                             |                                       |
 |     |        |      | **Mounting for box on reeling**                                                                                             |                                       |
-| 34  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
-| 35  | 4      | pc   | Hexagonal screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                             |                                       |
-| 36  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 46 mm, incl. 2 M10 self-securing nuts and 2 M10 washers, stainless steel V4A | 4043952396568                         |
-| 37  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
+| 36  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
+| 37  | 4      | pc   | Allen screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                             |                                       |
+| 38  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 46 mm, incl. 2 M10 self-securing nuts and 2 M10 washers, stainless steel V4A | 4043952396568                         |
+| 39  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
 
 # Needed tools
 
 - Drilling machines for 2 and 22 mm holes (e.g. Step Drill)
-- Soldering station, including equipment e.g. shrinking tubes
-	- adapter tip for melting in press nuts
-- 2x wrench 27 mm 
-- Reader for micro SD
+- Soldering station, including equipment
+- Adapter tip for melting in press nuts
+- Diagonal pliers
+- Heat gun
+- Wrench 27 mm
+- Allen wrench 2.5 and 3 mm
 - Screwdriver PH1 + PH2
-- Screwdriver flathead (2,5)
-- caliper
+- Screwdriver flathead (2.5)
+- Caliper
 - Sikaflex (e.g. 291i  or some other marine certified adhesive sealant)
-- Crimp-Tools for 2824-20
+- Spatula
+- Crimp-Tools for 2824-20 and for ferrules
+- Cleaning equipment: ethanol, q-tips, lint-free wipes
 
 
 # Self-Manufactured Components
