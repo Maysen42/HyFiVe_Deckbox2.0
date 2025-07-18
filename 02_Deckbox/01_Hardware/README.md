@@ -1,4 +1,4 @@
-# deckbox - Hardware
+![first_weipu_installed](https://github.com/user-attachments/assets/1db4ce6a-7ee0-4049-9b6a-4222b31d9373)![first_weipu_installed](https://github.com/user-attachments/assets/17b4772d-8730-4291-86ac-50cf53060bbc)# deckbox - Hardware
 
 # Bill of Material
 
@@ -20,7 +20,7 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 10  | 2      | pc   | Wire 25 cm, 2 x ~0.5mm², red and black                                                                                      |                                       |
 | 11  | 4      | pc   | Ferrules 0.5mm² ||
 | 12  | 4      | pc   | Heat-shrink tubing 20mm x 3mm ||
-| 13  | 1      | pc   | **TODO USB-C Stecker Bausatz raussuchen (3-teilig)**                                                | e.g. 4064161155296                    |
+| 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set                                                |                   |
 |     |        |      | **External power supply**                                                                                                   |                                       |
 | 14  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
 |     |        |      | **For connection to 230  V**                                                                                                |                                       |
@@ -59,6 +59,7 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 - Soldering station, including equipment
 - Adapter tip for melting in press nuts
 - Diagonal pliers
+- wire stripper
 - Heat gun
 - Wrench 27 mm
 - Allen wrench 2.5 and 3 mm
@@ -264,41 +265,21 @@ Screw the PCB onto the AC/DC housing with 2 metal screws **(2.2 x 6.5 mm)**.
 ### Connecting Weipu Connectors
 ### AC Connector (3-Pole)
 Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter. Guide the cables outward through the hole.
-TODO: **Make new photos**
 
 <figure> 
-   <img src="media/weipu_sockets_01.jpg"  width="400" title="install weipu sockets 01">
-
+   <img src="media/wire_weipu_nut.jpg"  width="400" title="install weipu sockets 01">
    <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the cables outward through the hole*</figurecaption>
 </figure>
 
 Shorten the AC cable to 10 cm from the deckbox and strip the insulation.
+Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.
 Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 2 of the connector (it also works the other way around). Pole 3 (Ground) is not connected.
 
-<figure> 
-   <img src="media/weipu_sockets_02.jpg"  width="400" title="install weipu sockets 02">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *solder cables to weipu socket*</figurecaption>
-</figure>
-
-#### Glueing / Sealing with Sikaflex instead of a gasket, as the deckbox wall is too thick.
-Required:
-- Sikaflex
-- Cleaning alcohol
-- Cleaning wipes
-- Spatula
-
-Procedure
-- Clean the surfaces of the deckbox and Weipu connector in the contact area with alcohol.
-- Apply Sikaflex (291i) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
-- Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
-- Scrape off excess sealant
-
 <table>
-  <caption>Table 1: apply sikaflex to seal the socket
+  <caption>solder cables to weipu socket
   <tr>
-    <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
-    <td><img src="media/weipu_sockets_04.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/result_soldering_weipu.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/schrinking_tube_weipu.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
 
@@ -315,37 +296,51 @@ Procedure
 - Crimping pliers
 
 ####
-TODO: **Make new photos**
 
 Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
-Solder the Weipu connector to the cable. Black (Ground) at the top (white dot) and red (Lead) at the bottom of the connector. The other end of the cable is screwed into the PCB input.
+Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.
+Solder the Weipu connector to the cable. Black (Ground) to pin 1 (at the top, marked whith a white dot) and red (Lead) to pin 2 at the bottom of the connector. Applies two ferrules on the other end of the wire and screw it into the PCB input.
 
 <figure> 
-   <img src="media/bottom_part_dc_01.jpg"  width="400" title="install weipu sockets 02">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *fit cable into PCB*</figurecaption>
+   <img src="media/result_soldering_dc.jpg"  width="400" title="install weipu sockets 02">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
 </figure>
 
 #### Glueing / Sealing with Sikaflex instead of a gasket, as the deckbox wall is too thick.
+Both weipu sockets 
+
 Required:
 - Sikaflex
 - Cleaning alcohol
 - Cleaning wipes
 - Spatula
 
+Procedure
 - Clean the surfaces of the deckbox and Weipu connector in the contact area with alcohol.
-- Apply Sikaflex (2911) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
-- Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
-- Scrape off excess sealant
-
+- Apply Sikaflex (291i) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
 
 <table>
   <caption>Table 1: apply sikaflex to seal the socket
   <tr>
     <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
-    <td><img src="media/weipu_sockets_05.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/applied_sikaflex.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
+
+- Insert the connector (white dot pointing up) and screw it into place (27 mm wrench)
+- Scrape off excess sealant with a q-tip
+
+<figure> 
+   <img src="media/first_weipu_installed.jpg"  width="400" title="install weipu sockets 02">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
+</figure>
+
+Repeat the procedure with the second weipu connector. The result should look like on the following picture.
+
+<figure> 
+   <img src="media/both_weipu_installed.jpg"  width="400" title="install weipu sockets 02">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
+</figure>
 
 ### Mounting the Raspberry Pi
 Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
