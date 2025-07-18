@@ -1,5 +1,3 @@
-![first_weipu_installed](https://github.com/user-attachments/assets/1db4ce6a-7ee0-4049-9b6a-4222b31d9373)![first_weipu_installed](https://github.com/user-attachments/assets/17b4772d-8730-4291-86ac-50cf53060bbc)# deckbox - Hardware
-
 # Bill of Material
 
 The following parts are needed to manufacture a HyFiVe deckbox.
@@ -226,13 +224,9 @@ Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm f
 Insert the bottom plate into the deckbox, paying attention to the recess for the Weipu connectors.
 Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
 
-<table>
-  <caption>Table 1: wind cables in middle level
-  <tr>
-    <td><img src="media/bottom_part_plate.jpg" width="300" height="300" loading="lazy"></td>
-    <td><img src="media/bottom_part_plate_02.jpg" width="300" height="300" loading="lazy"></td>
-  </tr>
-</table>
+<figure>
+	<img src="media/bottom_part_plate.jpg" width="300" height="300" loading="lazy"></td>
+</figure>
 
 
 ### AC/DC Converter
