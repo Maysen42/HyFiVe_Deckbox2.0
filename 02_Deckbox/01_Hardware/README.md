@@ -15,10 +15,10 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 7   | 1      | pc   | DCDC Converter, Input 8-58V, output: 5V, max. 15 W, e.g. K480503                                                            | 8852090466622                         |
 | 8   | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
 | 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact  2824-20                                      | product numbers 0039039042 430300038  |
-| 10  | 2      | pc   | Wire 25 cm, 2 x ~0.5mm², red and black                                                                                      |                                       |
-| 11  | 4      | pc   | Ferrules 0.5mm² ||
-| 12  | 4      | pc   | Heat-shrink tubing 20mm x 3mm ||
-| 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set                                                |                   |
+| 10  | 2      | pc   | 2-core wire ~25 cm, 2 x ~0.5mm², red and black                                                                              |                                       |
+| 11  | 4      | pc   | Ferrules 0.5mm² 													    |					    |
+| 12  | 4      | pc   | Heat-shrink tubing 20mm x 3mm 												    |					    |
+| 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set                                               			    |		  	                    |
 |     |        |      | **External power supply**                                                                                                   |                                       |
 | 14  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
 |     |        |      | **For connection to 230  V**                                                                                                |                                       |
@@ -38,16 +38,16 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 26  | 1      | pc   | 3D printed mounting for electronic components, consisting of four parts TODO **Link to STEP files**                         | self manufactured                     |
 | 27  | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers<br>TODO **Link to STEP files**                       | self manufactured                     |
 | 28  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
-| 29  | 4      | pc   | Allen screws M3x16                                                                                                      |                                       |
+| 29  | 4      | pc   | Allen screws M3x16                                                                                                          |                                       |
 | 30  | 2      | pc   | Cable ties small                                                                                                            |                                       |
-| 31  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                      | 4043952720745                         |
-| 32  | 28     | pc   | Tapping screw 2.9 x 9.5                                                                                      | 4043952537589                         |
-| 33  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                      | 4043377159625                         |
+| 31  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                                     | 4043952720745                         |
+| 32  | 28     | pc   | Tapping screw 2.9 x 9.5                                                                                                     | 4043952537589                         |
+| 33  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                                     | 4043377159625                         |
 | 34  | 4      | pc   | (plastic) washers for 3.9 mm with large outer diameter                                                                      |                                       |
-| 35  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                             |                                       |
+| 35  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                                |                                       |
 |     |        |      | **Mounting for box on reeling**                                                                                             |                                       |
 | 36  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
-| 37  | 4      | pc   | Allen screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                             |                                       |
+| 37  | 4      | pc   | Allen screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                                 |                                       |
 | 38  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 46 mm, incl. 2 M10 self-securing nuts and 2 M10 washers, stainless steel V4A | 4043952396568                         |
 | 39  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
 
@@ -85,8 +85,7 @@ The following components need to be manufactured according to design files provi
 
 <figure> 
    <img src="media/deckbox_on_deck2.jpg"  width="900" title="deckbox_on_deck">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *deckbox mounted on deck with water-cut mounting plate and steel straps*</figurecaption>
+   <figurecaption>Figure: deckbox mounted on deck with water-cut mounting plate and steel straps</figurecaption>
 </figure>
 
 # Assembly
@@ -293,7 +292,7 @@ Solder the Weipu connector (3-pole) to the cable. Blue to pole 1, brown to pole 
 
 Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
 Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.
-Solder the Weipu connector to the cable. Black (Ground) to pin 1 (at the top, marked whith a white dot) and red (Lead) to pin 2 at the bottom of the connector. Applies two ferrules on the other end of the wire and screw it into the PCB input.
+Solder the Weipu connector to the cable. Black (Ground) to pin 1 (at the top, marked whith a white dot) and red (Lead) to pin 2 at the bottom of the connector. Applies two ferrules on the other end of the wire.
 
 <figure> 
    <img src="media/result_soldering_dc.jpg"  width="400" title="install weipu sockets 02">
@@ -347,7 +346,7 @@ Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of
     <td><img src="media/bottom_part_rpi_02.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
-Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm).
+Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm) with an applied washer.
 
 
 <table>
@@ -358,35 +357,81 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
   </tr>
 </table>
 
-----
+
+### Manufacturing the USB-C Plug
+To safe some space it is recommeneded to manufacture a usb plug from slim spare parts. We use the repair kit of recable shown below.
+
+<figure> 
+   <img src="media/prepare_usbc_plug.jpg"  width="400" title="connect acdc PCB">
+   <figurecaption><a name="figure1">*Figure:*</a>dc/dc converter and usb-c plug kit provided by recable</figurecaption>
+</figure>
+
+First you have to cut a small triangle in on site top of the shrinking tube.
+
+<figure> 
+   <img src="media/cut_edge_shrinking_tube.jpg"  width="400" title="connect acdc PCB">
+   <figurecaption><a name="figure1">*Figure:*</a>cutting shrink tube</figurecaption>
+</figure>
+
+Remove as little as possible (about 2 mm) of the insulation from the dc/dc converter output wires. Soldering the wires to the plug as shown in the figure. In this case the yellow wire is the lead.
+<table>
+  <tr>
+    <td><img src="media/pin_sheme_usbc.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/result_soldering_usbc.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+
+Now you can slide the frame of the Plug over the plug until it is snap into its place. Bend the wire holder downwards at a right angle and guide the wires into its holder. Fix the wires with a pliers.
+<table>
+  <tr>
+    <td><img src="media/insert_housing_usbc.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/fix_cable_usbc.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+
+Move the schrink tube over the plug. The cutted edge has to be at the bottom and at the front. Try to hold it in position with on hand during shrinking the tube with a het gun. Also the right angle should be bendet back in final position during heating. Be carfull because of the hot air during this process to avoid burnings.
+<table>
+  <tr>
+    <td><img src="media/schrink_tube_usbc.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/result_usbc.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
+
 
 ### Installing the DC/DC Converter
-- Solder the USB-C connector to the output (black and yellow cable) at a 90° angle
-- Use heat shrink tubing
-- @SEBASTIAN: PLEASE ADD HERE
-TODO: **Make new photos**
+- Install the DC/DC converter with the holder and screw it into place (use a screw 2.9 x 9.5 mm)
 
-- Install the DC/DC converter with the holder and screw it into place
-
-TODO: **Make new photos**
 <figure> 
    <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="connect dcdc PCB">
-
    <figurecaption><a name="figure1">*Figure 1:*</a> *fixate dc/dc converter with holder*</figurecaption>
 </figure>
 
 - Insert the USB-C connector into the Raspberry Pi
 
 
-### Connecting AC/DC converter to PCB
-- Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation
-- Screw the cable into place on the input side of the PCB
+#### prepare power cable for router
 
+If you are not reusing the power cable from the RUT955 you need to make your own cable.
+You need a molex plug with two crimp contacts (2824-20) two ferrules and about 25 cm of 2 core wire
 <figure> 
-   <img src="media/bottom_part_acdc_pcb.jpg"  width="400" title="connect acdc PCB">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *screw cable to input of PCB*</figurecaption>
+   <img src="media/prepare_molex.jpg"  width="400">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
 </figure>
+
+Take the cable and strip down the insulation by ~6 mm at the one site and ~3mm at the other side. Crimp down wire ferrules on the end with 6mm using a .
+<figure> 
+   <img src="media/applied_ferrules.jpg"  width="400">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
+</figure>
+
+Crimp the molex 2824-connectors on the other end. Insert molex connectors into the top part of 4x4 molex plug (the pin position is also descriped on the top of the router).
+<table>
+  <tr>
+    <td><img src="media/crimp_molex_pin.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/result_crimp_molex.jpg" width="300" height="300" loading="lazy"></td>
+    <td><img src="media/insert_pin_molex.jpg" width="300" height="300" loading="lazy"></td>
+  </tr>
+</table>
 
 
 ### Connecting the Router Antennas
@@ -395,11 +440,10 @@ TODO: **Make new photos**
 
 <figure> 
    <img src="media/bottom_part_router_antennas_01.jpg"  width="400">
-
    <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
 </figure>
 
-- Screw the router onto the bottom plate (2.3 x 9.5)
+- Screw the router onto the bottom plate (using 4 screws 2.9 x 9.5 mm)
 
 <table>
   <tr>
@@ -414,22 +458,28 @@ TODO: **Make new photos**
    <figurecaption><a name="figure1">*Figure 1:*</a> *connect ethernet and power cables*</figurecaption>
 </figure>
 
-#### prepare power cable for router
 
-If you are not reusing the power cable from the RUT955 you need to make your own cable.
+### Connecting power wires to PCB board
+Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation and install two ferrules.
+Screw the cable into place on the input side (In1) of the PCB.
+Repeat the procedure for the open end of the DC-Input of the weipu socket and screw it into the other input (In2) on the PCB
 
-TODO: **Make new photos**
+<figure> 
+   <img src="media/bottom_part_acdc_pcb.jpg"  width="400" title="connect acdc PCB">
+   <figurecaption><a name="figure1">*Figure 1:*</a> *screw cable to input of PCB*</figurecaption>
+</figure>
 
-- Twisted pair (2x0.5^2) 270 mm
-- 1. End 2x wire and sleeves
-- 2. End crimp molex 2824-20
+Screw the Input of the dc/dc converter to the output of the PCB (Out1). Repeat this  procedure for the power cable of the router on the other output (Out2).
 
-Take the cable and crimp down wire sleeves on one end. Crimp the molex 2824-connectors on the other end. Insert molex connectors into the top part of 4x4 molex plug.
 
+----
 Up until now the deckbox lower part should look something like this
 <figure> 
    <img src="media/bottom_part_complete.jpg"  width="400">
 </figure>
+
+----
+
 
 ### Finishing Deckbox and attaching the Deckbox cage
 
