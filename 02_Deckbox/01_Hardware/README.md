@@ -302,7 +302,11 @@ The following components need to be manufactured according to design files provi
   </tr>
 </table>
 
-- Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm) with an applied washer.
+- Insert the Raspberry Pi in the bottom of the case (the sd-card must not be installed jet).
+- Close the case by snapping in the lid to the bottom.
+- Insert the sd-card to the card slot.
+- Put the complete Raspberry Pi, mounted in the case, in the recess at the bottom plate.
+- secure it with the clamp and screw it into place with a metal screw (2.9 x 9.5 mm) with an applied washer.
 
 <table>
   <tr>
