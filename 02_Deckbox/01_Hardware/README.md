@@ -16,9 +16,9 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 8   | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
 | 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact  2824-20                                      | product numbers 0039039042 430300038  |
 | 10  | 2      | pc   | 2-core wire ~25 cm, 2 x ~0.5mm², red and black                                                                              |                                       |
-| 11  | 6      | pc   | electric wire ferrule 0.5mm² 													    |					    |
-| 12  | 4      | pc   | Heat-shrink tubing 20mm x 3mm 												    |					    |
-| 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set                                               			    |		  	                    |
+| 11  | 6      | pc   | electric wire ferrule 0.5mm² 												    |					    |
+| 12  | 4      | pc   | Heat shrink tubing 20mm x 3mm 												    |					    |
+| 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set (consits of 3 parts: plug, housing and heat shrink tubing)           |		  	                    |
 |     |        |      | **External power supply**                                                                                                   |                                       |
 | 14  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
 |     |        |      | **For connection to 230  V**                                                                                                |                                       |
@@ -53,9 +53,10 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 
 # Needed tools
 
-- Drilling machines for 2 and 22 mm holes (e.g. Step Drill)
+- Drilling machines 22 mm holes
 - Soldering station, including equipment
 - Adapter tip for melting in press nuts
+- Tweezers
 - Diagonal pliers
 - wire stripper
 - Heat gun
@@ -83,7 +84,6 @@ The following components need to be manufactured according to design files provi
 
 <figure> 
    <img src="media/deckbox_on_deck2.jpg"  width="900" title="deckbox_on_deck">
-   <figurecaption>Figure: deckbox mounted on deck with water-cut mounting plate and steel straps</figurecaption>
 </figure>
 
 # Assembly
@@ -94,7 +94,6 @@ The following components need to be manufactured according to design files provi
 - Guide the cables through the corresponding slots
 
 <table>
-  <caption>Table 1: Mounting antennas
   <tr>
     <td><img src="media/mounting_antennas_01.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/mounting_antennas_01a.jpg" width="300" height="300" loading="lazy"></td>
@@ -102,27 +101,22 @@ The following components need to be manufactured according to design files provi
   </tr>
 </table>
 
-Guide the GPS antenna cable and click the antenna into place.
+- Guide the GPS antenna cable and click the antenna into place.
 <figure> 
    <img src="media/Mounting_antennas_GPS.jpg"  width="500" title="GPS Antenna">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the GPS antenna and click into place*</figurecaption>
 </figure>
 
 
 ### Antenna mount (middle level)
-Insert the middle level of the antenna mount and guide all 5 cables through.
+- Insert the middle level of the antenna mount and guide all 5 cables through.
 
 <figure> 
    <img src="media/middle_level_01.jpg"  width="500" title="middle level">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Insert middle level and guide cables through*</figurecaption>
 </figure>
 
-Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) starting from the center and then the corners.
+- Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) starting from the center and then the corners.
 
 <table>
-  <caption>Table 1: fix middle level
   <tr>
     <td><img src="media/middle_level_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/middle_level_03.jpg" width="300" height="300" loading="lazy"></td>
@@ -130,19 +124,16 @@ Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) start
   </tr>
 </table>
 
-Bundle the cables with cable ties (2.5mm) and attach them to the middle level
+- Bundle the cables with cable ties (2.5mm) and attach them to the middle level
 
 <figure> 
    <img src="media/middle_level_cable_01.jpg"  width="500" title="middle level cable">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *fix the cables with cable ties*</figurecaption>
 </figure>
 
-Wind the cables together at the middle level, leaving 30 cm of each cable loose, and guide them back through the second opening (Note: Wi-Fi cables are shorter than the others!). It is recommended to keep the winding flat so that the cables can be easily guided back.
-Bundle the cables again and secure them with cable ties
+- Wind the cables together at the middle level, leaving 30 cm of each cable loose, and guide them back through the second opening (Note: Wi-Fi cables are shorter than the others!). It is recommended to keep the winding flat so that the cables can be easily guided back.
+- Bundle the cables again and secure them with cable ties
 
 <table>
-  <caption>Table 1: wind cables in middle level
   <tr>
     <td><img src="media/middle_level_cable_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/middle_level_cable_03.jpg" width="300" height="300" loading="lazy"></td>
@@ -151,25 +142,26 @@ Bundle the cables again and secure them with cable ties
 </table>
 
 ### Antenna mount (bottom level)
-Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the press nuts into the corners of the top level. Place the press nuts on the soldering iron with tweezers (!Warning! Hot!). If necessary, first free the hole by screwing in an M3 cylinder head screw.
+- Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the threaded inserts into the corners of the bottom level.
+- If necessary, first free the hole by screwing in an M3 cylinder head screw.
 
 <figure> 
    <img src="media/bottom_level_press_nuts_01.jpg"  width="500" title="requirements for bottom level">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *bottom part, press nuts and soldering iron*</figurecaption>
 </figure>
 
+- Place a threaded insert on the soldering iron with tweezers (**Attention: Hot!**).
+
 <table>
-  <caption>Table 5: preparation to press in nuts
   <tr>
     <td><img src="media/bottom_level_press_nuts_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/bottom_level_press_nuts_solder_iron_01.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/bottom_level_press_nuts_solder_iron_02.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
-	  
+
+- Melt in the threaded insert
+
 <table>
-  <caption>Table 5: press in nuts
   <tr>
     <td><img src="media/bottom_level_press_nuts_03.jpg" width="200" height="200" loading="lazy"></td>
     <td><img src="media/bottom_level_press_nuts_04.jpg" width="200" height="200" loading="lazy"></td>
@@ -178,12 +170,11 @@ Using a soldering iron and an M3 adapter tip at approximately 180°C, melt the p
   </tr>
 </table>
 
-For later attachment to the deckbox lid, screw 4 cylinder head screws from the inside into the threads.
+- Repeat the melting process on all 4 corners.
+- For later attachment to the deckbox lid, screw 4 cylinder head screws from the inside into the threads.
 
 <figure> 
    <img src="media/bottom_level_fixation.jpg"  width="400" title="screws in nuts">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *insert screws into the nuts*</figurecaption>
 </figure>
 
 - Guide the cables through the middle opening of the bottom level and place them on the middle level.
@@ -191,7 +182,6 @@ For later attachment to the deckbox lid, screw 4 cylinder head screws from the i
 - Place the entire mount in the deckbox lid and secure it with screws in the corners.
 
 <table>
-  <caption>Table 5: preparation to press in nuts
   <tr>
     <td><img src="media/bottom_level_fixation_02.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/bottom_level_fixation_03.jpg" width="300" height="300" loading="lazy"></td>
@@ -201,25 +191,24 @@ For later attachment to the deckbox lid, screw 4 cylinder head screws from the i
 
 ---
 
-## Deckbox Bottom
-Using a step drill, create a 22 mm hole on two opposing sides (centered, 26 mm from the top edge).
+## Deckbox bottom
+### Drill holes for the power supply
+- Using a step drill, create a 22 mm hole on two opposing sides (centered, 25 mm from the top edge).
 
 <figure> 
    <img src="media/weipu_holes_drawing.jpg"  width="500" title="drawing for weipu sockets">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *drawing for positioning of the holes*</figurecaption>
 </figure>
+
+- Control the drilled holes
 
 <figure> 
    <img src="media/weipu_holes.jpg"  width="400" title="control holes weipu sockets">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *control drilled holes*</figurecaption>
 </figure>
 
 
 ### Installing the Bottom Plate
-Insert the bottom plate into the deckbox, paying attention to the recess for the Weipu connectors.
-Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
+- Insert the bottom plate into the deckbox, paying attention to the recess for the Weipu connectors.
+- Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
 
 <figure>
 	<img src="media/bottom_part_plate.jpg" width="300" height="300" loading="lazy"></td>
@@ -227,48 +216,40 @@ Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
 
 
 ### AC/DC Converter
-Press the AC/DC converter into the housing and secure the housing to the bottom plate with 2 metal screws (2.9 x 9.5mm).
+- Press the AC/DC converter into the housing.
 <figure> 
    <img src="media/bottom_part_acdc_01.jpg"  width="400" title="ACDC converter with holder">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *put ACDC converter in 3D printed hosuing*</figurecaption>
 </figure>
 
-Cable sides see photo
+- Screw the housing to the bottom plate with 2 metal screws (2.9 x 9.5mm) in the orientation as shown on the picture. 
 
 <figure> 
    <img src="media/bottom_part_acdc_02.jpg"  width="400" title="ACDC converter on bottom plate">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *orientation of converter on bottom plate*</figurecaption>
 </figure>
 
 ### PCB on AC/DC Housing
-Screw the PCB onto the AC/DC housing with 2 metal screws **(2.2 x 6.5 mm)**.\
+- Screw the PCB onto the AC/DC housing with 2 metal screws **(2.2 x 6.5 mm)**.\
 **Attention: DO NOT confuse the screws with 9.5 mm length, otherwise the AC/DC-converter might take damage**
 
 <figure> 
    <img src="media/bottom_part_pcb.jpg"  width="400" title="PCB on ACDC housing">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Screw the PCB onto the ACDC housing with 2 metal screws (2.2 x 6.5 mm).*</figurecaption>
 </figure>
 
 
 ### Connecting Weipu AC connector (3-Pole)
-Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter. Guide the cables outward through the hole.
+- Unscrew the nut and thread it onto the blue and brown cables of the AC/DC converter.
+- Guide the cables outward through the hole.
 
 <figure> 
    <img src="media/wire_weipu_nut.jpg"  width="400" title="install weipu sockets 01">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *Guide the cables outward through the hole* </figurecaption>
 </figure>
 
-  
-Shorten the AC cable to 10 cm from the deckbox and strip the insulation for about 6 mm.\
-Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.\
-Put two shrink tubing on the wire, one on each core and solder the Weipu connector (3-pole) to the cable. The blue core has to be connected to pin 1 and the brown to pin 2 of the connector (it also works the other way around). Pin 3 (Ground) is not connected. Shrink the heat shrink tubing onto the pins, trying to have as little of the pin uncovered as possible.
+- Shorten the AC cable to 10 cm from the deckbox and strip the insulation for about 6 mm.
+- Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.
+- Put two shrink tubing on the wire, one on each core and solder the Weipu connector (3-pole) to the cable. The blue core has to be connected to pin 1 and the brown to pin 2 of the connector (it also works the other way around). Pin 3 (Ground) is not connected.
+- Shrink the heat shrink tubing onto the pins, trying to have as little of the pin uncovered as possible.
 
 <table>
-  <caption>solder cables to weipu socket
   <tr>
     <td><img src="media/result_soldering_weipu.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/schrinking_tube_weipu.jpg" width="300" height="300" loading="lazy"></td>
@@ -276,45 +257,22 @@ Put two shrink tubing on the wire, one on each core and solder the Weipu connect
 </table>
 
 ### Connecting Weipu DC connector (2-Pole)
-#### Required:
-- Weipu connector 2-pole
-- Cable (2 conductors, diameter 2mm, length at least 25cm)
-- Heat shrink tube
-- 2x wire end sleeves
-- Soldering iron
-- Solder
-- Vice
-- Wire stripping pliers
-- Crimping pliers
-
-####
-
-Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.\
-Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.\
-Put two shrink tubing on the wire, one on each core and solder the Weipu connector to the cable. Black (ground) to pin 1 (at the top, marked whith a white dot) and red (lead) to pin 2 at the bottom of the connector. Shrink the heat shrink tubing onto the pins, trying to have as little of the pin uncovered as possible.\
-Attach two electric wire ferrules on the other end of the wire.
+- Similar to AC-Connector, unscrew the nut and thread it onto the black and red cables. Guide the cables outward through the hole.
+- Remove the O-ring (seal) from the weipu socket, as it can not be used becaue the wall of the fibex case is to thick. The weipu socket will be glued in later.
+- Put two shrink tubing on the wire, one on each core and solder the Weipu connector to the cable. Black (ground) to pin 1 (at the top, marked whith a white dot) and red (lead) to pin 2 at the bottom of the connector.
+- Shrink the heat shrink tubing onto the pins, trying to have as little of the pin uncovered as possible.
+- Attach two electric wire ferrules on the other end of the wire.
 
 <figure> 
    <img src="media/result_soldering_dc.jpg"  width="400" title="install weipu sockets 02">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
 </figure>
 
 ### Glueing / Sealing Weipu connectors with Sikaflex
-Both weipu sockets needs to be glued in the fibexas the deckbox wall is too thick. We use Sikaflex for this purpose.
-
-#### Required:
-- Sikaflex
-- Cleaning alcohol
-- Cleaning wipes
-- Spatula
-
-#### Procedure
+- Both weipu sockets needs to be glued in the fibexas the deckbox wall is too thick. Use Sikaflex for this purpose.
 - Clean the surfaces of the deckbox and Weipu connector in the contact area with alcohol.
 - Apply Sikaflex (291i) to the flange of the Weipu connector with a spatula (as sparingly as possible, but there should be a continuous film on the connector).
 
 <table>
-  <caption>Table 1: apply sikaflex to seal the socket
   <tr>
     <td><img src="media/weipu_sockets_03.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/applied_sikaflex.jpg" width="300" height="300" loading="lazy"></td>
@@ -326,34 +284,27 @@ Both weipu sockets needs to be glued in the fibexas the deckbox wall is too thic
 
 <figure> 
    <img src="media/first_weipu_installed.jpg"  width="400" title="install weipu sockets 02">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
 </figure>
 
-Repeat the procedure with the second weipu connector. The result should look like on the following picture.
+- Repeat the procedure with the second weipu connector. The result should look like on the following picture.
 
 <figure> 
    <img src="media/both_weipu_installed.jpg"  width="400" title="install weipu sockets 02">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *soldering the dc weipu socket*</figurecaption>
 </figure>
 
 ### Mounting the Raspberry Pi
-Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
-
+- Cut the foam tape into 3 pieces (2x approximately 0.5 cm length for the sides of the recess in the bottom plate, 1x approximately 3 cm length for the clamp) and glue them into place.
 
 <table>
-  <caption>Table 1: apply sikaflex to seal the socket
   <tr>
     <td><img src="media/bottom_part_rpi_01.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/bottom_part_rpi_02.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
-Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm) with an applied washer.
 
+- Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal screw (2.9 x 9.5 mm) with an applied washer.
 
 <table>
-  <caption>Table 1: apply sikaflex to seal the socket
   <tr>
     <td><img src="media/bottom_part_rpi_03.jpg" width="300" height="300" loading="lazy"></td>
     <td><img src="media/bottom_part_rpi_04.jpg" width="300" height="300" loading="lazy"></td>
@@ -362,31 +313,30 @@ Insert the Raspberry Pi, secure the clamp, and screw it into place with a metal 
 
 
 ### Manufacturing the USB-C Plug
-To safe some space it is recommeneded to manufacture a usb plug from slim spare parts. We use the repair kit of recable shown below.
+- To safe some space it is recommeneded to manufacture a usb plug from slim spare parts. We use the repair kit of recable shown below.
 
 <figure> 
    <img src="media/prepare_usbc_plug.jpg"  width="400" title="connect acdc PCB">
-   
-   <figurecaption><a name="figure1">*Figure:*</a>dc/dc converter and usb-c plug kit provided by recable</figurecaption>
 </figure>
 
-First you have to cut a small triangle in on site top of the shrinking tube.
+- First you have to cut a small triangle in on site top of the shrinking tube.
 
 <figure> 
    <img src="media/cut_edge_shrinking_tube.jpg"  width="400" title="connect acdc PCB">
-   
-   <figurecaption><a name="figure1">*Figure:*</a>cutting shrink tube</figurecaption>
 </figure>
 
-Remove as little as possible (about 2 mm) of the insulation from the dc/dc converter output wires. Soldering the wires to the plug as shown in the figure. If you use the recable plug the bigger pin (on the left) is the V+ contact and the biggest pin (on the right) is the V- contact. In this case the yellow wire is the lead.
+- Remove about 2 mm of the insulation from the dc/dc converter output wires.
+- Soldering the wires to the plug as shown in the picture.
+- If you use the recable plug the bigger pin (on the left) is the V+ contact and the biggest pin (on the right) is the V- contact. In this case the yellow wire is the lead.
 
 <figure> 
    <img src="media/result_soldering_usbc.jpg"  width="400" title="connect acdc PCB">
-   
-   <figurecaption><a name="figure1">*Figure:*</a>cutting shrink tube</figurecaption>
 </figure>
 
-Now you can slide the frame of the Plug over the plug until it is snap into its place. Bend the wire holder downwards at a right angle and guide the wires into its holder. Fix the wires with a pliers.
+- Now you can slide the frame of the plug over the plug until it is snap into its place.
+- Bend the wire holder downwards at a right angle and guide the wires into its holder.
+- Fix the wires with a pliers.
+
 <table>
   <tr>
     <td><img src="media/insert_housing_usbc.jpg" width="300" height="300" loading="lazy"></td>
@@ -394,8 +344,10 @@ Now you can slide the frame of the Plug over the plug until it is snap into its 
   </tr>
 </table>
 
-Move the schrink tube over the plug. The cutted edge has to be at the bottom and at the front. Try to hold it in position with on hand during shrinking the tube with a heat gun. Also the right angle should be bent back in final position during heating.\
+- Move the schrink tube over the plug. The cutted edge has to be at the bottom and at the front.
+- Try to hold it in position with on hand during shrinking the tube with a heat gun. Also the right angle should be bent back in final position during heating.\
 **Attention: Be carfull because of the hot air during this process to avoid burnings.**
+  
 <table>
   <tr>
     <td><img src="media/schrink_tube_usbc.jpg" width="300" height="300" loading="lazy"></td>
@@ -409,31 +361,26 @@ Move the schrink tube over the plug. The cutted edge has to be at the bottom and
 
 <figure> 
    <img src="media/bottom_part_dcdc_01.jpg"  width="400" title="connect dcdc PCB">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *fixate dc/dc converter with holder*</figurecaption>
 </figure>
 
-- Insert the USB-C connector into the Raspberry Pi
 
-
-### prepare power cable for router
-
-If you are not reusing the power cable from the RUT955 you need to make your own cable.
-You need a molex plug with two crimp contacts (2824-20) two electric wire ferrules and about 25 cm of 2 core wire
+### Prepare power cable for router
+- If you are not reusing the power cable from the RUT955 you need to make your own cable.
+- You need a molex plug with two crimp contacts (2824-20) two electric wire ferrules and about 25 cm of 2 core wire
 <figure> 
    <img src="media/prepare_molex.jpg"  width="400">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
 </figure>
 
-Take the cable and strip down the insulation by ~6 mm at the one site and ~3mm at the other side. Crimp down electric wire ferrules on each of the end with 6mm.
+- Take the cable and strip down the insulation by ~6 mm at the one site and ~3mm at the other side.
+- Crimp down electric wire ferrules on each of the end with 6mm.
+
 <figure> 
    <img src="media/applied_ferrules.jpg"  width="400">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
 </figure>
 
-Crimp the molex 2824-connectors on the other end. Insert molex connectors into the top part of 4x4 molex plug (the pin position is also descriped on the top of the router).
+- Crimp the molex 2824-connectors on the other end.
+- Insert molex connectors into the top part of 4x4 molex plug (the pin position is also descriped on the top of the router).
+
 <table>
   <tr>
     <td><img src="media/crimp_molex_pin.jpg" width="300" height="300" loading="lazy"></td>
@@ -444,13 +391,10 @@ Crimp the molex 2824-connectors on the other end. Insert molex connectors into t
 
 
 ### Connecting the Router Antennas
-
 - Screw the antennas onto the router
 
 <figure> 
    <img src="media/bottom_part_router_antennas_01.jpg"  width="400">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *connect antennas to router*</figurecaption>
 </figure>
 
 - Screw the router onto the bottom plate (using 4 screws 2.9 x 9.5 mm)
@@ -461,30 +405,32 @@ Crimp the molex 2824-connectors on the other end. Insert molex connectors into t
     <td><img src="media/bottom_part_router_plate_02.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
+
 - Insert the Ethernet and power (12V) cables
+
 <figure> 
    <img src="media/bottom_part_router_plate_03.jpg"  width="400">
-
-   <figurecaption><a name="figure1">*Figure 1:*</a> *connect ethernet and power cables*</figurecaption>
 </figure>
 
 
 ### Connecting power wires to PCB board
-Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation.
-Screw the cable into place on the input side (In1) of the PCB.
-Repeat the procedure for the wire of the DC-input of the weipu socket and screw it into the other input (In2) on the PCB
+- Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation.
+- Screw the cable into place on the input side (In1) of the PCB.
+- Repeat the procedure for the wire of the DC-input of the weipu socket and screw it into the other input (In2) on the PCB
 
 <figure> 
    <img src="media/bottom_part_acdc_pcb.jpg"  width="400" title="connect acdc PCB">
-   
-   <figurecaption><a name="figure1">*Figure 1:*</a> *screw cable to input of PCB*</figurecaption>
 </figure>
 
-Attach two electric wire ferrules to the input wires of the dc/dc converter and screw it to the output of the PCB (Out1). Repeat this procedure for the power cable of the router on the other output (Out2).
+- Attach two electric wire ferrules to the input wires of the dc/dc converter.
+- Screw it to the output of the PCB (Out1).
+- Screw the power cable of the router on the other output (Out2).
+- Insert the USB-C connector into the Raspberry Pi
 
 
-----
-Up until now the deckbox lower part should look something like this
+### Result deckbox bottom
+- Up until now the deckbox lower part should look something like this.
+
 <figure> 
    <img src="media/bottom_part_complete.jpg"  width="400">
 </figure>
@@ -492,13 +438,9 @@ Up until now the deckbox lower part should look something like this
 ----
 
 
-## Finishing Deckbox and attaching the Deckbox cage
+## Finishing deckbox and attaching the deckbox cage
+- You need the mounting plate/cage and the 4 M4 screws (inkl nut and washer)
 
-requires:
-- 4x nuts M4
-- 4x washers M4
-- 4x flat head screws M4x16
-- Stainless steel cage
 <figure> 
    <img src="media/cage_00.jpg"  width="400">
 </figure>
@@ -527,17 +469,18 @@ requires:
 
 - (optional) Apply stickers
 
-
-## Manufacture Power Cable for 230 V
+---
+## Manufacture power cable
 Depending on the power source available on the chosen vessel, you can manufacture the corresponding power cable. 
 
+### Power cable for 230 V AC
 **Safety caution: When dealing with 230 V make sure that you do not endanger yourself and that your product is safe for usage by other people. Make sure that you have the necessary training and follow the local laws.**
 
 - Cut 15 m cable (or length suitable for your application)
 - Attach Schuko plug including cap on one side
 - Attach Weipu 3 pin plug on the other side (use pin 1 and 2)
 
-## Manufacure Power Cable for 9-30 V
+### Power cable for 9-30 V DC
 - Cut 15 m cable (or length suitable for your application)
 - Use brown wire as plus. Use blue wire as minus
 - Attach Weipu 2 pin plug including cap to one side. Use pin 1 as minus, pin 2 as plus
