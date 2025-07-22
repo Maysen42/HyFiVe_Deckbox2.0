@@ -394,7 +394,7 @@ Now you can slide the frame of the Plug over the plug until it is snap into its 
   </tr>
 </table>
 
-Move the schrink tube over the plug. The cutted edge has to be at the bottom and at the front. Try to hold it in position with on hand during shrinking the tube with a het gun. Also the right angle should be bendet back in final position during heating.\
+Move the schrink tube over the plug. The cutted edge has to be at the bottom and at the front. Try to hold it in position with on hand during shrinking the tube with a heat gun. Also the right angle should be bent back in final position during heating.\
 **Attention: Be carfull because of the hot air during this process to avoid burnings.**
 <table>
   <tr>
