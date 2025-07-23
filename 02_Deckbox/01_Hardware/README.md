@@ -103,7 +103,7 @@ The following components need to be manufactured according to design files provi
 
 - Guide the GPS antenna cable and click the antenna into place.
 <figure> 
-   <img src="media/Mounting_antennas_GPS.jpg"  width="500" title="GPS Antenna">
+   <img src="media/Mounting_antennas_GPS.jpg"  width="400" title="GPS Antenna">
 </figure>
 
 
@@ -111,7 +111,7 @@ The following components need to be manufactured according to design files provi
 - Insert the middle level of the antenna mount and guide all 5 cables through.
 
 <figure> 
-   <img src="media/middle_level_01.jpg"  width="500" title="middle level">
+   <img src="media/middle_level_01.jpg"  width="400" title="middle level">
 </figure>
 
 - Screw the top and middle levels together using 10 metal screws (2.9 x 9.5) starting from the center and then the corners.
@@ -127,7 +127,7 @@ The following components need to be manufactured according to design files provi
 - Bundle the cables with cable ties (2.5mm) and attach them to the middle level
 
 <figure> 
-   <img src="media/middle_level_cable_01.jpg"  width="500" title="middle level cable">
+   <img src="media/middle_level_cable_01.jpg"  width="400" title="middle level cable">
 </figure>
 
 - Wind the cables together at the middle level, leaving 30 cm of each cable loose, and guide them back through the second opening (Note: Wi-Fi cables are shorter than the others!). It is recommended to keep the winding flat so that the cables can be easily guided back.
@@ -146,7 +146,7 @@ The following components need to be manufactured according to design files provi
 - If necessary, first free the hole by screwing in an M3 cylinder head screw.
 
 <figure> 
-   <img src="media/bottom_level_press_nuts_01.jpg"  width="500" title="requirements for bottom level">
+   <img src="media/bottom_level_press_nuts_01.jpg"  width="400" title="requirements for bottom level">
 </figure>
 
 - Place a threaded insert on the soldering iron with tweezers (**Attention: Hot!**).
@@ -196,7 +196,7 @@ The following components need to be manufactured according to design files provi
 - Using a step drill, create a 22 mm hole on two opposing sides (centered, 25 mm from the top edge).
 
 <figure> 
-   <img src="media/weipu_holes_drawing.jpg"  width="500" title="drawing for weipu sockets">
+   <img src="media/weipu_holes_drawing.jpg"  width="600" title="drawing for weipu sockets">
 </figure>
 
 - Control the drilled holes
@@ -211,7 +211,7 @@ The following components need to be manufactured according to design files provi
 - Secure the plate with 4 plastic washers and 4 metal screws (3.9 x 9.5).
 
 <figure>
-	<img src="media/bottom_part_plate.jpg" width="300" height="300" loading="lazy"></td>
+	<img src="media/bottom_part_plate.jpg" width="400"></td>
 </figure>
 
 
@@ -419,31 +419,35 @@ The following components need to be manufactured according to design files provi
 
 ### Connecting power wires to PCB board
 - Shorten the DC cable from the AC/DC converter to 20 cm and strip the insulation.
-- Screw the cable into place on the input side (In1) of the PCB.
-- Repeat the procedure for the wire of the DC-input of the weipu socket and screw it into the other input (In2) on the PCB
+- Screw the cable into place on the input side (DC1 IN) of the PCB.
+- Repeat the procedure for the wire of the DC-input of the weipu socket and screw it into the other input (DC2 IN) on the PCB
 
 <figure> 
-   <img src="media/bottom_part_acdc_pcb.jpg"  width="400" title="connect acdc PCB">
+   <img src="media/contacting_pcb_in.jpg"  width="600" title="connect acdc PCB">
 </figure>
 
 - Attach two electric wire ferrules to the input wires of the dc/dc converter.
-- Screw it to the output of the PCB (Out1).
-- Screw the power cable of the router on the other output (Out2).
-- Insert the USB-C connector into the Raspberry Pi
+- Screw it to the output of the PCB (DC2 OUT).
+- Screw the power cable of the router on the other output (DC1 OUT).
+- Insert the USB-C plug into the Raspberry Pi
+
+<figure> 
+   <img src="media/contacting_pcb_out.jpg"  width="600" title="connect acdc PCB">
+</figure>
 
 
 ### Result deckbox bottom
 - Up until now the deckbox lower part should look something like this.
 
 <figure> 
-   <img src="media/bottom_part_complete.jpg"  width="400">
+   <img src="media/bottom_part_complete.jpg"  width="600">
 </figure>
 
 ----
 
 
 ## Finishing deckbox and attaching the deckbox cage
-- You need the mounting plate/cage and the 4 M4 screws (inkl nut and washer)
+- You need the mounting plate/cage and the four M4 screws (incl nut and washer)
 
 <figure> 
    <img src="media/cage_00.jpg"  width="400">
