@@ -192,7 +192,7 @@ The following components need to be manufactured according to design files provi
 
 ---
 
-## Deckbox bottom
+## Mounting components to the deck box bottom
 ### Drill holes for the power supply
 - Using a step drill, create a 22 mm hole on two opposing sides (centered, 25 mm from the top edge).
 
@@ -393,6 +393,16 @@ The following components need to be manufactured according to design files provi
     <td><img src="media/insert_pin_molex.jpg" width="300" height="300" loading="lazy"></td>
   </tr>
 </table>
+
+----
+
+## Connecting componets of the deck box bottom
+- In the following steps all components from before will be connected to each other
+- The wiring diagram is the following
+
+<figure> 
+   <img src="media/deckbox_connection_diagramm.svg"  width="700">
+</figure>
 
 
 ### Connecting the Router Antennas
