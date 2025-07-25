@@ -15,9 +15,9 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 7   | 1      | pc   | DCDC Converter, Input 8-58V, output: 5V, max. 15 W, e.g. K480503                                                            | 8852090466622                         |
 | 8   | 1      | pc   | power plug for RUT955, either cut and reused from ACDC unit                                                                 |                                       |
 | 9   | 1      | pc   | alternativly: Molex crimp socket 'Micro-Fit' 2x2-poles plus 4 x crimp contact  2824-20                                      | product numbers 0039039042 430300038  |
-| 10  | 2      | pc   | 2-core wire ~25 cm, 2 x ~0.5mm², red and black                                                                              |                                       |
-| 11  | 6      | pc   | electric wire ferrule 0.5mm² 												    |					    |
-| 12  | 4      | pc   | Heat shrink tubing 20mm x 3mm 												    |					    |
+| 10  | 2      | pc   | 2-core wire ~25 cm, 2 x ~0.5mm², red and black                                                                              | 4040849567070                         |
+| 11  | 6      | pc   | electric wire ferrule 0.5mm² 												    | 9900000247027			    |
+| 12  | 4      | pc   | Heat shrink tubing 20mm x 3mm 												    | 9900000174064			    |
 | 13  | 1      | pc   | USB-C Plug, e.g. recable USB C to C plug 5 strands set (consits of 3 parts: plug, housing and heat shrink tubing)           |		  	                    |
 |     |        |      | **External power supply**                                                                                                   |                                       |
 | 14  | 1      | pc   | Power cable, ~15 m, 2 wires, ~1mm², suited for outdoor/deck                                                                 | 2050005621999                         |
@@ -38,16 +38,16 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 | 26  | 1      | pc   | 3D printed mounting for electronic components, consisting of four parts TODO **Link to STEP files**                         | self manufactured                     |
 | 27  | 1      | pc   | 3D printed mounting for antennas of RUT955, consisting of three layers<br>TODO **Link to STEP files**                       | self manufactured                     |
 | 28  | 4      | pc   | Threaded inserts to melt into 3D print, M3x5x4                                                                              | e.g. ASIN B09B7F2XM3 or 4260528721160 |
-| 29  | 4      | pc   | Allen screws M3x16                                                                                                          |                                       |
-| 30  | 2      | pc   | Cable ties small                                                                                                            |                                       |
-| 31  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                                     | 4043952720745                         |
+| 29  | 4      | pc   | Allen screws M3x16                                                                                                          | 4043952175507                         |
+| 30  | 2      | pc   | Cable ties small                                                                                                            | 9900000247645                         |
+| 31  | 2      | pc   | Tapping screw 2.2 x 6.5                                                                                                     | 4043377162199                         |
 | 32  | 28     | pc   | Tapping screw 2.9 x 9.5                                                                                                     | 4043952537589                         |
 | 33  | 4      | pc   | Tapping screw 3.9 x 9.5                                                                                                     | 4043377159625                         |
-| 34  | 4      | pc   | (plastic) washers for 3.9 mm with large outer diameter                                                                      |                                       |
-| 35  | 1      | pc   | ~5 cm foam tape (2 cm width)                                                                                                |                                       |
+| 34  | 4      | pc   | (plastic) washers for 3.9 mm with large outer diameter                                                                      | 4043952665589 or 4001796381737        |
+| 35  | 1      | pc   | ~5 cm foam tape (20 x 2 mm)                                                                                                 | 4260396830346                         |
 |     |        |      | **Mounting for box on reeling**                                                                                             |                                       |
 | 36  | 1      | pc   | Mounting plate, watercutted, stainless steel V4A<br>TODO **Link to STEP files**                                             | self manufactured                     |
-| 37  | 4      | pc   | Allen screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                                 |                                       |
+| 37  | 4      | pc   | Allen screw, M4x16, incl. washer and self-securing nut, stainless steel V4A                                                 | 4043377065032			    |
 | 38  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 46 mm, incl. 2 M10 self-securing nuts and 2 M10 washers, stainless steel V4A | 4043952396568                         |
 | 39  | 2      | pc   | Steel strap for tubes, DIN 3570, nominal width 82 mm, incl. 2 M12 self-securing nuts and 2 M12 washers, stainless steel V4A | 4043377302007                         |
 
@@ -58,6 +58,7 @@ The following parts are needed to manufacture a HyFiVe deckbox.
 - Adapter tip for melting in press nuts
 - Tweezers
 - Diagonal pliers
+- flat nose pliers
 - wire stripper
 - Heat gun
 - Wrench 27 mm
